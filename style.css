@@ -1,0 +1,97 @@
+/*
+Theme Name:         Reverie
+Theme URI:          http://themefortress.com/reverie/
+Description:        Reverie is a versatile HTML5 responsive WordPress framework based on ZURB's Foundation.
+Version:            1.0.0
+Author:             Zhen Huang
+Author URI:         http://themefortress.com/
+
+License:            MIT License
+License URI:        http://www.opensource.org/licenses/mit-license.php
+*/
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Customized Adjustments of Foundation for WordPress
+:: Styling Basic WordPress Outputs
+:: Customize Foundation Style Pagination for WP-Pagenavi
+:: Your Customized Style
+*/
+
+/* ---------------------------------------------------
+   Customized Adjustments of Foundation for WordPress
+--------------------------------------------------- */
+	
+	/* Auto Height for Images for Responsive Design */
+	img { height: auto; }
+	li { margin-bottom: 2%!important; }
+
+	/* ZURB Navi for Foundation */
+	dl.nav { display: block; width: auto; height: 27px; margin: 0 0 18px; }
+	dl.nav dt, dl.nav dd { float: left; display: inline; }
+	dl.nav dt { color: #999; font-weight: normal; }
+	dl.nav dd a { text-decoration: none; margin-left: 6px; padding: 5px 12px;
+	 -webkit-border-radius: 12px; -moz-border-radius: 12px; }
+	dl.nav dd a:hover { background: #eee; }
+	dl.nav dd.current-menu-item a,
+	dl.nav dd.current-post-ancestor a,
+	dl.nav dd.current-menu-parent a,
+	dl.nav dd.current-post-parent a
+	 { background: #2A85E8; color: #fff; }
+ 
+	/* Foundation-specific presentation CSS by ZURB */
+	body { padding-bottom: 60px; }
+	div.reverie-header { margin: 0 0 30px 0; padding: 20px 0 0 0; border-bottom: solid 1px #ccc; }
+	div.reverie-header h1 { margin-bottom: 0; padding: 0; }
+	div.reverie-header h1 a { color: #181818; }
+	div.reverie-header h1 a:hover { color: #181818; }
+	div.reverie-header .subheader { margin-bottom: 9px; }
+	div.highlight { margin-bottom: 12px; }
+	img.beta { position: absolute; top: 0px; right: 0px; }
+
+/* -----------------------------------------
+   Styling Basic WordPress Outputs
+----------------------------------------- */
+	
+	/* Resizing the Blog Post */
+	.post-box p { line-height: 21px!important; }
+	.post-box { font-size: 14px; line-height: 20px!important; }
+	.post-box h1 { font-weight: bold; font-size: 30px; line-height: 1; margin-bottom: 2px; }
+	.post-box h2 { font-weight: bold; font-size: 26px; line-height: 1; margin-bottom: 2px; }
+	.post-box h3 { font-size: 22px;	}
+	.post-box h4 { font-size: 18px;	}
+	
+	/* Add Divider for Listed Posts */
+	.divider { background:url(images/divider.png) no-repeat center top; height:36px; margin:20px 0 27px; }	
+	
+	/* Add Align Class for Images */
+	img.alignright { float: right; margin: 0 0 18px 18px; }
+	img.alignleft { float: left; margin: 0 18px 18px 0; }
+	
+	/* Add HTML5 Caption Class for Images */
+	figure.figure {	background: #EEE; margin: 0 0 18px;	-webkit-border-radius: 3px;	-moz-border-radius: 3px; display: inline-block; }
+	figure.figure figcaption { display: block; padding: 8px 10px; font-size: 13px; line-height: 18px; color: #555; }
+	figure.alignright.figure { float: right; margin: 0 0 18px 18px; }
+	figure.alignleft.figure { float: left; margin: 0 18px 18px 0; }
+		
+	/* Sidebar Adjustment */
+	.sidebar-section { padding-bottom: 10px; padding-top: 20px;	font-size: 1.3rem; font-weight: normal;	}
+	
+	/* Footer Nav */
+	.footer-section { padding-bottom: 10px; padding-top: 20px; font-size: 1.3rem; font-weight: normal; }
+	.footer-nav li { display: block; float: right; padding-left: 3%; margin-bottom: 0; }
+
+/*  -------------------------------------------------------
+    Customize Foundation Style Pagination for WP-Pagenavi
+    ---------------------------------------------------- */ 
+    
+    div.wp-pagenavi { display: block; height: 24px; margin-left: -5px; color: #555; }
+    div.wp-pagenavi a, div.wp-pagenavi span { float: left; display: block; padding: 6px 7px 4px; height: 24px; color: #555; font-size: 15px; margin-left: 5px; }
+    div.wp-pagenavi span.pages { padding-left: 0; }
+    div.wp-pagenavi .current, div.wp-pagenavi a:hover { border-bottom: solid 2px #00a6fc; color: #141414; }
+    div.wp-pagenavi span.unavailable:hover { border-bottom: none; }
+	
+/*  --------------------------
+    Your Customized Style
+    ----------------------- */

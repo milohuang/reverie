@@ -1,0 +1,25 @@
+/* Reverie is a versatile HTML5 responsive WordPress framework based on ZURB's Foundation. */
+
+/* TEAM */
+
+Zhen Huang
+http://themefortress.com
+Twitter: @themefortress
+Reverie Framework: http://themefortress.com/reverie/
+
+/* THANKS */							
+
+ZURB Foundation
+http://foundation.zurb.com/
+
+Roots
+http://www.rootstheme.com/
+
+HTML5 Boilerplate
+http://html5boilerplate.com/
+
+/* SITE */           
+    
+Standards: HTML5, CSS3              
+Components: Modernizr, jQuery, etc.
+CMS: WordPress
