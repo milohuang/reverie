@@ -25,7 +25,7 @@ License URI:        http://www.opensource.org/licenses/mit-license.php
 	
 	/* Auto Height for Images for Responsive Design */
 	img { height: auto; }
-	li { margin-bottom: 2%!important; }
+	li { margin-bottom: 2%; }
 
 	/* ZURB Navi for Foundation */
 	dl.nav { display: block; width: auto; height: 27px; margin: 0 0 18px; }
@@ -55,8 +55,8 @@ License URI:        http://www.opensource.org/licenses/mit-license.php
 ----------------------------------------- */
 	
 	/* Resizing the Blog Post */
-	.post-box p { line-height: 21px!important; }
-	.post-box { font-size: 14px; line-height: 20px!important; }
+	.post-box p { line-height: 21px; }
+	.post-box { font-size: 14px; line-height: 20px; }
 	.post-box h1 { font-weight: bold; font-size: 30px; line-height: 1; margin-bottom: 2px; }
 	.post-box h2 { font-weight: bold; font-size: 26px; line-height: 1; margin-bottom: 2px; }
 	.post-box h3 { font-size: 22px;	}
