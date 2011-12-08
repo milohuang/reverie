@@ -152,6 +152,10 @@ class description_walker extends Walker_Nav_Menu
 		
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 	}
+	
+	function end_el(&$output, $item, $depth) {
+		$output .= "</dd>\n";
+	}
 }
 
 // img unautop, Courtesy of Interconnectit http://interconnectit.com/2175/how-to-remove-p-tags-from-images-in-wordpress/
