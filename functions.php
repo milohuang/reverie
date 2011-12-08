@@ -127,7 +127,7 @@ class description_walker extends Walker_Nav_Menu
 		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
 		$class_names = ' class="'. esc_attr( $class_names ) . '"';
 		
-		$output .= $indent . '<dd id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
+		$output .= $indent . '<dd id="menu-item-'. $item->ID . '-dd"' . $value . $class_names .'>';
 		
 		$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
 		$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
