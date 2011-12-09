@@ -96,6 +96,7 @@ License URI:        http://www.opensource.org/licenses/mit-license.php
         ul.footer-nav.mobile li a.active, dl.nav.mobile dd a.active { height: auto; margin: 0; border-width: 1px 0 0; }
 
         ul.footer-nav.mobile li.current-menu-item a, dl.nav.mobile dd.current-menu-item a, .nice.tabs.mobile dd.current-menu-item a { border: none; background: #00a6fc; color: #fff; margin: 0; position: static; top: 0px; height: auto; }
+    }
 
 /*  -------------------------------------------------------
     Customize Foundation Style Pagination for WP-Pagenavi
