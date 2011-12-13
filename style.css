@@ -68,6 +68,7 @@ License URI:        http://www.opensource.org/licenses/mit-license.php
 	/* Add Align Class for Images */
 	img.alignright { float: right; margin: 0 0 18px 18px; }
 	img.alignleft { float: left; margin: 0 18px 18px 0; }
+	img.aligncenter { display: block; margin: 18px auto; }
 	
 	/* Add HTML5 Caption Class for Images */
 	figure.figure {	background: #EEE; margin: 0 0 18px;	-webkit-border-radius: 3px;	-moz-border-radius: 3px; display: inline-block; }
