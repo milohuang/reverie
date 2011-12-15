@@ -72,7 +72,7 @@ License URI:        http://www.opensource.org/licenses/mit-license.php
 	
 	/* Add HTML5 Caption Class for Images */
 	figure.figure {	background: #EEE; margin: 0 0 18px;	-webkit-border-radius: 3px;	-moz-border-radius: 3px; display: table; border-spacing: 10px; width: 1%; }
-	figure.figure figcaption { display: block; font-size: 13px; line-height: 18px; color: #555; }
+	figure.figure figcaption { font-size: 13px; line-height: 18px; color: #555; }
 	figure.figure img { max-width: inherit; }
 	figure.figure img, figure.figure figcaption { display: table-row; }
 	figure.alignright.figure { float: right; margin: 0 0 18px 18px; }
