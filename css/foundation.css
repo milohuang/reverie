@@ -926,6 +926,17 @@ div.slider-nav span.left {
 		.column, .columns { width: auto !important; float: none; margin-left: 0px; margin-right: 0px; padding-left: 20px; padding-right: 20px; }
 		.column:last-child, .columns:last-child { margin-right: 0px; }
 		.offset-by-one, .offset-by-two, .offset-by-three, .offset-by-four, .offset-by-five, .offset-by-six, .offset-by-seven, .offset-by-eight, .offset-by-nine, .offset-by-ten, .offset-by-eleven { margin-left: 0% !important; }
+		
+		/* Mobile 4-column Grid */
+		.row .phone-one.column:first-child, .row .phone-two.column:first-child, .row .phone-three.column:first-child, .row .phone-four.column:first-child, .row .phone-one.columns:first-child, .row .phone-two.columns:first-child, .row .phone-three.columns:first-child, .row .phone-four.columns:first-child { margin-left: 0; }
+		
+		.row .phone-one.column, .row .phone-two.column, .row .phone-three.column, .row .phone-four.column,
+		.row .phone-one.columns, .row .phone-two.columns, .row .phone-three.columns, .row .phone-four.columns { margin-left: 4.4%; float: left; min-height: 1px; position: relative; padding: 0; }
+		
+		.row .phone-one.columns { width: 21.68% !important; }
+		.row .phone-two.columns { width: 47.8% !important; }
+		.row .phone-three.columns { width: 73.9% !important; }
+		.row .phone-four.columns { width: 100% !important; }
 	}
 	
 	
@@ -982,12 +993,19 @@ div.slider-nav span.left {
 
 	@media only screen and (max-width: 767px) {
 		div.form-field input, div.form-field input.small, div.form-field input.medium, div.form-field input.large, div.form-field input.oversize, input.input-text, input.input-text.oversize, textarea,
-		form.nice div.form-field input, form.nice div.form-field input.oversize, form.nice input.input-text, form.nice input.input-text.oversize, form.nice textarea { display: block; width: 96%; padding: 6px 2% 4px; font-size: 18px; }
-		form.nice div.form-field input, form.nice div.form-field input.oversize, form.nice input.input-text, form.nice input.input-text.oversize, form.nice textarea { -webkit-border-radius: 2px; -moz-border-radius: 2px; }
+		form.nice div.form-field input, form.nice div.form-field input.oversize, form.nice input.input-text, form.nice input.input-text.oversize, form.nice textarea,input[type="text"].nice { display: block; width: 96%; padding: 6px 2% 4px; font-size: 18px; }
+		form.nice div.form-field input, form.nice div.form-field input.oversize, form.nice input.input-text, form.nice input.input-text.oversize, form.nice textarea, input[type="text"].nice { -webkit-border-radius: 2px; -moz-border-radius: 2px; }
 		form.nice div.form-field.error small, form.nice small.error { padding: 6px 2%; display: block; }
 		form.nice div.form-field.error .small + small, form.nice .small + .error { width: auto; }
 		form.nice div.form-field.error .medium + small, form.nice .medium + .error { width: auto; }
 		form.nice div.form-field.error .large + small, form.nice .large + .error { width: auto; }
+		input[type="submit"],input[type="reset"] {
+			width: 100%;
+		}
+		fieldset {
+			background: #F1F1F1;
+			margin-bottom: 20px;
+		}
 	}
 	
 	
