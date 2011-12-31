@@ -72,7 +72,7 @@ function cleaner_caption( $output, $attr, $content ) {
 		return $content;
 
 	/* Set up the attributes for the caption <div>. */
-	$attributes .= ' class="figure ' . esc_attr( $attr['align'] ) . '"';
+	$attributes = ' class="figure ' . esc_attr( $attr['align'] ) . '"';
 
 	/* Open the caption <div>. */
 	$output = '<figure' . $attributes .'>';
