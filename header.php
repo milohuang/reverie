@@ -55,7 +55,13 @@
 	<!-- All JavaScript at the bottom, except for Modernizr / Respond.
 	     Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
 	     For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
-	<script src="<?php echo get_template_directory_uri(); ?>/js/libs/modernizr-2.0.6.min.js"></script>
+	<?php
+	wp_enqueue_script( 'modernizr', get_template_directory_uri().'/js/libs/modernizr-2.0.6.min.js' );
+	
+	// Included JS Files of Foundation
+	wp_enqueue_script( 'foundation', get_template_directory_uri().'/js/foundation.js', array( 'jquery' ), '1.0', true );
+	wp_enqueue_script( 'app', get_template_directory_uri().'/js/app.js', array( 'jquery' ), '1.0', true );
+	?>
 	
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	<?php wp_head(); ?>
