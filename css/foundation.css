@@ -1152,7 +1152,7 @@ div.slider-nav span.left {
 ---------------------------------------------------*/	
 
 
-	@media only screen and (max-width: 767px) {
+	@media only screen and (max-width: 768px) {
 		div.form-field input, div.form-field input.small, div.form-field input.medium, div.form-field input.large, div.form-field input.oversize, input.input-text, input.input-text.oversize, textarea,
 		form.nice div.form-field input, form.nice div.form-field input.oversize, form.nice input.input-text, form.nice input.input-text.oversize, form.nice textarea { display: block; width: 96%; padding: 6px 2% 4px; font-size: 18px; }
 		form.nice div.form-field input, form.nice div.form-field input.oversize, form.nice input.input-text, form.nice input.input-text.oversize, form.nice textarea { -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; }
