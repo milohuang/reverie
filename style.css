@@ -114,3 +114,11 @@ License URI:        http://www.opensource.org/licenses/mit-license.php
 /*  --------------------------
     Your Customized Style
     ----------------------- */
+
+    .rss-header {
+    position: absolute; 
+	right: 0; 
+	margin-top: -90px; 
+	height: 80px; 
+	width: 80px; 
+	margin-right: 20px; }
