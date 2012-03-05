@@ -31,4 +31,4 @@
 
 		<?php wp_footer(); ?>
 	</body>
-g</html>
+</html>
