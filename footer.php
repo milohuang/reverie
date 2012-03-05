@@ -5,7 +5,7 @@
 			<div class="row">
 				<div class="four columns">
 					&copy; <?php echo date('Y'); ?> - <?php bloginfo('name'); ?>
-					<br/>Based on <a href="http://themefortress.com/reverie/" title="Reverie Framework">Reverie Framework</a>, with some <a href="https://github.com/aneveux/reverie" target="_blank">little modifications</a>.
+					<br/>Powered by <a href="http://themefortress.com/reverie/" title="Reverie Framework">Reverie Framework</a>, with some <a href="https://github.com/aneveux/reverie" target="_blank">little modifications</a>.
 				</div>
 				<div class="one columns twitter-footer"><a href="https://twitter.com/antoineneveux"><img src="<?php echo get_template_directory_uri(); ?>/images/misc/twitter.png" alt="twitter" /></a></div>
 				<?php wp_nav_menu(array('theme_location' => 'utility_navigation', 'container' => false, 'menu_class' => 'eight columns footer-nav')); ?>
@@ -31,4 +31,4 @@
 
 		<?php wp_footer(); ?>
 	</body>
-</html>
+g</html>
