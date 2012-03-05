@@ -6,7 +6,7 @@
 				<div class="eight columns">
 					&copy; 2008-<?php echo date('Y'); ?> All rights reserved.
 					<br>
-					<?php bloginfo('name'); ?> is based on <a href="http://themefortress.com/reverie/" title="Reverie Framework">Reverie Framework</a>, with some <a href="https://github.com/aneveux/reverie" target="_blank">little modificationsg</a>.
+					<?php bloginfo('name'); ?> is based on <a href="http://themefortress.com/reverie/" title="Reverie Framework">Reverie Framework</a>, with some <a href="https://github.com/aneveux/reverie" target="_blank">little modifications</a>.
 				</div>
 				<?php wp_nav_menu(array('theme_location' => 'utility_navigation', 'container' => false, 'menu_class' => 'eight columns footer-nav')); ?>
 			</div>
