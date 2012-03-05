@@ -21,85 +21,85 @@ License URI:        http://www.opensource.org/licenses/mit-license.php
 
 /* ---------------------------------------------------
    Customized Adjustments of Foundation for WordPress
---------------------------------------------------- */
-	
-	/* Auto Height for Images for Responsive Design */
-	img { height: auto; }
-	li { margin-bottom: 2%; }
+   --------------------------------------------------- */
 
-	/* ZURB Navi for Foundation */
-	dl.nav { display: block; width: auto; height: 27px; margin: 0 0 18px; }
-	dl.nav dt, dl.nav dd { float: left; display: inline; }
-	dl.nav dt { color: #999; font-weight: normal; }
-	dl.nav dd a { text-decoration: none; margin-left: 6px; padding: 5px 12px;
-	 -webkit-border-radius: 12px; -moz-border-radius: 12px; }
-	dl.nav dd a:hover { background: #eee; }
-	dl.nav dd.current-menu-item a,
-	dl.nav dd.current-post-ancestor a,
-	dl.nav dd.current-menu-parent a,
-	dl.nav dd.current-post-parent a
-	 { background: #2A85E8; color: #fff; }
- 
-	/* Foundation-specific presentation CSS by ZURB */
-	body { padding-bottom: 60px; }
-	div.reverie-header { margin: 0 0 30px 0; padding: 20px 0 0 0; border-bottom: solid 1px #ccc; }
-	div.reverie-header h1 { margin-bottom: 0; padding: 0; }
-	div.reverie-header h1 a { color: #181818; }
-	div.reverie-header h1 a:hover { color: #181818; }
-	div.reverie-header .subheader { margin-bottom: 9px; }
-	div.highlight { margin-bottom: 12px; }
-	img.beta { position: absolute; top: 0px; right: 0px; }
+   /* Auto Height for Images for Responsive Design */
+   img { height: auto; }
+   li { margin-bottom: 2%; }
+
+   /* ZURB Navi for Foundation */
+   dl.nav { display: block; width: auto; height: 27px; margin: 0 0 18px; }
+   dl.nav dt, dl.nav dd { float: left; display: inline; }
+   dl.nav dt { color: #999; font-weight: normal; }
+   dl.nav dd a { text-decoration: none; margin-left: 6px; padding: 5px 12px;
+   	-webkit-border-radius: 12px; -moz-border-radius: 12px; }
+   	dl.nav dd a:hover { background: #eee; }
+   	dl.nav dd.current-menu-item a,
+   	dl.nav dd.current-post-ancestor a,
+   	dl.nav dd.current-menu-parent a,
+   	dl.nav dd.current-post-parent a
+   	{ background: #2A85E8; color: #fff; }
+
+   	/* Foundation-specific presentation CSS by ZURB */
+   	body { padding-bottom: 60px; }
+   	div.reverie-header { margin: 0 0 30px 0; padding: 20px 0 0 0; border-bottom: solid 1px #ccc; }
+   	div.reverie-header h1 { margin-bottom: 0; padding: 0; }
+   	div.reverie-header h1 a { color: #181818; }
+   	div.reverie-header h1 a:hover { color: #2A85E8; }
+   	div.reverie-header .subheader { margin-bottom: 9px; }
+   	div.highlight { margin-bottom: 12px; }
+   	img.beta { position: absolute; top: 0px; right: 0px; }
 
 /* -----------------------------------------
    Styling Basic WordPress Outputs
------------------------------------------ */
-	
-	/* Resizing the Blog Post */
-	.post-box p { line-height: 21px; }
-	.post-box { font-size: 14px; line-height: 20px; }
-	.post-box h1 { font-weight: bold; font-size: 30px; line-height: 1; margin-bottom: 2px; }
-	.post-box h2 { font-weight: bold; font-size: 26px; line-height: 1; margin-bottom: 2px; }
-	.post-box h3 { font-size: 22px;	}
-	.post-box h4 { font-size: 18px;	}
-	
-	/* Add Divider for Listed Posts */
-	.divider { background:url(images/divider.png) no-repeat center top; height:36px; margin:20px 0 27px; }	
-	
-	/* Add Align Class for Images */
-	img.alignright { float: right; margin: 0 0 18px 18px; }
-	img.alignleft { float: left; margin: 0 18px 18px 0; }
-	img.aligncenter { display: block; margin: 18px auto; }
-	
-	/* Add HTML5 Caption Class for Images */
-	figure.figure {	background: #EEE; margin: 0 0 18px;	-webkit-border-radius: 3px;	-moz-border-radius: 3px; display: table; border-spacing: 10px; width: 1%; }
-	figure.figure figcaption { font-size: 13px; line-height: 18px; color: #555; }
-	figure.figure img { max-width: inherit; }
-	figure.figure img, figure.figure figcaption { display: table-row; }
-	figure.alignright.figure { float: right; margin: 0 0 18px 18px; }
-	figure.alignleft.figure { float: left; margin: 0 18px 18px 0; }
-		
-	/* Sidebar Adjustment */
-	.sidebar-section { padding-bottom: 10px; padding-top: 20px;	font-size: 1.3rem; font-weight: normal;	}
-	
-	/* Footer Nav */
-	.footer-section { padding-bottom: 10px; padding-top: 20px; font-size: 1.3rem; font-weight: normal; }
-	.footer-nav li { display: block; float: right; padding-left: 3%; margin-bottom: 0; }
+   ----------------------------------------- */
 
-    @media only screen and (max-width: 767px) {
-        ul.footer-nav.mobile, dl.nav.mobile { width: auto; margin: 20px -20px 40px; height: auto; border-bottom: 1px solid #ccc; }
-        ul.footer-nav.mobile li { float: none; height: auto; padding-right: 0; }
-        dl.nav.mobile dt { display: none; }
-        dl.nav.mobile dd { float: none; height: auto; }
-        ul.footer-nav.mobile li a:hover { background-color: #eee; }
-        ul.footer-nav.mobile li a, dl.nav.mobile dd a { display: block; width: auto; height: auto; padding: 18px 20px; line-height: 1; border: solid 0 #ccc; border-width: 1px 0 0; margin: 0; color: #555; font-size: 15px; font-size: 1.5rem; -webkit-background-clip: padding-box; /* fix WebKit background bleed on border-radius */
-        -webkit-border-radius: 0;
-           -moz-border-radius: 0;
-                border-radius: 0;
-         }
-        ul.footer-nav.mobile li a.active, dl.nav.mobile dd a.active { height: auto; margin: 0; border-width: 1px 0 0; }
+   /* Resizing the Blog Post */
+   .post-box p { line-height: 21px; }
+   .post-box { font-size: 14px; line-height: 20px; }
+   .post-box h1 { font-weight: bold; font-size: 30px; line-height: 1; margin-bottom: 2px; }
+   .post-box h2 { font-weight: bold; font-size: 26px; line-height: 1; margin-bottom: 2px; }
+   .post-box h3 { font-size: 22px;	}
+   .post-box h4 { font-size: 18px;	}
 
-        ul.footer-nav.mobile li.current-menu-item a, dl.nav.mobile dd.current-menu-item a, .nice.tabs.mobile dd.current-menu-item a { border: none; background: #00a6fc; color: #fff; margin: 0; position: static; top: 0px; height: auto; }
-    }
+   /* Add Divider for Listed Posts */
+   .divider { background:url(images/divider.png) no-repeat center top; height:36px; margin:20px 0 27px; }	
+
+   /* Add Align Class for Images */
+   img.alignright { float: right; margin: 0 0 18px 18px; }
+   img.alignleft { float: left; margin: 0 18px 18px 0; }
+   img.aligncenter { display: block; margin: 18px auto; }
+
+   /* Add HTML5 Caption Class for Images */
+   figure.figure {	background: #EEE; margin: 0 0 18px;	-webkit-border-radius: 3px;	-moz-border-radius: 3px; display: table; border-spacing: 10px; width: 1%; }
+   figure.figure figcaption { font-size: 13px; line-height: 18px; color: #555; }
+   figure.figure img { max-width: inherit; }
+   figure.figure img, figure.figure figcaption { display: table-row; }
+   figure.alignright.figure { float: right; margin: 0 0 18px 18px; }
+   figure.alignleft.figure { float: left; margin: 0 18px 18px 0; }
+
+   /* Sidebar Adjustment */
+   .sidebar-section { padding-bottom: 5px; padding-top: 5px;	font-size: 1.3rem; font-weight: normal;	}
+
+   /* Footer Nav */
+   .footer-section { padding-bottom: 10px; padding-top: 20px; font-size: 1.3rem; font-weight: normal; }
+   .footer-nav li { display: block; float: right; padding-left: 3%; margin-bottom: 0; }
+
+   @media only screen and (max-width: 767px) {
+   	ul.footer-nav.mobile, dl.nav.mobile { width: auto; margin: 20px -20px 40px; height: auto; border-bottom: 1px solid #ccc; }
+   	ul.footer-nav.mobile li { float: none; height: auto; padding-right: 0; }
+   	dl.nav.mobile dt { display: none; }
+   	dl.nav.mobile dd { float: none; height: auto; }
+   	ul.footer-nav.mobile li a:hover { background-color: #eee; }
+   	ul.footer-nav.mobile li a, dl.nav.mobile dd a { display: block; width: auto; height: auto; padding: 18px 20px; line-height: 1; border: solid 0 #ccc; border-width: 1px 0 0; margin: 0; color: #555; font-size: 15px; font-size: 1.5rem; -webkit-background-clip: padding-box; /* fix WebKit background bleed on border-radius */
+   		-webkit-border-radius: 0;
+   		-moz-border-radius: 0;
+   		border-radius: 0;
+   	}
+   	ul.footer-nav.mobile li a.active, dl.nav.mobile dd a.active { height: auto; margin: 0; border-width: 1px 0 0; }
+
+   	ul.footer-nav.mobile li.current-menu-item a, dl.nav.mobile dd.current-menu-item a, .nice.tabs.mobile dd.current-menu-item a { border: none; background: #00a6fc; color: #fff; margin: 0; position: static; top: 0px; height: auto; }
+   }
 
 /*  -------------------------------------------------------
     Customize Foundation Style Pagination for WP-Pagenavi
@@ -110,7 +110,22 @@ License URI:        http://www.opensource.org/licenses/mit-license.php
     div.wp-pagenavi span.pages { padding-left: 0; }
     div.wp-pagenavi .current, div.wp-pagenavi a:hover { border-bottom: solid 2px #00a6fc; color: #141414; }
     div.wp-pagenavi span.unavailable:hover { border-bottom: none; }
-	
+
 /*  --------------------------
     Your Customized Style
     ----------------------- */
+
+    .rss-header {
+    	position: absolute; 
+    	right: 0; 
+    	margin-top: -90px; 
+    	height: 80px; 
+    	width: 80px; 
+    	margin-right: 20px; }
+
+    	.twitter-footer {
+    		height: 60px;
+    		width:60px;
+    		margin: 0;
+    		padding: 0;
+    	}

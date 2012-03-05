@@ -73,8 +73,12 @@
 		<div class="row">
 			<header class="twelve columns" role="banner">
 				<div class="reverie-header">
-					<h1><?php bloginfo('name'); ?></h1>
+					<h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
 					<h4 class="subheader"><?php bloginfo('description'); ?></h4>
+
+					<div class="rss-header">						
+						<a href="<?php echo home_url(); ?>/feed/"><img src="<?php echo get_template_directory_uri(); ?>/images/misc/rss.png" alt="rss" /></a>
+					</div>
 				</div>
 				<nav role="navigation">
 					<?php /*
