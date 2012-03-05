@@ -79,7 +79,7 @@ License URI:        http://www.opensource.org/licenses/mit-license.php
 	figure.alignleft.figure { float: left; margin: 0 18px 18px 0; }
 		
 	/* Sidebar Adjustment */
-	.sidebar-section { padding-bottom: 10px; padding-top: 20px;	font-size: 1.3rem; font-weight: normal;	}
+	.sidebar-section { padding-bottom: 5px; padding-top: 5px;	font-size: 1.3rem; font-weight: normal;	}
 	
 	/* Footer Nav */
 	.footer-section { padding-bottom: 10px; padding-top: 20px; font-size: 1.3rem; font-weight: normal; }
