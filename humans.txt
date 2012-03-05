@@ -1,3 +1,4 @@
+/* humanstxt.org */
 /* Reverie is a versatile HTML5 responsive WordPress framework based on ZURB's Foundation. */
 
 /* TEAM */
@@ -6,6 +7,11 @@ Zhen Huang
 http://themefortress.com
 Twitter: @themefortress
 Reverie Framework: http://themefortress.com/reverie/
+
+Contributor: Antoine Neveux
+Site: http://www.antoineneveux.fr
+Twitter: @antoineneveux
+Location: Lille, France
 
 /* THANKS */							
 
