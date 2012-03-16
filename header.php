@@ -16,12 +16,8 @@
 	<!-- Included Foundation CSS Files -->
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/foundation.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/app.css">
-
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
-    <?php if (is_child_theme()) { ?>
-    <!-- Include Child theme CSS file -->
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-    <?php } ?>
+	
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	
 	<!--[if lt IE 9]>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ie.css">
@@ -37,11 +33,14 @@
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
 	
 	<!--  iPhone Web App Home Screen Icon -->
-	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/images/devices/reverie-icon-ipad.png" />
 	<link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/images/devices/reverie-icon-retina.png" />
 	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/devices/reverie-icon.png" />
 	
+	<!-- Enable Startup Image for iOS Home Screen Web App -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/mobile-load.png" />
+
 	<!-- Startup Image iPad Landscape (748x1024) -->
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/images/devices/reverie-load-ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" />
 	<!-- Startup Image iPad Portrait (768x1004) -->
@@ -49,16 +48,10 @@
 	<!-- Startup Image iPhone (320x460) -->
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/images/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
 	
-	<!-- All JavaScript at the bottom, except for Modernizr / Respond.
-	     Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
-	     For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
-	<?php
-	wp_enqueue_script( 'modernizr', get_template_directory_uri().'/js/libs/modernizr-2.0.6.min.js' );
+	<!-- If jQuery already load, remove the line -->
+	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
 	
-	// Included JS Files of Foundation
-	wp_enqueue_script( 'foundation', get_template_directory_uri().'/js/foundation.js', array( 'jquery' ), '1.0', true );
-	wp_enqueue_script( 'app', get_template_directory_uri().'/js/app.js', array( 'jquery' ), '1.0', true );
-	?>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/modernizr.foundation.js"></script>
 	
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	<?php wp_head(); ?>
@@ -73,7 +66,7 @@
 		<div class="row">
 			<header class="twelve columns" role="banner">
 				<div class="reverie-header">
-					<h1><?php bloginfo('name'); ?></h1>
+					<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
 					<h4 class="subheader"><?php bloginfo('description'); ?></h4>
 				</div>
 				<nav role="navigation">
@@ -100,3 +93,6 @@
 				</nav>
 			</header>
 		</div>
+		
+		<!-- Row for main content area -->
+		<div id="main" class="row">

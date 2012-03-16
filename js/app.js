@@ -1,5 +1,5 @@
-/* Foundation v2.1.4 http://foundation.zurb.com */
-jQuery( document ).ready(function () {
+/* Foundation v2.2 http://foundation.zurb.com */
+jQuery(document).ready(function ($) {
 
 	/* Use this js doc for all application specific JS */
 
@@ -15,27 +15,27 @@ jQuery( document ).ready(function () {
 		$tab.addClass('active');
 
     	//Show Tab Content
-		jQuery(contentLocation).closest('.tabs-content').children('li').hide();
-		jQuery(contentLocation).show();
+		$(contentLocation).closest('.tabs-content').children('li').hide();
+		$(contentLocation).css('display', 'block');
 	}
 
-	jQuery('dl.tabs').each(function () {
+	$('dl.tabs').each(function () {
 		//Get all tabs
-		var tabs = jQuery(this).children('dd').children('a');
+		var tabs = $(this).children('dd').children('a');
 		tabs.click(function (e) {
-			activateTab(jQuery(this));
+			activateTab($(this));
 		});
 	});
 
 	if (window.location.hash) {
-		activateTab(jQuery('a[href="' + window.location.hash + '"]'));
+		activateTab($('a[href="' + window.location.hash + '"]'));
 	}
 
 	/* ALERT BOXES ------------ */
-	jQuery(".alert-box").delegate("a.close", "click", function(event) {
+	$(".alert-box").delegate("a.close", "click", function(event) {
     event.preventDefault();
-	  jQuery(this).closest(".alert-box").fadeOut(function(event){
-	    jQuery(this).remove();
+	  $(this).closest(".alert-box").fadeOut(function(event){
+	    $(this).remove();
 	  });
 	});
 
@@ -43,52 +43,53 @@ jQuery( document ).ready(function () {
 	/* PLACEHOLDER FOR FORMS ------------- */
 	/* Remove this and jquery.placeholder.min.js if you don't need :) */
 
-	jQuery('input, textarea').placeholder();
+	$('input, textarea').placeholder();
+
+	/* TOOLTIPS ------------ */
+	$(this).tooltips();
 
 
 
 	/* UNCOMMENT THE LINE YOU WANT BELOW IF YOU WANT IE6/7/8 SUPPORT AND ARE USING .block-grids */
-//	jQuery('.block-grid.two-up>li:nth-child(2n+1)').css({clear: 'left'});
-//	jQuery('.block-grid.three-up>li:nth-child(3n+1)').css({clear: 'left'});
-//	jQuery('.block-grid.four-up>li:nth-child(4n+1)').css({clear: 'left'});
-//	jQuery('.block-grid.five-up>li:nth-child(5n+1)').css({clear: 'left'});
+//	$('.block-grid.two-up>li:nth-child(2n+1)').css({clear: 'left'});
+//	$('.block-grid.three-up>li:nth-child(3n+1)').css({clear: 'left'});
+//	$('.block-grid.four-up>li:nth-child(4n+1)').css({clear: 'left'});
+//	$('.block-grid.five-up>li:nth-child(5n+1)').css({clear: 'left'});
 
 
 
 	/* DROPDOWN NAV ------------- */
 
-	var currentFoundationDropdown = null;
-	jQuery('.nav-bar li a').each(function() {
-		jQuery(this).data('clicks', 0);
-	});
-	jQuery('.nav-bar li a').on('click', function(e) {
+	var lockNavBar = false;
+	$('.nav-bar a.flyout-toggle').live('click', function(e) {
 		e.preventDefault();
-		if (currentFoundationDropdown !== jQuery(this).index() || currentFoundationDropdown === null) {
-			jQuery(this).data('clicks', 0);
-			currentFoundationDropdown = jQuery(this).index();
+		var flyout = $(this).siblings('.flyout');
+		if (lockNavBar === false) {
+			$('.nav-bar .flyout').not(flyout).slideUp(500);
+			flyout.slideToggle(500, function(){
+				lockNavBar = false;
+			});
 		}
-		jQuery(this).data('clicks', (jQuery(this).data('clicks') + 1));
-		var f = jQuery(this).siblings('.flyout');
-		if (!f.is(':visible') && jQuery(this).parent('.has-flyout').length > 1) {
-			jQuery('.nav-bar li .flyout').hide();
-			f.show();
-		} else if ((jQuery(this).data('clicks') > 1) || (jQuery(this).parent('.has-flyout').length < 1)) {
-			window.location = jQuery(this).attr('href');
-		}
+		lockNavBar = true;
 	});
-	jQuery('.nav-bar').on('click', function(e) {
-		e.stopPropagation();
-		if (jQuery(e.target).parents().is('.flyout') || jQuery(e.target).is('.flyout')) {
-			e.preventDefault();
-		}
-	});
-	// jQuery('body').bind('touchend', function(e) {
-	// 	if (!jQuery(e.target).parents().is('.nav-bar') || !jQuery(e.target).is('.nav-bar')) {
-	// 		jQuery('.nav-bar li .flyout').is(':visible').hide();
-	// 	}
-	// });
+  if (Modernizr.touch) {
+    $('.nav-bar>li.has-flyout>a.main').css({
+      'padding-right' : '75px'
+    });
+    $('.nav-bar>li.has-flyout>a.flyout-toggle').css({
+      'border-left' : '1px dashed #eee'
+    });
+  } else {
+    $('.nav-bar>li.has-flyout').hover(function() {
+      $(this).children('.flyout').show();
+    }, function() {
+      $(this).children('.flyout').hide();
+    })
+  }
+
 
 	/* DISABLED BUTTONS ------------- */
 	/* Gives elements with a class of 'disabled' a return: false; */
+  
 
 });

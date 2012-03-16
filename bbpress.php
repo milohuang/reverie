@@ -1,14 +1,12 @@
 <?php get_header(); ?>
 
-	<!-- Row for main content area -->
-	<div id="content" class="row">
+		<!-- Row for main content area -->
+		<div id="content" class="twelve columns" role="main">
 	
-		<div id="main" class="twelve columns" role="main">
 			<div class="post-box">
 				<?php get_template_part('loop', 'page'); ?>
 			</div>
-		</div><!-- /#main -->
+
+		</div><!-- End Content row -->
 		
-	</div><!-- End main row -->
-	
 <?php get_footer(); ?>

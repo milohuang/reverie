@@ -1,20 +1,14 @@
 <?php get_header(); ?>
 
-	<!-- Row for main content area -->
-	<div id="content" class="row">
+		<!-- Row for main content area -->
+		<div id="content" class="eight columns" role="main">
 	
-		<div id="main" class="eight columns" role="main">
 			<div class="post-box">
 				<?php get_template_part('loop', 'index'); ?>
 			</div>
-		</div><!-- /#main -->
 
-		<aside id="sidebar" class="four columns" role="complementary">
-			<div class="sidebar-box">
-				<?php get_sidebar(); ?>
-			</div>
-		</aside><!-- /#sidebar -->
-
-	</div><!-- End Content row -->
-	
+		</div><!-- End Content row -->
+		
+		<?php get_sidebar(); ?>
+		
 <?php get_footer(); ?>

@@ -1,9 +1,8 @@
 <?php get_header(); ?>
 
-	<!-- Row for main content area -->
-	<div id="content" class="row">
+		<!-- Row for main content area -->
+		<div id="content" class="eight columns" role="main">
 	
-		<div id="main" class="twelve columns" role="main">
 			<div class="post-box">
 				<h1><?php _e('File Not Found', 'reverie'); ?></h1>
 				<div class="error">
@@ -16,9 +15,9 @@
 					<li><?php _e('Click the <a href="javascript:history.back()">Back</a> button', 'reverie'); ?></li>
 				</ul>
 			</div>
-		</div><!-- /#main -->
+
+		</div><!-- End Content row -->
 		
+		<?php get_sidebar(); ?>
 		
-	</div><!-- End main row -->
-	
 <?php get_footer(); ?>

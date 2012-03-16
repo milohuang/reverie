@@ -1,3 +1,5 @@
+		</div><!-- End Main row -->
+		
 		<footer id="content-info" role="contentinfo">
 			<div class="row">
 				<?php dynamic_sidebar("Footer"); ?>
@@ -6,17 +8,13 @@
 				<div class="four columns">
 					&copy; 2008-<?php echo date('Y'); ?> All rights reserved.
 					<br>
-					<?php bloginfo('name'); ?> is powered by <a href="http://themefortress.com/reverie/" title="Reverie Framework">Reverie Framework</a>.
+					Powered by <a href="http://themefortress.com/reverie/" title="Reverie Framework">Reverie Framework</a>.
 				</div>
 				<?php wp_nav_menu(array('theme_location' => 'utility_navigation', 'container' => false, 'menu_class' => 'eight columns footer-nav')); ?>
 			</div>
 		</footer>
 			
 	</div><!-- Container End -->
-
-	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/js/libs/jquery-1.6.4.min.js"><\/script>')</script>
 	
 	<!-- Included JS Files of Foundation -->
 	<script src="<?php echo get_template_directory_uri(); ?>/js/foundation.js"></script>
