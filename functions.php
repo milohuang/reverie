@@ -21,6 +21,21 @@ add_action('after_setup_theme', 'reverie_setup');
 
 remove_action('wp_head', 'wp_generator');
 
+// enqueue scripts
+function reverie_scripts_method() {
+
+	wp_register_script('reverie_foundation',get_template_directory_uri() . '/js/foundation.js','','',true);
+	wp_enqueue_script( 'reverie_foundation' );
+
+    wp_register_script('reverie_appjs',get_template_directory_uri() . '/js/app.js','','',true);
+    wp_enqueue_script( 'reverie_appjs' );
+
+	wp_enqueue_script( 'jquery' );
+
+}    
+ 
+add_action('wp_enqueue_scripts', 'reverie_scripts_method');
+
 // create widget areas: sidebar, footer
 $sidebars = array('Sidebar');
 foreach ($sidebars as $sidebar) {

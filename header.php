@@ -48,9 +48,6 @@
 	<!-- Startup Image iPhone (320x460) -->
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/images/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
 	
-	<!-- If jQuery already load, remove the line -->
-	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
-	
 	<script src="<?php echo get_template_directory_uri(); ?>/js/modernizr.foundation.js"></script>
 	
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
