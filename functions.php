@@ -19,6 +19,8 @@ function reverie_setup() {
 }
 add_action('after_setup_theme', 'reverie_setup');
 
+remove_action('wp_head', 'wp_generator');
+
 // create widget areas: sidebar, footer
 $sidebars = array('Sidebar');
 foreach ($sidebars as $sidebar) {
