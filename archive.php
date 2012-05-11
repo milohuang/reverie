@@ -4,7 +4,7 @@
 		<div id="content" class="eight columns" role="main">
 	
 			<div class="post-box">
-				<h1>
+				<h2>
 					<?php if (is_day()) : ?>
 						<?php printf(__('Daily Archives: %s', 'reverie'), get_the_date()); ?>
 					<?php elseif (is_month()) : ?>
@@ -14,7 +14,7 @@
 					<?php else : ?>
 						<?php single_cat_title(); ?>
 					<?php endif; ?>
-				</h1>
+				</h2>
 				<hr>
 				<?php get_template_part('loop', 'category'); ?>
 			</div>
