@@ -79,6 +79,22 @@ License URI:        http://www.opensource.org/licenses/mit-license.php
 	.footer-section { padding-bottom: 10px; padding-top: 20px; font-size: 13px; font-size: 1.3rem; font-weight: normal; }
 	.footer-nav li { display: block; float: right; padding-left: 3%; margin-bottom: 0; }
 	
+	@media only screen and (max-width: 767px) {
+        ul.footer-nav.mobile, dl.nav.mobile { width: auto; margin: 20px -20px 40px; height: auto; border-bottom: 1px solid #ccc; }
+        ul.footer-nav.mobile li { float: none; height: auto; padding-right: 0; }
+        dl.nav.mobile dt { display: none; }
+        dl.nav.mobile dd { float: none; height: auto; }
+        ul.footer-nav.mobile li a:hover { background-color: #eee; }
+        ul.footer-nav.mobile li a, dl.nav.mobile dd a { display: block; width: auto; height: auto; padding: 18px 20px; line-height: 1; border: solid 0 #ccc; border-width: 1px 0 0; margin: 0; color: #555; font-size: 15px; font-size: 1.5rem; -webkit-background-clip: padding-box; /* fix WebKit background bleed on border-radius */
+        -webkit-border-radius: 0;
+           -moz-border-radius: 0;
+                border-radius: 0;
+         }
+        ul.footer-nav.mobile li a.active, dl.nav.mobile dd a.active { height: auto; margin: 0; border-width: 1px 0 0; }
+
+        ul.footer-nav.mobile li.current-menu-item a, dl.nav.mobile dd.current-menu-item a, .nice.tabs.mobile dd.current-menu-item a { border: none; background: #00a6fc; color: #fff; margin: 0; position: static; top: 0px; height: auto; }
+    }
+	
 	/* Breadcrumb Adjustment */
 	ul.breadcrumbs li span { padding-left: 12px; }
 	ul.breadcrumbs li a { padding-left: 0; }
