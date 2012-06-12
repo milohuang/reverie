@@ -89,7 +89,15 @@
 						'depth' => 0,
 						'items_wrap' => '<dl class="nav hide-on-phones"><dt>Blog Menu:</dt>%3$s</dl>',
 						'walker' => new description_walker())
-					); ?>
+					  ); 
+					  wp_nav_menu(array(
+                                                'menu' => 'device_navigation', 
+                                                'menu_class' => 'top-nav nav-bar twelve columns hide-on-desktops',
+                                                'theme_location' => 'device_navigation', 
+                                                'container' => 'false', 
+                                                'depth' => '1', /* suppress lower levels */
+                                                'items_wrap' => '%3$s')
+                                         );?>
 				</nav>
 			</header>
 		</div>
