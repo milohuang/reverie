@@ -14,7 +14,8 @@ function reverie_setup() {
 	add_theme_support('menus');
 	register_nav_menus(array(
 		'primary_navigation' => __('Primary Navigation', 'reverie'),
-		'utility_navigation' => __('Utility Navigation', 'reverie')
+		'utility_navigation' => __('Utility Navigation', 'reverie'),
+		'device_navigation'  => __('Device Navigation', 'reverie')   //  Device navigation
 	));	
 }
 add_action('after_setup_theme', 'reverie_setup');
