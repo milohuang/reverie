@@ -1,8 +1,8 @@
 A Brief Introduction
 ====================
-Reverie Framework is an extremely versatile HTML5 WordPress framework based on ZURB's [Foundation](http://foundation.zurb.com), a powerful tool for building prototypes on any kind of devices. Reverie follows [HTML5 Boilerplate](http://html5boilerplate.com) standard and is [hNews microformat](https://www.readability.com/publishers/guidelines) ready. It is optimized for Search Engine while at the same time improve readability.
+Reverie Framework is an extremely versatile HTML5 WordPress framework based on ZURB's [Foundation](http://foundation.zurb.com), a powerful tool for building prototypes on any kind of devices. Reverie follows [HTML5 Boilerplate](http://html5boilerplate.com) standard and is [hNews microformat](https://www.readability.com/publishers/guidelines) ready. It is optimized for Search Engine while at the same time improves readability.
 
-It is extremely easy to create your blog, CMS, brochure and any other kind of sites with Reverie. You can see some [samples](http://foundation.zurb.com/prototyping.php) on ZURB and how they make these prototypes. Did I just mentioned Reverie works well with [bbPress 2.0](http://bbpress.org/) and [BuddyPress 1.5](http://buddypress.org/) even without styling?
+It is extremely easy to create your blog, CMS, brochure and any other kind of sites with Reverie. You can see some [samples](http://foundation.zurb.com/prototyping.php) on ZURB and how they make these prototypes. Did I just mention Reverie works well with [bbPress 2.0](http://bbpress.org/) and [BuddyPress 1.5](http://buddypress.org/) even without styling?
 
 ###Links of Reverie###
 * Homepage:      http://themefortress.com/reverie
