@@ -20,6 +20,36 @@ function reverie_setup() {
 }
 add_action('after_setup_theme', 'reverie_setup');
 
+add_action('init', 'reverie_scripts');
+function reverie_scripts() {
+    
+    if (!is_admin() ) {
+    	
+    	wp_deregister_script('jquery');
+    	wp_register_script('jquery', get_template_directory_uri().'/js/jquery.min.js');
+    	wp_enqueue_script('jquery');
+    	
+    	wp_register_script('foundation', get_template_directory_uri().'/js/foundation.js', array( 'jquery' ) );
+    	wp_enqueue_script('foundation');
+    	
+    	wp_register_script('modernizer', get_template_directory_uri().'/js/modernizr.foundation.js', array( 'jquery' ));
+    	wp_enqueue_script('modernizer');
+    	
+    	wp_register_script('app', get_template_directory_uri().'/js/app.js', array( 'jquery' ), false, true);
+    	wp_enqueue_script('app');
+    	
+      if ($is_IE) {
+        wp_register_script ( 'html5shim', "http://html5shim.googlecode.com/svn/trunk/html5.js" , false, true);
+        wp_enqueue_script ( 'html5shim' );
+      } 
+
+      if ( (!is_admin()) && is_singular() && comments_open() && get_option('thread_comments') )
+	wp_enqueue_script('comment-reply');
+	
+  }
+    
+}
+
 // create widget areas: sidebar, footer
 $sidebars = array('Sidebar');
 foreach ($sidebars as $sidebar) {
