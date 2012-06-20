@@ -16,10 +16,6 @@
 			
 	</div><!-- Container End -->
 	
-	<!-- Included JS Files of Foundation -->
-	<script src="<?php echo get_template_directory_uri(); ?>/js/foundation.js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/app.js"></script>
-	
 	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
 	     chromium.org/developers/how-tos/chrome-frame-getting-started -->
 	<!--[if lt IE 7]>
