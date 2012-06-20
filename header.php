@@ -48,12 +48,6 @@
 	<!-- Startup Image iPhone (320x460) -->
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/images/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
 	
-	<!-- If jQuery already load, remove the line -->
-	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
-	
-	<script src="<?php echo get_template_directory_uri(); ?>/js/modernizr.foundation.js"></script>
-	
-	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	<?php wp_head(); ?>
 </head>
 
@@ -89,7 +83,15 @@
 						'depth' => 0,
 						'items_wrap' => '<dl class="nav hide-on-phones"><dt>Blog Menu:</dt>%3$s</dl>',
 						'walker' => new description_walker())
-					); ?>
+					  ); 
+					  wp_nav_menu(array(
+                                                'menu' => 'device_navigation', 
+                                                'menu_class' => 'top-nav nav-bar twelve columns hide-on-desktops',
+                                                'theme_location' => 'device_navigation', 
+                                                'container' => 'false', 
+                                                'depth' => '1', /* suppress lower levels */
+                                                'items_wrap' => '%3$s')
+                                         );?>
 				</nav>
 			</header>
 		</div>
