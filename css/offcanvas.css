@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* Foundation 3, artfully masterminded by ZURB Addition offcanvas.css - Specific CSS for off-canvas layouts  Off canvas layout CSS/JS provided by or adapted from work by Jason Weaver and Luke Wroblewski
+ Requires: globals.css grid.css
+*/
+body.off-canvas { padding: 0; margin: 0; }
+
+.container { width: 100%; }
+
+.row { overflow: hidden; }
+
+.row .row { overflow: visible; }
+
+footer { background: #555; color: #fff; padding: 10px 0; }
+
+.paneled .container { overflow: hidden; }
+
+.paneled .row { width: 100%; }
+
+[role="main"]:before { content: " "; position: absolute; z-index: -1; top: 0; left: -100%; width: 100%; height: 100%; background: #e4e4e4; -webkit-box-shadow: inset -3px 0px 6px 0px rgba(0, 0, 0, 0.15); -moz-box-shadow: inset -3px 0px 6px 0px rgba(0, 0, 0, 0.15); box-shadow: inset -3px 0px 6px 0px rgba(0, 0, 0, 0.15); }
+
+[role="complementary"], [role="main"] { width: 100%; padding: 0 15px; display: block; position: relative; z-index: 1; -webkit-transition: 0.25s all ease-in; -moz-transition: 0.25s all ease-in; -ms-transition: 0.25s all ease-in; -o-transition: 0.25s all ease-in; transition: 0.25s all ease-in; }
+
+.paneled [role="main"] { padding: 0; }
+
+.page-panel { width: 100%; padding: 0 15px; -webkit-transition: 0.3s margin ease-in-out; -moz-transition: 0.3s margin ease-in-out; -ms-transition: 0.3s margin ease-in-out; -o-transition: 0.3s margin ease-in-out; transition: 0.3s margin ease-in-out; background: #fff; }
+
+#switchPanels { margin: 0 -15px; }
+
+.hide-extras [role="complementary"] { display: block; }
+
+[role="navigation"]#topMenu { -webkit-transition: 0.25s all ease-in; -moz-transition: 0.25s all ease-in; -ms-transition: 0.25s all ease-in; -o-transition: 0.25s all ease-in; transition: 0.25s all ease-in; }
+
+[role="navigation"]#topMenu ul { margin-top: 0; }
+
+.js [role="complementary"] { margin-left: -100%; width: 80%; float: left; z-index: 2; }
+.js [role="main"] { margin-left: 0; background: #f4f4f4; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; float: right; z-index: 1; position: relative; }
+.js .paneled [role="main"] { background: #fff; width: 500%; overflow: hidden; float: none; position: relative; left: 0; -webkit-transition: 0.15s all ease-in; -moz-transition: 0.15s all ease-in; -ms-transition: 0.15s all ease-in; -o-transition: 0.15s all ease-in; transition: 0.15s all ease-in; }
+.js .page-panel { min-height: 400px; float: left; margin: 0; width: 20%; }
+
+.active [role="complementary"] { margin-left: 0; }
+
+.active [role="main"] { margin-right: -80%; }
+
+.active-menu [role="navigation"]#topMenu { margin-top: 0 !important; }
+
+@media all and (min-width: 768px) { .js menu-button, .js .sidebar-button { display: none; }
+  .js [role="complementary"] { width: 33.34%; margin-left: 0; float: left; padding: 0 15px; }
+  .js [role="main"] { width: 66.66%; padding: 0 15px; }
+  .js .paneled [role="main"] { width: 100%; padding: 0; background: #f4f4f4; left: 0 !important; }
+  .js .page-panel { display: block; min-height: 800px; float: none; margin: 0; width: 100%; background: #f4f4f4; }
+  .js .hide-extras [role="main"] { width: 100%; }
+  .js .hide-extras [role="complementary"] { display: none; }
+  .js [role="navigation"]#topMenu { display: none; } }

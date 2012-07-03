@@ -17,7 +17,14 @@
 	</div><!-- Container End -->
 	
 	<!-- Included JS Files of Foundation -->
-	<script src="<?php echo get_template_directory_uri(); ?>/js/foundation.js"></script>
+	
+	<!-- If jQuery already load, remove the line -->
+	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.reveal.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.orbit-1.4.0.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.customforms.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.placeholder.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.tooltips.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/app.js"></script>
 	
 	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.

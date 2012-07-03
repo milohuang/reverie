@@ -1,5 +1,16 @@
-<form role="search" method="get" id="searchform" class="nice custom" action="<?php echo home_url('/'); ?>">
-	<label class="visuallyhidden" for="s"><?php _e('Search for:', 'reverie'); ?></label>
-	<input type="text" value="" name="s" id="s" class="input-text" placeholder="<?php _e('Search', 'reverie'); ?>">
-	<input type="submit" id="searchsubmit" value="<?php _e('Search', 'reverie'); ?>" class="white nice button radius">
+<form role="search" method="get" id="searchform" action="<?php echo home_url('/'); ?>">
+	<div class="row">
+	<div class="twelve columns">
+		<div class="row collapse">
+			
+			<div class="eight mobile-three columns">
+				<input type="text" value="" name="s" id="s" placeholder="<?php _e('Search', 'reverie'); ?>">
+			</div>
+			
+			<div class="four mobile-one columns">
+				<input type="submit" id="searchsubmit" value="<?php _e('Search', 'reverie'); ?>" class="postfix button">
+			</div>
+		</div>
+	</div>
+	</div>
 </form>

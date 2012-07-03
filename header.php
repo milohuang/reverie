@@ -11,11 +11,14 @@
 	<title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
 	
 	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
-	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="viewport" content="width=device-width" />
 	
 	<!-- Included Foundation CSS Files -->
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/foundation.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/app.css">
+	
+	<!-- Included Google Web Font OpenSans CSS Files -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300' rel='stylesheet' type='text/css'>
 	
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	
@@ -48,16 +51,13 @@
 	<!-- Startup Image iPhone (320x460) -->
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/images/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
 	
-	<!-- If jQuery already load, remove the line -->
-	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
-	
 	<script src="<?php echo get_template_directory_uri(); ?>/js/modernizr.foundation.js"></script>
 	
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?>
 	
 	<!-- Start the main container -->
 	<div id="container" class="container" role="document">
@@ -70,13 +70,7 @@
 					<h4 class="subheader"><?php bloginfo('description'); ?></h4>
 				</div>
 				<nav role="navigation">
-					<?php /*
-						You can use Foundation Tabs to get a better responsive design.
-					    Our navigation menu. If one isn't filled out, wp_nav_menu falls
-					    back to wp_page_menu. The menu assigned to the primary position is
-					    the one used. If none is assigned, the menu with the lowest ID is
-					    used. */
-						
+					<?php
 					    wp_nav_menu( array(
 						'theme_location' => 'primary_navigation',
 						'container' =>false,
@@ -87,8 +81,8 @@
 						'link_before' => '',
 						'link_after' => '',
 						'depth' => 0,
-						'items_wrap' => '<dl class="nav hide-on-phones"><dt>Blog Menu:</dt>%3$s</dl>',
-						'walker' => new description_walker())
+						'items_wrap' => '<ul class="nav-bar">%3$s</ul>',
+						'walker' => new reverie_walker())
 					); ?>
 				</nav>
 			</header>

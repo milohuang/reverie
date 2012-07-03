@@ -71,21 +71,21 @@
 	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
 	<p><?php printf( __('You must be <a href="%s">logged in</a> to post a comment.', 'reverie'), wp_login_url( get_permalink() ) ); ?></p>
 	<?php else : ?>
-	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform" class="nice">
+	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 		<?php if ( is_user_logged_in() ) : ?>
 		<p><?php printf(__('Logged in as <a href="%s/wp-admin/profile.php">%s</a>.', 'reverie'), get_option('siteurl'), $user_identity); ?> <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php __('Log out of this account', 'reverie'); ?>"><?php _e('Log out &raquo;', 'reverie'); ?></a></p>
 		<?php else : ?>
 		<p>
 			<label for="author"><?php _e('Name', 'reverie'); if ($req) _e(' (required)', 'reverie'); ?></label>
-			<input type="text" class="input-text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?>>
+			<input type="text" class="five" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?>>
 		</p>
 		<p>
 			<label for="email"><?php _e('Email (will not be published)', 'reverie'); if ($req) _e(' (required)', 'reverie'); ?></label>
-			<input type="email" class="input-text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?>>
+			<input type="text" class="five" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?>>
 		</p>
 		<p>
 			<label for="url"><?php _e('Website', 'reverie'); ?></label>
-			<input type="url" class="input-text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3">
+			<input type="text" class="five" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3">
 		</p>
 		<?php endif; ?>
 		<p>
@@ -93,7 +93,7 @@
 			<textarea name="comment" id="comment" tabindex="4"></textarea>
 		</p>
 		<p id="allowed_tags" class="small"><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></p>
-		<p><input name="submit" class="blue nice button radius" type="submit" id="submit" tabindex="5" value="<?php _e('Submit Comment', 'reverie'); ?>"></p>
+		<p><input name="submit" class="radius large button" type="submit" id="submit" tabindex="5" value="<?php _e('Submit Comment', 'reverie'); ?>"></p>
 		<?php comment_id_fields(); ?>
 		<?php do_action('comment_form', $post->ID); ?>
 	</form>

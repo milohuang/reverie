@@ -110,49 +110,11 @@ function image_tag($html, $id, $alt, $title) {
 }
 add_filter('get_image_tag', 'image_tag', 0, 4);
 
-// Customize the output of menus to fit the ZURB navigation style. Courtesy of Kriesi.at. http://www.kriesi.at/archives/improve-your-wordpress-navigation-menu-output
-class description_walker extends Walker_Nav_Menu
-{
-	function start_el(&$output, $item, $depth, $args)
-	{
-		global $wp_query;
-		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
-		
-		$class_names = $value = '';
-		
-		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
-		
-		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
-		$class_names = ' class="'. esc_attr( $class_names ) . '"';
-		
-		$output .= $indent . '<dd id="menu-item-'. $item->ID . '-dd"' . $value . $class_names .'>';
-		
-		$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
-		$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
-		$attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
-		$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
-		
-		$prepend = '';
-		$append = '';
-		$description  = ! empty( $item->description ) ? '' : '';
-		
-		if($depth != 0)
-		{
-			$description = $append = $prepend = "";
-		}
-		
-		$item_output = $args->before;
-		$item_output .= '<a'. $attributes .'>';
-		$item_output .= $args->link_before .$prepend.apply_filters( 'the_title', $item->title, $item->ID ).$append;
-		$item_output .= $description.$args->link_after;
-		$item_output .= '</a>';
-		$item_output .= $args->after;
-		
-		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-	}
-	function end_el(&$output, $item, $depth) {
-		$output .= "</dd>\n";
-	}
+class reverie_walker extends Walker_Nav_Menu {
+  function start_lvl(&$output, $depth) {
+    $indent = str_repeat("\t", $depth);
+    $output .= "\n$indent<a href=\"#\" class=\"flyout-toggle\"><span> </span></a><ul class=\"flyout\">\n";
+  }
 }
 
 // img unautop, Courtesy of Interconnectit http://interconnectit.com/2175/how-to-remove-p-tags-from-images-in-wordpress/
@@ -161,6 +123,33 @@ function img_unautop($pee) {
     return $pee;
 }
 add_filter( 'the_content', 'img_unautop', 30 );
+
+// Pagination
+function reverie_pagination() {
+	global $wp_query;
+ 
+	$big = 999999999; // This needs to be an unlikely integer
+ 
+	// For more options and info view the docs for paginate_links()
+	// http://codex.wordpress.org/Function_Reference/paginate_links
+	$paginate_links = paginate_links( array(
+		'base' => str_replace( $big, '%#%', get_pagenum_link($big) ),
+		'current' => max( 1, get_query_var('paged') ),
+		'total' => $wp_query->max_num_pages,
+		'mid_size' => 5,
+		'prev_next' => True,
+	    'prev_text' => __('&laquo;'),
+	    'next_text' => __('&raquo;'),
+		'type' => 'list'
+	) );
+ 
+	// Display the pagination if more than one page is found
+	if ( $paginate_links ) {
+		echo '<div class="reverie-pagination">';
+		echo $paginate_links;
+		echo '</div><!--// end .pagination -->';
+	}
+}
 
 // Presstrends
 function presstrends() {
