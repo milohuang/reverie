@@ -57,7 +57,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>
+<body <?php body_class(); ?>>
 	
 	<!-- Start the main container -->
 	<div id="container" class="container" role="document">
