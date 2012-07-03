@@ -110,12 +110,31 @@ function image_tag($html, $id, $alt, $title) {
 }
 add_filter('get_image_tag', 'image_tag', 0, 4);
 
+// Customize output for menu
 class reverie_walker extends Walker_Nav_Menu {
   function start_lvl(&$output, $depth) {
     $indent = str_repeat("\t", $depth);
     $output .= "\n$indent<a href=\"#\" class=\"flyout-toggle\"><span> </span></a><ul class=\"flyout\">\n";
   }
 }
+
+// Customize output for menu, thanks hCante
+add_filter('wp_nav_menu_objects', function ($items) {
+    $hasSub = function ($menu_item_id, &$items) {
+        foreach ($items as $item) {
+            if ($item->menu_item_parent && $item->menu_item_parent==$menu_item_id) {
+                return true;
+            }
+        }
+        return false;
+    };
+    foreach ($items as &$item) {
+        if ($hasSub($item->ID, &$items)) {
+            $item->classes[] = 'has-flyout';
+        }
+    }
+    return $items;    
+});
 
 // img unautop, Courtesy of Interconnectit http://interconnectit.com/2175/how-to-remove-p-tags-from-images-in-wordpress/
 function img_unautop($pee) {
