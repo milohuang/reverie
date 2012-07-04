@@ -118,6 +118,14 @@ class reverie_walker extends Walker_Nav_Menu {
   }
 }
 
+// Add Foundation 'active' class for the current menu item 
+add_filter('nav_menu_css_class' , function ($classes, $item){
+     if($item->current == 1){ //Notice you can change the conditional from is_single() and $item->title
+             $classes[] = "active";
+     }
+     return $classes;
+} , 10 , 2);
+
 // Customize output for menu, thanks hCante
 add_filter('wp_nav_menu_objects', function ($items) {
     $hasSub = function ($menu_item_id, &$items) {
