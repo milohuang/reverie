@@ -30,7 +30,7 @@ function reverie_css() {
      wp_enqueue_style( 'app' );
      
      // Load style.css to allow contents overwrite foundation & app css
-     wp_register_style( 'style',get_template_directory_uri() . 'style.css', false );
+     wp_register_style( 'style',get_template_directory_uri() . '/style.css', false );
      wp_enqueue_style( 'style' );
      
      wp_register_style( 'google_font',"http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300", false );
