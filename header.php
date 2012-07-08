@@ -12,25 +12,7 @@
 	
 	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="viewport" content="width=device-width" />
-	
-	<!-- Included Foundation CSS Files -->
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/foundation.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/app.css">
-	
-	<!-- Included Google Web Font OpenSans CSS Files -->
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300' rel='stylesheet' type='text/css'>
-	
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-	
-	<!--[if lt IE 9]>
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ie.css">
-	<![endif]-->
-	
-	<!-- IE Fix for HTML5 Tags -->
-	<!--[if lt IE 9]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	
+				
 	<!-- Favicon and Feed -->
 	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
@@ -51,10 +33,8 @@
 	<!-- Startup Image iPhone (320x460) -->
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/images/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
 	
-	<script src="<?php echo get_template_directory_uri(); ?>/js/modernizr.foundation.js"></script>
-	
-	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
-	<?php wp_head(); ?>
+<?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>
