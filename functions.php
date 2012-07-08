@@ -78,7 +78,7 @@ global $is_IE;
      wp_register_script( 'tooltips', get_template_directory_uri() . '/js/jquery.tooltips.js', array( 'jquery' ), false, true );
      wp_enqueue_script( 'tooltips' );
      
-     wp_register_script( 'app', get_template_directory_uri() . 'js/i7-app.js', array( 'jquery' ), false, true );
+     wp_register_script( 'app', get_template_directory_uri() . '/js/app.js', array( 'jquery' ), false, true );
      wp_enqueue_script( 'app' );
      
     
