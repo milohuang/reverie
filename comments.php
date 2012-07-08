@@ -45,7 +45,7 @@
 		<h3><?php comments_number(__('No Responses to', 'reverie'), __('One Response to', 'reverie'), __('% Responses to', 'reverie') ); ?> &#8220;<?php the_title(); ?>&#8221;</h3>
 		<ol class="commentlist">
 		<?php wp_list_comments('type=comment&callback=reverie_comments'); ?>
-		<?php // wp_list_comments(); ?>
+		
 		</ol>
 		<footer>
 			<nav id="comments-nav">
