@@ -202,15 +202,6 @@ add_filter('nav_menu_css_class' , function ($classes, $item){
      return $classes;
 } , 10 , 2);
 
-// Add additional class to submenu, thanks to awshout on Github.
-add_filter( 'nav_menu_css_class', 'check_for_submenu', 10, 2);
-    function check_for_submenu($classes, $item) {
-    global $wpdb;
-    $has_children = $wpdb->get_var("SELECT COUNT(meta_id) FROM wp_postmeta WHERE meta_key='_menu_item_menu_item_parent' AND meta_value='".$item->ID."'");
-    if ($has_children > 0) array_push($classes,'has-flyout');
-    return $classes; 
-}
-
 // img unautop, Courtesy of Interconnectit http://interconnectit.com/2175/how-to-remove-p-tags-from-images-in-wordpress/
 function img_unautop($pee) {
     $pee = preg_replace('/<p>\\s*?(<a .*?><img.*?><\\/a>|<img.*?>)?\\s*<\\/p>/s', '<figure>$1</figure>', $pee);
