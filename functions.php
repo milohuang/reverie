@@ -195,12 +195,15 @@ class reverie_walker extends Walker_Nav_Menu {
 }
 
 // Add Foundation 'active' class for the current menu item 
-add_filter('nav_menu_css_class' , function ($classes, $item){
-     if($item->current == 1){ //Notice you can change the conditional from is_single() and $item->title
-             $classes[] = "active";
-     }
-     return $classes;
-} , 10 , 2);
+function reverie_active_nav_class( $classes, $item )
+{
+    if($item->current == 1)
+    {
+        $classes[] = 'active';
+    }
+    return $classes;
+}
+add_filter( 'nav_menu_css_class', 'reverie_active_nav_class', 10, 2 );
 
 // img unautop, Courtesy of Interconnectit http://interconnectit.com/2175/how-to-remove-p-tags-from-images-in-wordpress/
 function img_unautop($pee) {
