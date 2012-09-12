@@ -9,19 +9,19 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 
 	<title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
-	
+
 	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="viewport" content="width=device-width" />
-				
+
 	<!-- Favicon and Feed -->
 	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
-	
+
 	<!--  iPhone Web App Home Screen Icon -->
 	<link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/images/devices/reverie-icon-ipad.png" />
 	<link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/images/devices/reverie-icon-retina.png" />
 	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/devices/reverie-icon.png" />
-	
+
 	<!-- Enable Startup Image for iOS Home Screen Web App -->
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/mobile-load.png" />
@@ -32,16 +32,16 @@
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/images/devices/reverie-load-ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" />
 	<!-- Startup Image iPhone (320x460) -->
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/images/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
-	
+
 <?php wp_head(); ?>
 
 </head>
 
 <body <?php body_class(); ?>>
-	
+
 	<!-- Start the main container -->
 	<div id="container" class="container" role="document">
-		
+
 		<!-- Row for blog navigation -->
 		<div class="row">
 			<header class="twelve columns" role="banner">
@@ -51,22 +51,25 @@
 				</div>
 				<nav role="navigation">
 					<?php
-					    wp_nav_menu( array(
-						'theme_location' => 'primary_navigation',
-						'container' =>false,
-						'menu_class' => '',
-						'echo' => true,
-						'before' => '',
-						'after' => '',
-						'link_before' => '',
-						'link_after' => '',
-						'depth' => 0,
-						'items_wrap' => '<ul class="nav-bar">%3$s</ul>',
-						'walker' => new reverie_walker())
-					); ?>
+						if ( has_nav_menu( 'primary_navigation' ) ):
+					    	wp_nav_menu( array(
+								'theme_location' => 'primary_navigation',
+								'container' =>false,
+								'menu_class' => '',
+								'echo' => true,
+								'before' => '',
+								'after' => '',
+								'link_before' => '',
+								'link_after' => '',
+								'depth' => 0,
+								'items_wrap' => '<ul class="nav-bar">%3$s</ul>',
+								'walker' => new reverie_walker())
+							);
+						endif;
+						?>
 				</nav>
 			</header>
 		</div>
-		
+
 		<!-- Row for main content area -->
 		<div id="main" class="row">
