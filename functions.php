@@ -257,6 +257,7 @@ function presstrends() {
 		$theme_data = wp_get_theme(get_stylesheet_directory() . '/style.css');
 		$plugin_count = count(get_option('active_plugins'));
 		$all_plugins = get_plugins();
+		$plugin_name = '';
 		foreach($all_plugins as $plugin_file => $plugin_data) {
 			$plugin_name .= $plugin_data['Name'];
 			$plugin_name .= '&';
