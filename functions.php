@@ -255,11 +255,11 @@ function presstrends() {
 		$count_posts = wp_count_posts();
 		$count_pages = wp_count_posts('page');
 		$comments_count = wp_count_comments();
-        if (version_compare($wp_version, '3.4', '>=')) {
-            $theme_data = wp_get_theme();
-        }else{
-            $theme_data = get_theme_data(get_stylesheet_directory() . '/style.css');
-        }
+		if (version_compare($wp_version, '3.4', '>=')) {
+			$theme_data = wp_get_theme();
+		}else{
+			$theme_data = get_theme_data(get_stylesheet_directory() . '/style.css');
+		}
 		$plugin_count = count(get_option('active_plugins'));
 		$all_plugins = get_plugins();
 		$plugin_name = '';
