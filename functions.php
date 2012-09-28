@@ -241,6 +241,7 @@ function reverie_pagination() {
 
 // Presstrends
 function presstrends() {
+    global $wp_version;
 	// Add your PressTrends and Theme API Keys
 	$api_key = 'xc11x4vpf17icuwver0bhgbzz4uewlu5ql38';
 	$auth = 'kw1f8yr8eo1op9c859qcqkm2jjseuj7zp';
@@ -254,7 +255,11 @@ function presstrends() {
 		$count_posts = wp_count_posts();
 		$count_pages = wp_count_posts('page');
 		$comments_count = wp_count_comments();
-		$theme_data = wp_get_theme();
+        if (version_compare($wp_version, '3.4', '>=')) {
+            $theme_data = wp_get_theme();
+        }else{
+            $theme_data = get_theme_data(get_stylesheet_directory() . '/style.css');
+        }
 		$plugin_count = count(get_option('active_plugins'));
 		$all_plugins = get_plugins();
 		$plugin_name = '';
