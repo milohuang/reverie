@@ -30,6 +30,9 @@ function reverie_css() {
      wp_register_style( 'app',get_template_directory_uri() . '/css/app.css', false );
      wp_enqueue_style( 'app' );
      
+     wp_register_style( 'offcanvas',get_template_directory_uri() . '/css/offcanvas.css', false );
+     wp_enqueue_style( 'offcanvas' );
+     
      // Load style.css to allow contents overwrite foundation & app css
      wp_register_style( 'style',get_template_directory_uri() . '/style.css', false );
      wp_enqueue_style( 'style' );
@@ -43,7 +46,7 @@ add_action( 'init', 'reverie_css' );
 
 function reverie_ie_css () {
     echo '<!--[if lt IE 9]>';
-    echo '<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ie.css">';
+    echo '<link rel="stylesheet" href="'. get_template_directory_uri().'/css/ie.css">';
     echo '<![endif]-->';
 }
 add_action( 'wp_head', 'reverie_ie_css' );
@@ -78,6 +81,9 @@ global $is_IE;
      
      wp_register_script( 'tooltips', get_template_directory_uri() . '/js/jquery.tooltips.js', array( 'jquery' ), false, true );
      wp_enqueue_script( 'tooltips' );
+     
+     wp_register_script( 'offcanvas', get_template_directory_uri() . '/js/jquery.offcanvas.js', array( 'jquery' ), false, true );
+     wp_enqueue_script( 'offcanvas' );
      
      wp_register_script( 'app', get_template_directory_uri() . '/js/app.js', array( 'jquery' ), false, true );
      wp_enqueue_script( 'app' );

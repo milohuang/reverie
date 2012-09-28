@@ -37,19 +37,19 @@
 
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('off-canvas hide-extras'); ?>>
 
 	<!-- Start the main container -->
 	<div id="container" class="container" role="document">
 
 		<!-- Row for blog navigation -->
-		<div class="row">
+		<div class="row top-header">
 			<header class="twelve columns" role="banner">
 				<div class="reverie-header">
 					<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
 					<h4 class="subheader"><?php bloginfo('description'); ?></h4>
 				</div>
-				<nav role="navigation">
+				<nav role="navigation" class="hide-for-small top-nav">
 					<?php
 						if ( has_nav_menu( 'primary_navigation' ) ):
 					    	wp_nav_menu( array(
@@ -68,8 +68,14 @@
 						endif;
 						?>
 				</nav>
+				<p class="show-for-small">
+					<a class='sidebar-button button' id="sidebarButton" href="#sidebar-off" >Menu</a>
+				</p> 
 			</header>
 		</div>
-
+		
+		<!-- Start Off-Canvas Row -->
+		<div class="row">
+		
 		<!-- Row for main content area -->
-		<div id="main" class="row">
+		<section id="main" role="main">

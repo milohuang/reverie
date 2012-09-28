@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 		<!-- Row for main content area -->
-		<div id="content" class="eight columns" role="main">
+		<div id="content" class="eight columns">
 	
 			<div class="post-box">
 				<h1>

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 		<!-- Row for main content area -->
-		<div id="content" class="twelve columns" role="main">
+		<div id="content" class="twelve columns">
 	
 			<div class="post-box">
 				<?php get_template_part('loop', 'page'); ?>

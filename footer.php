@@ -1,4 +1,28 @@
-		</div><!-- End Main row -->
+		</section><!-- End Main Section -->
+
+		<section id="sidebar-off" role="complementary">
+			<nav id="sideMenu" role="navigation">
+		    	<?php
+		    		if ( has_nav_menu( 'primary_navigation' ) ):
+		    	    	wp_nav_menu( array(
+		    				'theme_location' => 'primary_navigation',
+		    				'container' =>false,
+		    				'menu_class' => '',
+		    				'echo' => true,
+		    				'before' => '',
+		    				'after' => '',
+		    				'link_before' => '',
+		    				'link_after' => '',
+		    				'depth' => 0,
+		    				'items_wrap' => '<ul class="nav-bar">%3$s</ul>',
+		    				'walker' => new reverie_walker())
+		    			);
+		    		endif;
+		    		?>											
+		   	</nav>
+		</section>
+		
+		</div><!-- End Off-Canvas Row -->
 		
 		<footer id="content-info" role="contentinfo">
 			<div class="row">
