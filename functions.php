@@ -2,20 +2,20 @@
 function reverie_setup() {
 	// Add language supports. Please note that Reverie Framework does not include language files.
 	load_theme_textdomain('reverie', get_template_directory() . '/lang');
-	
+
 	// Add post thumbnail supports. http://codex.wordpress.org/Post_Thumbnails
 	add_theme_support('post-thumbnails');
 	// set_post_thumbnail_size(150, 150, false);
-	
+
 	// Add post formarts supports. http://codex.wordpress.org/Post_Formats
 	add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
-	
+
 	// Add menu supports. http://codex.wordpress.org/Function_Reference/register_nav_menus
 	add_theme_support('menus');
 	register_nav_menus(array(
 		'primary_navigation' => __('Primary Navigation', 'reverie'),
 		'utility_navigation' => __('Utility Navigation', 'reverie')
-	));	
+	));
 }
 add_action('after_setup_theme', 'reverie_setup');
 
@@ -23,22 +23,22 @@ add_action('after_setup_theme', 'reverie_setup');
 // Enqueue css files
 function reverie_css() {
   if ( !is_admin() ) {
-  
+
      wp_register_style( 'foundation',get_template_directory_uri() . '/css/foundation.css', false );
      wp_enqueue_style( 'foundation' );
-    
+
      wp_register_style( 'app',get_template_directory_uri() . '/css/app.css', false );
      wp_enqueue_style( 'app' );
-     
+
      // Load style.css to allow contents overwrite foundation & app css
      wp_register_style( 'style',get_template_directory_uri() . '/style.css', false );
      wp_enqueue_style( 'style' );
-     
+
      wp_register_style( 'google_font',"http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300", false );
      wp_enqueue_style( 'google_font' );
-     
+
   }
-}  
+}
 add_action( 'init', 'reverie_css' );
 
 function reverie_ie_css () {
@@ -54,41 +54,41 @@ function reverie_scripts() {
 global $is_IE;
 
   if ( !is_admin() ) {
-  
+
   // Enqueue to header
      wp_deregister_script( 'jquery' );
      wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js' );
      wp_enqueue_script( 'jquery' );
-     
+
      wp_register_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.foundation.js', array( 'jquery' ) );
      wp_enqueue_script( 'modernizr' );
- 
+
   // Enqueue to footer
      wp_register_script( 'reveal', get_template_directory_uri() . '/js/jquery.reveal.js', array( 'jquery' ), false, true );
      wp_enqueue_script( 'reveal' );
-     
+
      wp_register_script( 'orbit', get_template_directory_uri() . '/js/jquery.orbit-1.4.0.js', array( 'jquery' ), false, true );
      wp_enqueue_script( 'orbit' );
-     
+
      wp_register_script( 'custom_forms', get_template_directory_uri() . '/js/jquery.customforms.js', array( 'jquery' ), false, true );
      wp_enqueue_script( 'custom_forms' );
-     
+
      wp_register_script( 'placeholder', get_template_directory_uri() . '/js/jquery.placeholder.min.js', array( 'jquery' ), false, true );
      wp_enqueue_script( 'placeholder' );
-     
+
      wp_register_script( 'tooltips', get_template_directory_uri() . '/js/jquery.tooltips.js', array( 'jquery' ), false, true );
      wp_enqueue_script( 'tooltips' );
-     
+
      wp_register_script( 'app', get_template_directory_uri() . '/js/app.js', array( 'jquery' ), false, true );
      wp_enqueue_script( 'app' );
-     
-    
+
+
      if ($is_IE) {
         wp_register_script ( 'html5shiv', "http://html5shiv.googlecode.com/svn/trunk/html5.js" , false, true);
         wp_enqueue_script ( 'html5shiv' );
-     } 
-     
-     // Enable threaded comments 
+     }
+
+     // Enable threaded comments
      if ( (!is_admin()) && is_singular() && comments_open() && get_option('thread_comments') )
 		wp_enqueue_script('comment-reply');
   }
@@ -194,7 +194,7 @@ class reverie_walker extends Walker_Nav_Menu {
   }
 }
 
-// Add Foundation 'active' class for the current menu item 
+// Add Foundation 'active' class for the current menu item
 function reverie_active_nav_class( $classes, $item )
 {
     if($item->current == 1)
@@ -215,9 +215,9 @@ add_filter( 'the_content', 'img_unautop', 30 );
 // Pagination
 function reverie_pagination() {
 	global $wp_query;
- 
+
 	$big = 999999999; // This needs to be an unlikely integer
- 
+
 	// For more options and info view the docs for paginate_links()
 	// http://codex.wordpress.org/Function_Reference/paginate_links
 	$paginate_links = paginate_links( array(
@@ -230,7 +230,7 @@ function reverie_pagination() {
 	    'next_text' => __('&raquo;'),
 		'type' => 'list'
 	) );
- 
+
 	// Display the pagination if more than one page is found
 	if ( $paginate_links ) {
 		echo '<div class="reverie-pagination">';
@@ -241,44 +241,50 @@ function reverie_pagination() {
 
 // Presstrends
 function presstrends() {
+    global $wp_version;
+	// Add your PressTrends and Theme API Keys
+	$api_key = 'xc11x4vpf17icuwver0bhgbzz4uewlu5ql38';
+	$auth = 'kw1f8yr8eo1op9c859qcqkm2jjseuj7zp';
 
-// Add your PressTrends and Theme API Keys
-$api_key = 'xc11x4vpf17icuwver0bhgbzz4uewlu5ql38';
-$auth = 'kw1f8yr8eo1op9c859qcqkm2jjseuj7zp';
-
-// NO NEED TO EDIT BELOW
-$data = get_transient( 'presstrends_data' );
-if (!$data || $data == ''){
-$api_base = 'http://api.presstrends.io/index.php/api/sites/add/auth/';
-$url = $api_base . $auth . '/api/' . $api_key . '/';
-$data = array();
-$count_posts = wp_count_posts();
-$count_pages = wp_count_posts('page');
-$comments_count = wp_count_comments();
-$theme_data = get_theme_data(get_stylesheet_directory() . '/style.css');
-$plugin_count = count(get_option('active_plugins'));
-$all_plugins = get_plugins();
-foreach($all_plugins as $plugin_file => $plugin_data) {
-$plugin_name .= $plugin_data['Name'];
-$plugin_name .= '&';
+	// NO NEED TO EDIT BELOW
+	$data = get_transient( 'presstrends_data' );
+	if (!$data || $data == ''){
+		$api_base = 'http://api.presstrends.io/index.php/api/sites/add/auth/';
+		$url = $api_base . $auth . '/api/' . $api_key . '/';
+		$data = array();
+		$count_posts = wp_count_posts();
+		$count_pages = wp_count_posts('page');
+		$comments_count = wp_count_comments();
+		if (version_compare($wp_version, '3.4', '>=')) {
+			$theme_data = wp_get_theme();
+		}else{
+			$theme_data = get_theme_data(get_stylesheet_directory() . '/style.css');
+		}
+		$plugin_count = count(get_option('active_plugins'));
+		$all_plugins = get_plugins();
+		$plugin_name = '';
+		foreach($all_plugins as $plugin_file => $plugin_data) {
+			$plugin_name .= $plugin_data['Name'];
+			$plugin_name .= '&';
+		}
+		$data['url'] = stripslashes(str_replace(array('http://', '/', ':' ), '', site_url()));
+		$data['posts'] = $count_posts->publish;
+		$data['pages'] = $count_pages->publish;
+		$data['comments'] = $comments_count->total_comments;
+		$data['approved'] = $comments_count->approved;
+		$data['spam'] = $comments_count->spam;
+		$data['theme_version'] = $theme_data['Version'];
+		$data['theme_name'] = $theme_data['Name'];
+		$data['site_name'] = str_replace( ' ', '', get_bloginfo( 'name' ));
+		$data['plugins'] = $plugin_count;
+		$data['plugin'] = urlencode($plugin_name);
+		$data['wpversion'] = get_bloginfo('version');
+		foreach ( $data as $k => $v ) {
+			$url .= $k . '/' . $v . '/';
+		}
+		$response = wp_remote_get( $url );
+		set_transient('presstrends_data', $data, 60*60*24);
+	}
 }
-$data['url'] = stripslashes(str_replace(array('http://', '/', ':' ), '', site_url()));
-$data['posts'] = $count_posts->publish;
-$data['pages'] = $count_pages->publish;
-$data['comments'] = $comments_count->total_comments;
-$data['approved'] = $comments_count->approved;
-$data['spam'] = $comments_count->spam;
-$data['theme_version'] = $theme_data['Version'];
-$data['theme_name'] = $theme_data['Name'];
-$data['site_name'] = str_replace( ' ', '', get_bloginfo( 'name' ));
-$data['plugins'] = $plugin_count;
-$data['plugin'] = urlencode($plugin_name);
-$data['wpversion'] = get_bloginfo('version');
-foreach ( $data as $k => $v ) {
-$url .= $k . '/' . $v . '/';
-}
-$response = wp_remote_get( $url );
-set_transient('presstrends_data', $data, 60*60*24);
-}}
 add_action('admin_init', 'presstrends');
 ?>
