@@ -38,6 +38,9 @@ Reverie utilizes Foundation's grid to implement layouts. It is quite easy to sta
 * Several custom page templates are included in the package. A folder named custom is used for storing all your custom page templates. You can share your custom templates in the forum.
 * Looks good but what if you don't need these features? Sure, you can turn them off.
 
+###PressTrends###
+Thanks to the generosity of [George](https://twitter.com/prstrends) from [PressTrends](http://www.presstrends.io/), Reverie Framework is using the service to track the usage of the framework and help us to improve it. Of course, you can always disable it by removing it from functions.php.
+
 What about Mobile Devices?
 ==========================
 Positive. With the power of Foundation, Reverie uses media query to adjust for all kinds of devices, including phones, tablets and computers. Reverie is also optimized for iPhone and iPad. Icons and loading images will be display when you save your website as a Home Screen app (example in the above image). Add this page to Home Screen on any iOS devices to see what I mean.
