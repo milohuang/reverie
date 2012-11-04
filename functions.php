@@ -60,27 +60,15 @@ global $is_IE;
   
   // Enqueue to header
      wp_deregister_script( 'jquery' );
-     wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js' );
+     wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.js' );
      wp_enqueue_script( 'jquery' );
      
      wp_register_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.foundation.js', array( 'jquery' ) );
      wp_enqueue_script( 'modernizr' );
  
   // Enqueue to footer
-     wp_register_script( 'reveal', get_template_directory_uri() . '/js/jquery.reveal.js', array( 'jquery' ), false, true );
-     wp_enqueue_script( 'reveal' );
-     
-     wp_register_script( 'orbit', get_template_directory_uri() . '/js/jquery.orbit-1.4.0.js', array( 'jquery' ), false, true );
-     wp_enqueue_script( 'orbit' );
-     
-     wp_register_script( 'custom_forms', get_template_directory_uri() . '/js/jquery.customforms.js', array( 'jquery' ), false, true );
-     wp_enqueue_script( 'custom_forms' );
-     
-     wp_register_script( 'placeholder', get_template_directory_uri() . '/js/jquery.placeholder.min.js', array( 'jquery' ), false, true );
-     wp_enqueue_script( 'placeholder' );
-     
-     wp_register_script( 'tooltips', get_template_directory_uri() . '/js/jquery.tooltips.js', array( 'jquery' ), false, true );
-     wp_enqueue_script( 'tooltips' );
+     wp_register_script( 'foundation', get_template_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), false, true );
+     wp_enqueue_script( 'foundation' );
      
      wp_register_script( 'offcanvas', get_template_directory_uri() . '/js/jquery.offcanvas.js', array( 'jquery' ), false, true );
      wp_enqueue_script( 'offcanvas' );
