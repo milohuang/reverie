@@ -48,7 +48,7 @@ License URI:        http://www.opensource.org/licenses/mit-license.php
 	h1, h2, h3, h4, h5 { font-family: 'Open Sans', "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif; font-weight: 300; }
 	
 	/* Add Divider for Listed Posts */
-	.divider { background:url(images/divider.png) no-repeat center top; height:36px; margin:20px 0 27px; }	
+	.post-divider { background:url(images/divider.png) no-repeat center top; height:36px; margin:20px 0 27px; }	
 	
 	/* Add Class for Images */
 	img.alignright { float: right; margin: 0 0 18px 18px; }

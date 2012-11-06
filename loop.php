@@ -23,7 +23,7 @@
 		<footer>
 			<?php $tag = get_the_tags(); if (!$tag) { } else { ?><p><?php the_tags(); ?></p><?php } ?>
 		</footer>
-		<div class="divider"></div>
+		<div class="post-divider"></div>
 	</article>	
 <?php endwhile; // End the loop ?>
 
