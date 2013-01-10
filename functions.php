@@ -186,6 +186,13 @@ class reverie_walker extends Walker_Nav_Menu {
     $indent = str_repeat("\t", $depth);
     $output .= "\n$indent<a href=\"#\" class=\"flyout-toggle\"><span> </span></a><ul class=\"flyout\">\n";
   }
+  function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ) {
+        $id_field = $this->db_fields['id'];
+        if ( !empty( $children_elements[ $element->$id_field ] ) ) {
+            $element->classes[] = 'has-flyout';
+        }
+        Walker_Nav_Menu::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
+  }
 }
 
 // Add Foundation 'active' class for the current menu item 
