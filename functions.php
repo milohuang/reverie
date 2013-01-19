@@ -59,10 +59,6 @@ global $is_IE;
   if ( !is_admin() ) {
   
   // Enqueue to header
-     wp_deregister_script( 'jquery' );
-     wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.js' );
-     wp_enqueue_script( 'jquery' );
-     
      wp_register_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.foundation.js', array( 'jquery' ) );
      wp_enqueue_script( 'modernizr' );
  
