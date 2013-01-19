@@ -192,10 +192,8 @@ class reverie_walker extends Walker_Nav_Menu {
 }
 
 // Add Foundation 'active' class for the current menu item 
-function reverie_active_nav_class( $classes, $item )
-{
-    if($item->current == 1)
-    {
+function reverie_active_nav_class( $classes, $item ) {
+    if ( $item->current == 1 || $item->current_item_ancestor == true ) {
         $classes[] = 'active';
     }
     return $classes;
