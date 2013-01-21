@@ -1,4 +1,4 @@
-$(function() {
+(function($) {
   // Set the negative margin on the top menu for slide-menu pages
   var $selector1 = $('#topMenu'),
     events = 'click.fndtn touchstart.fndtn';
@@ -47,4 +47,4 @@ $(function() {
       $target = $(href);
     $('html, body').animate({scrollTop : $target.offset().top}, 300);
   });
-});
+})(jQuery);
