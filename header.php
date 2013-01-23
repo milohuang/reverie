@@ -51,22 +51,14 @@
 				</div>
 				<nav role="navigation" class="hide-for-small top-nav">
 					<?php
-						if ( has_nav_menu( 'primary_navigation' ) ):
-					    	wp_nav_menu( array(
-								'theme_location' => 'primary_navigation',
-								'container' =>false,
-								'menu_class' => '',
-								'echo' => true,
-								'before' => '',
-								'after' => '',
-								'link_before' => '',
-								'link_after' => '',
-								'depth' => 0,
-								'items_wrap' => '<ul class="nav-bar">%3$s</ul>',
-								'walker' => new reverie_walker())
-							);
-						endif;
-						?>
+					    wp_nav_menu( array(
+							'theme_location' => 'primary',
+							'depth' => 2,
+							'items_wrap' => '<ul class="nav-bar">%3$s</ul>',
+							'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
+							'walker' => new reverie_walker()
+						) );
+					?>
 				</nav>
 				<p class="show-for-small">
 					<a class='sidebar-button button' id="sidebarButton" href="#sidebar-off" >Menu</a>

@@ -3,22 +3,14 @@
 		<section id="sidebar-off" role="complementary">
 			<nav id="sideMenu" role="navigation">
 		    	<?php
-		    		if ( has_nav_menu( 'primary_navigation' ) ):
-		    	    	wp_nav_menu( array(
-		    				'theme_location' => 'primary_navigation',
-		    				'container' =>false,
-		    				'menu_class' => '',
-		    				'echo' => true,
-		    				'before' => '',
-		    				'after' => '',
-		    				'link_before' => '',
-		    				'link_after' => '',
-		    				'depth' => 0,
-		    				'items_wrap' => '<ul class="nav-bar">%3$s</ul>',
-		    				'walker' => new reverie_walker())
-		    			);
-		    		endif;
-		    		?>											
+		    	    wp_nav_menu( array(
+		    			'theme_location' => 'primary',
+		    			'depth' => 2,
+		    			'items_wrap' => '<ul class="nav-bar">%3$s</ul>',
+		    			'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
+		    			'walker' => new reverie_walker()
+		    		) );
+		    	?>											
 		   	</nav>
 		</section>
 		
@@ -34,7 +26,9 @@
 					<br>
 					Powered by <a href="http://themefortress.com/reverie/" rel="nofollow" title="Reverie Framework">Reverie Framework</a>.
 				</div>
-				<?php wp_nav_menu(array('theme_location' => 'utility_navigation', 'container' => false, 'menu_class' => 'eight columns footer-nav')); ?>
+				<div class="eight columns">
+					<?php wp_nav_menu(array('theme_location' => 'utility', 'container' => false, 'menu_class' => 'inline-list right')); ?>
+				</div>
 			</div>
 		</footer>
 			
