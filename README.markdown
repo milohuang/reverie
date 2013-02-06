@@ -8,6 +8,7 @@ It is extremely easy to create your blog, CMS, brochure and any other kind of si
 * Homepage:      http://themefortress.com/reverie
 * Introduction:  http://themefortress.com/blog/reverie-versatile-html5-wordpress-framework-25
 * ThemeFortress: http://themefortress.com
+* Discussion Group: https://groups.google.com/d/forum/reverie-framework
 
 ###Learn more about Foundation###
 * Homepage:      http://foundation.zurb.com  
