@@ -6,10 +6,10 @@ if you use vanilla CSS.
 function reverie_css_style()
 {	
 	// normalize stylesheet
-	wp_register_style( 'reverie-normalize-stylesheet', get_stylesheet_directory_uri() . '/css/normalize.css', array(), '' );
+	wp_register_style( 'reverie-normalize-stylesheet', get_template_directory_uri() . '/css/normalize.css', array(), '' );
 	
 	// foundation stylesheet
-	wp_register_style( 'reverie-foundation-stylesheet', get_stylesheet_directory_uri() . '/css/foundation.css', array(), '' );	
+	wp_register_style( 'reverie-foundation-stylesheet', get_template_directory_uri() . '/css/foundation.css', array(), '' );	
 	
 	// Register the main style under root directory
 	wp_register_style( 'reverie-stylesheet', get_stylesheet_directory_uri() . '/style.css', array(), '', 'all' );
