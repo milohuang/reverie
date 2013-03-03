@@ -1,26 +1,29 @@
 <?php get_header(); ?>
 
-		<!-- Row for main content area -->
-		<div id="content" class="eight columns">
+<!-- Row for main content area -->
+	<div class="small-12 large-8 columns" role="main">
 	
-			<div class="post-box">
-				<h1>
-					<?php if (is_day()) : ?>
-						<?php printf(__('Daily Archives: %s', 'reverie'), get_the_date()); ?>
-					<?php elseif (is_month()) : ?>
-						<?php printf(__('Monthly Archives: %s', 'reverie'), get_the_date('F Y')); ?>
-					<?php elseif (is_year()) : ?>
-						<?php printf(__('Yearly Archives: %s', 'reverie'), get_the_date('Y')); ?>
-					<?php else : ?>
-						<?php single_cat_title(); ?>
-					<?php endif; ?>
-				</h1>
-				<hr>
-				<?php get_template_part('loop', 'category'); ?>
-			</div>
-
-		</div><!-- End Content row -->
+	<?php if ( have_posts() ) : ?>
+	
+		<?php /* Start the Loop */ ?>
+		<?php while ( have_posts() ) : the_post(); ?>
+			<?php get_template_part( 'content', get_post_format() ); ?>
+		<?php endwhile; ?>
 		
-		<?php get_sidebar(); ?>
+		<?php else : ?>
+			<?php get_template_part( 'content', 'none' ); ?>
+		
+	<?php endif; // end have_posts() check ?>
+	
+	<?php /* Display navigation to next/previous pages when applicable */ ?>
+	<?php if ( function_exists('reverie_pagination') ) { reverie_pagination(); } else if ( is_paged() ) { ?>
+		<nav id="post-nav">
+			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'reverie' ) ); ?></div>
+			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'reverie' ) ); ?></div>
+		</nav>
+	<?php } ?>
+
+	</div>
+	<?php get_sidebar(); ?>
 		
 <?php get_footer(); ?>

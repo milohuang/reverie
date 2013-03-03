@@ -1,10 +1,13 @@
 <?php get_header(); ?>
 
-		<!-- Row for main content area -->
-		<div id="content" class="eight columns">
+<!-- Row for main content area -->
+	<div class="small-12 large-8 columns" role="main">
 	
-			<div class="post-box">
-				<h1><?php _e('File Not Found', 'reverie'); ?></h1>
+		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+			<header>
+				<h1 class="entry-title"><?php _e('File Not Found', 'reverie'); ?></h1>
+			</header>
+			<div class="entry-content">
 				<div class="error">
 					<p class="bottom"><?php _e('The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.', 'reverie'); ?></p>
 				</div>
@@ -15,9 +18,9 @@
 					<li><?php _e('Click the <a href="javascript:history.back()">Back</a> button', 'reverie'); ?></li>
 				</ul>
 			</div>
+		</article>
 
-		</div><!-- End Content row -->
-		
-		<?php get_sidebar(); ?>
+	</div>
+	<?php get_sidebar(); ?>
 		
 <?php get_footer(); ?>

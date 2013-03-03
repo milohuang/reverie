@@ -1,0 +1,95 @@
+/* Welcome and glad you are using Reverie.
+ * This is the main stylesheet loaded by default.
+ * Edit the file and have fun.
+ * http://themefortress.com/reverie */
+
+// import normalize, stay at top
+@import "normalize";
+
+// Global Foundation Settings
+@import "settings";
+
+// Comment out this import if you are customizing you imports below
+@import "foundation";
+
+/* Start to customize Reverie */
+
+// add some extra style to row to beautify custom background image
+header.row,
+.container.row,
+.row.full-width {
+	background-color: rgba(255,255,255,0.9);
+}
+
+// adjusting header
+h4.subheader {
+	margin-top: -1em;
+}
+
+// add new pagination class for WordPress, Sass is amazingly fast
+.page-numbers { @include pagination; }
+
+// customizing pagination for WordPress using Foundation mixins, this is not beautiful I know
+.page-numbers li {
+	span:hover a,
+	span a:focus {
+		background: $pagination-link-active-bg;
+	}
+	span.current {
+		background: $pagination-link-current-background;
+		padding: $pagination-link-pad;
+		color: $pagination-link-current-font-color;
+		font-weight: $pagination-link-current-font-weight;
+		cursor: $pagination-link-current-cursor;
+	}
+}
+
+// add some basic comment styles
+ol.commentlist {
+	margin-left: 0;
+	margin-top: 2em;
+	li {
+		list-style: none;
+		margin-bottom: 2em;
+	}
+		.comment-author img {
+			border-radius: 50%;
+			float: left;
+			margin: 0 1em 0 0;
+		}
+		.author-meta {
+			display: inline-block;
+		}
+			cite.fn {
+				@extend h4;
+				margin-right: 0.5em;
+			}
+		section.comment {
+			@include panel(white, 20px);
+		}
+			a.comment-reply-link {
+				float: right;
+				position: relative;
+				bottom: 1em;
+			}
+}
+
+// add some extra margin to ul
+ul {
+	margin-#{$default-float}: $list-side-margin;
+}
+
+// add some margin for images in post
+.container img {
+	margin-bottom: $paragraph-margin-bottom;
+}
+
+// adjust search button on top-bar
+input.prefix.button {
+	line-height: 1;
+}
+
+// adjust search button on sideba
+#sidebar input.prefix.button {
+	line-height: 0.7;
+}

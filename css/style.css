@@ -1,3 +1,376 @@
+/* Welcome and glad you are using Reverie.
+ * This is the main stylesheet loaded by default.
+ * Edit the file and have fun.
+ * http://themefortress.com/reverie */
+/* normalize.css v2.1.0 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 *,
 *:before,
 *:after {
@@ -965,6 +1338,7 @@ h1,
 h2,
 h3,
 h4,
+ol.commentlist cite.fn,
 h5,
 h6,
 pre,
@@ -1006,7 +1380,7 @@ p aside {
 }
 
 /* Default header styles */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, ol.commentlist cite.fn, h5, h6 {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-style: normal;
@@ -1016,7 +1390,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.2em;
   margin-bottom: 0.5em;
 }
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+h1 small, h2 small, h3 small, h4 small, ol.commentlist cite.fn small, h5 small, h6 small {
   font-size: 60%;
   color: #6f6f6f;
   line-height: 0;
@@ -1034,7 +1408,7 @@ h3 {
   font-size: 1.6875em;
 }
 
-h4 {
+h4, ol.commentlist cite.fn {
   font-size: 1.4375em;
 }
 
@@ -3021,6 +3395,8 @@ form.custom .custom.disabled {
 .joyride-tip-guide h2,
 .joyride-tip-guide h3,
 .joyride-tip-guide h4,
+.joyride-tip-guide ol.commentlist cite.fn,
+ol.commentlist .joyride-tip-guide cite.fn,
 .joyride-tip-guide h5,
 .joyride-tip-guide h6 {
   line-height: 1.25;
@@ -3527,7 +3903,7 @@ kbd {
   padding: 1.25em;
   background: #f2f2f2;
 }
-.panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6, .panel p {
+.panel h1, .panel h2, .panel h3, .panel h4, .panel ol.commentlist cite.fn, ol.commentlist .panel cite.fn, .panel h5, .panel h6, .panel p {
   color: #333333;
 }
 .panel > :first-child {
@@ -3536,11 +3912,11 @@ kbd {
 .panel > :last-child {
   margin-bottom: 0;
 }
-.panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6 {
+.panel h1, .panel h2, .panel h3, .panel h4, .panel ol.commentlist cite.fn, ol.commentlist .panel cite.fn, .panel h5, .panel h6 {
   line-height: 1;
   margin-bottom: 0.625em;
 }
-.panel h1.subheader, .panel h2.subheader, .panel h3.subheader, .panel h4.subheader, .panel h5.subheader, .panel h6.subheader {
+.panel h1.subheader, .panel h2.subheader, .panel h3.subheader, .panel h4.subheader, .panel ol.commentlist cite.subheader.fn, ol.commentlist .panel cite.subheader.fn, .panel h5.subheader, .panel h6.subheader {
   line-height: 1.4;
 }
 .panel.callout {
@@ -3553,7 +3929,7 @@ kbd {
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
-.panel.callout h1, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout h5, .panel.callout h6, .panel.callout p {
+.panel.callout h1, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout ol.commentlist cite.fn, ol.commentlist .panel.callout cite.fn, .panel.callout h5, .panel.callout h6, .panel.callout p {
   color: white;
 }
 .panel.callout > :first-child {
@@ -3562,11 +3938,11 @@ kbd {
 .panel.callout > :last-child {
   margin-bottom: 0;
 }
-.panel.callout h1, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout h5, .panel.callout h6 {
+.panel.callout h1, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout ol.commentlist cite.fn, ol.commentlist .panel.callout cite.fn, .panel.callout h5, .panel.callout h6 {
   line-height: 1;
   margin-bottom: 0.625em;
 }
-.panel.callout h1.subheader, .panel.callout h2.subheader, .panel.callout h3.subheader, .panel.callout h4.subheader, .panel.callout h5.subheader, .panel.callout h6.subheader {
+.panel.callout h1.subheader, .panel.callout h2.subheader, .panel.callout h3.subheader, .panel.callout h4.subheader, .panel.callout ol.commentlist cite.subheader.fn, ol.commentlist .panel.callout cite.subheader.fn, .panel.callout h5.subheader, .panel.callout h6.subheader {
   line-height: 1.4;
 }
 .panel.radius {
@@ -4170,4 +4546,131 @@ table tfoot tr td {
 }
 .f-dropdown.large {
   max-width: 800px;
+}
+
+/* Start to customize Reverie */
+header.row,
+.container.row,
+.row.full-width {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+h4.subheader, ol.commentlist cite.subheader.fn {
+  margin-top: -1em;
+}
+
+.page-numbers {
+  display: block;
+  height: 1.5em;
+  margin-left: -0.3125em;
+}
+.page-numbers li {
+  display: block;
+  float: left;
+  height: 1.5em;
+  color: #222222;
+  font-size: 0.875em;
+  margin-left: 0.3125em;
+}
+.page-numbers li a {
+  display: block;
+  padding: 0.0625em 0.4375em 0.0625em;
+  color: #999999;
+}
+.page-numbers li:hover a,
+.page-numbers li a:focus {
+  background: #e6e6e6;
+}
+.page-numbers li.unavailable a {
+  cursor: default;
+  color: #999999;
+}
+.page-numbers li.unavailable:hover a, .page-numbers li.unavailable a:focus {
+  background: transparent;
+}
+.page-numbers li.current a {
+  background: #2ba6cb;
+  color: white;
+  font-weight: bold;
+  cursor: default;
+}
+.page-numbers li.current a:hover, .page-numbers li.current a:focus {
+  background: #2ba6cb;
+}
+
+.page-numbers li span:hover a,
+.page-numbers li span a:focus {
+  background: #e6e6e6;
+}
+.page-numbers li span.current {
+  background: #2ba6cb;
+  padding: 0.0625em 0.4375em 0.0625em;
+  color: white;
+  font-weight: bold;
+  cursor: default;
+}
+
+ol.commentlist {
+  margin-left: 0;
+  margin-top: 2em;
+}
+ol.commentlist li {
+  list-style: none;
+  margin-bottom: 2em;
+}
+ol.commentlist .comment-author img {
+  border-radius: 50%;
+  float: left;
+  margin: 0 1em 0 0;
+}
+ol.commentlist .author-meta {
+  display: inline-block;
+}
+ol.commentlist cite.fn {
+  margin-right: 0.5em;
+}
+ol.commentlist section.comment {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e6e6e6;
+  margin-bottom: 1.25em;
+  padding: 20px;
+  background: white;
+}
+ol.commentlist section.comment h1, ol.commentlist section.comment h2, ol.commentlist section.comment h3, ol.commentlist section.comment h4, ol.commentlist section.comment cite.fn, ol.commentlist section.comment h5, ol.commentlist section.comment h6, ol.commentlist section.comment p {
+  color: #333333;
+}
+ol.commentlist section.comment > :first-child {
+  margin-top: 0;
+}
+ol.commentlist section.comment > :last-child {
+  margin-bottom: 0;
+}
+ol.commentlist section.comment h1, ol.commentlist section.comment h2, ol.commentlist section.comment h3, ol.commentlist section.comment h4, ol.commentlist section.comment cite.fn, ol.commentlist section.comment h5, ol.commentlist section.comment h6 {
+  line-height: 1;
+  margin-bottom: 0.625em;
+}
+ol.commentlist section.comment h1.subheader, ol.commentlist section.comment h2.subheader, ol.commentlist section.comment h3.subheader, ol.commentlist section.comment h4.subheader, ol.commentlist section.comment cite.subheader.fn, ol.commentlist section.comment h5.subheader, ol.commentlist section.comment h6.subheader {
+  line-height: 1.4;
+}
+ol.commentlist a.comment-reply-link {
+  float: right;
+  position: relative;
+  bottom: 1em;
+}
+
+ul {
+  margin-left: 1.125em;
+}
+
+.container img {
+  margin-bottom: 1.25em;
+}
+
+input.prefix.button {
+  line-height: 1;
+}
+
+#sidebar input.prefix.button {
+  line-height: 0.7;
 }

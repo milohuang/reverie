@@ -1,0 +1,1 @@
+Images are used for iOS devices.

@@ -2,7 +2,7 @@
 Theme Name:         Reverie
 Theme URI:          http://themefortress.com/reverie/
 Description:        Reverie is a versatile HTML5 responsive WordPress framework based on ZURB's Foundation.
-Version:            3.1.0
+Version:            4.0.0
 Author:             Zhen Huang
 Author URI:         http://themefortress.com/
 
@@ -11,116 +11,145 @@ License URI:        http://www.opensource.org/licenses/mit-license.php
 */
 
 /* -------------------------------------------------- 
-   Table of Contents
------------------------------------------------------
-:: Customized Adjustments of Foundation for WordPress
-:: Styling Basic WordPress Outputs
-:: Customize Foundation Style Pagination for WP-Pagenavi
-:: Customize for BuddyPress
-:: Your Customized Style
-*/
 
-/* ---------------------------------------------------
-   Customized Adjustments of Foundation for WordPress
---------------------------------------------------- */
- 
-	/* Foundation-specific presentation CSS by ZURB */
-	div.reverie-header { margin: 0 0 20px 0; padding: 20px 0 0 0; border-bottom: solid 1px #ccc; }
-	div.reverie-header h1 { font-weight: 500; margin-bottom: 0; padding: 0; }
-	div.reverie-header h1 a { color: #181818; }
-	div.reverie-header h1 a:hover { color: #181818; }
+	This stylesheet will not be loaded in the front
+	end by default.
 	
-	@media handheld, only screen and (max-width: 767px) {
-	header { position: relative; }
-	header .subheader { margin-bottom: 0; }
-	header .menu-action { float: left; position: relative; top: 1px; margin-top: -12px; }
-	header .menu-action .button.small { padding: 8px; }
-	header .menu-action .button.small svg { opacity: 0.5; }
-	header h1 { font-size: 27px; font-size: 2.7rem; margin-bottom: 18px; }
-	header h4 { font-size: 17px; font-size: 1.7rem; }
-	}
+	If you are using Sass, the main stylesheet in
+	css/style.css and scss/style.scss. Style.scss has
+	already loaded the main Foundation Sass and Normalize.
+	Start learning Sass today and have fun and enjoy
+	customizing Reverie.
+	
+	If you are using vanilla CSS to customize Reverie,
+	go to functions.php line 23 and follow the instruction
+	to enable CSS support, then start editing this file.
 
-/* -----------------------------------------
-   Styling Basic WordPress Outputs
------------------------------------------ */
-	
-	/* Global */
-	h1, h2, h3, h4, h5 { font-family: 'Open Sans', "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif; font-weight: 300; }
-	
-	/* Add Divider for Listed Posts */
-	.post-divider { background:url(images/divider.png) no-repeat center top; height:36px; margin:20px 0 27px; }	
-	
-	/* Add Class for Images */
-	img.alignright { float: right; margin: 0 0 18px 18px; }
-	img.alignleft { float: left; margin: 0 18px 18px 0; }
-	img.aligncenter { display: block; margin: 18px auto; }
-	
-	/* Add HTML5 Class for Images */
-	figure {
-		margin-bottom: 17px;
-	}
-	figure img {
-	height: auto;
-	border: 1px solid #DDD;
-	margin: 0 auto;
-	display: block;
-	box-shadow: 0px 2px 10px #ddd;
-	-moz-box-shadow: 0px 2px 10px #ddd;
-	-webkit-box-shadow: 0px 2px 10px #ddd;
-	border-image: initial;
-	}
-	
-	/* Add HTML5 Caption Class for Images */
-	figure.figure {	margin: 0 auto;	-webkit-border-radius: 3px;	-moz-border-radius: 3px; display: inline-block; }
-	figure.figure figcaption { padding: 8px 10px; font-size: 13px; font-size: 1.3rem; line-height: 18px; color: #555; }
-	figure.alignright.figure { float: right; margin: 0 0 18px 18px; }
-	figure.alignleft.figure { float: left; margin: 0 18px 18px 0; }
-	
-	/* Sidebar Adjustment */
-	.sidebar-section { padding-bottom: 10px; padding-top: 20px;	font-size: 13px; font-size: 1.3rem; font-weight: normal; }
-	
-	/* Footer Nav */
-	.footer-section { padding-bottom: 10px; padding-top: 20px; font-size: 13px; font-size: 1.3rem; font-weight: normal; }
-	
-	/* Overwrite Off-Canvas Style */
-	footer { background: #fff; color: inherit; padding: 10px 0; }
-	.js [role="main"] { background: inherit; }
-	.top-header { overflow: visible; }
-	#content { padding-left: 0; }
-	#sidebar { padding-right: 0; }
-	
-	/* Breadcrumb Adjustment */
-	ul.breadcrumbs li span { padding-left: 3px; }
-	ul.breadcrumbs li a { padding-left: 0; }
-	
-	/* Comment Textarea Adjustment */
-	#respond textarea { height: 100px; }	
+-------------------------------------------------- */
 
-/*  -------------------------------------------------------
-    Adjust Foundation 3 Pagination Style for WordPress
-    ---------------------------------------------------- */ 
-    
-    ul.page-numbers { display: block; height: 24px; margin-left: -5px; }
-    ul.page-numbers li {float: left; display: block; height: 24px; color: #999; font-size: 14px; margin-left: 5px; }
-    ul.page-numbers li a { display: block; padding: 1px 7px 1px; color: #555; }
-    ul.page-numbers li:hover a, ul.page-numbers li a:focus { background: #e6e6e6; }
-    ul.page-numbers li.unavailable a { cursor: default; color: #999; }
-    ul.page-numbers li.unavailable:hover a,ul.page-numbers li.unavailable a:focus { background: transparent; }
-    ul.page-numbers li span.current { background: #2ba6cb; color: #fff; font-weight: bold; cursor: default; display: block; padding: 1px 7px 1px; }    
-    
-/*  ---------------------------
-    :: Customize for BuddyPress
-    --------------------------- */
+/* Start to customize Reverie */
+header.row,
+.container.row,
+.row.full-width {
+  background-color: rgba(255, 255, 255, 0.9);
+}
 
-	.padder label + textarea { margin-top: 0; }
-	.padder #item-body #message-threads .thread-avatar img { max-width: 50px; }
-	ul.item-list.activity-list li.new_blog_post { padding-bottom: 15px; }
-    .padder select { display: inline-block; }
-    .padder div.item-list-tabs { margin: 25px 0; }
-    .padder form#whats-new-form textarea { height: 30px; }
-    .padder .button { display: inline; }
-    
-	
-/*  --------------------------
-    Your Customized Style
-    ----------------------- */
+h4.subheader, ol.commentlist cite.subheader.fn {
+  margin-top: -1em;
+}
+
+.page-numbers {
+  display: block;
+  height: 1.5em;
+  margin-left: -0.3125em;
+}
+.page-numbers li {
+  display: block;
+  float: left;
+  height: 1.5em;
+  color: #222222;
+  font-size: 0.875em;
+  margin-left: 0.3125em;
+}
+.page-numbers li a {
+  display: block;
+  padding: 0.0625em 0.4375em 0.0625em;
+  color: #999999;
+}
+.page-numbers li:hover a,
+.page-numbers li a:focus {
+  background: #e6e6e6;
+}
+.page-numbers li.unavailable a {
+  cursor: default;
+  color: #999999;
+}
+.page-numbers li.unavailable:hover a, .page-numbers li.unavailable a:focus {
+  background: transparent;
+}
+.page-numbers li.current a {
+  background: #2ba6cb;
+  color: white;
+  font-weight: bold;
+  cursor: default;
+}
+.page-numbers li.current a:hover, .page-numbers li.current a:focus {
+  background: #2ba6cb;
+}
+
+.page-numbers li span:hover a,
+.page-numbers li span a:focus {
+  background: #e6e6e6;
+}
+.page-numbers li span.current {
+  background: #2ba6cb;
+  padding: 0.0625em 0.4375em 0.0625em;
+  color: white;
+  font-weight: bold;
+  cursor: default;
+}
+
+ol.commentlist {
+  margin-left: 0;
+  margin-top: 2em;
+}
+ol.commentlist li {
+  list-style: none;
+  margin-bottom: 2em;
+}
+ol.commentlist .comment-author img {
+  border-radius: 50%;
+  float: left;
+  margin: 0 1em 0 0;
+}
+ol.commentlist .author-meta {
+  display: inline-block;
+}
+ol.commentlist cite.fn {
+  margin-right: 0.5em;
+}
+ol.commentlist section.comment {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e6e6e6;
+  margin-bottom: 1.25em;
+  padding: 20px;
+  background: white;
+}
+ol.commentlist section.comment h1, ol.commentlist section.comment h2, ol.commentlist section.comment h3, ol.commentlist section.comment h4, ol.commentlist section.comment cite.fn, ol.commentlist section.comment h5, ol.commentlist section.comment h6, ol.commentlist section.comment p {
+  color: #333333;
+}
+ol.commentlist section.comment > :first-child {
+  margin-top: 0;
+}
+ol.commentlist section.comment > :last-child {
+  margin-bottom: 0;
+}
+ol.commentlist section.comment h1, ol.commentlist section.comment h2, ol.commentlist section.comment h3, ol.commentlist section.comment h4, ol.commentlist section.comment cite.fn, ol.commentlist section.comment h5, ol.commentlist section.comment h6 {
+  line-height: 1;
+  margin-bottom: 0.625em;
+}
+ol.commentlist section.comment h1.subheader, ol.commentlist section.comment h2.subheader, ol.commentlist section.comment h3.subheader, ol.commentlist section.comment h4.subheader, ol.commentlist section.comment cite.subheader.fn, ol.commentlist section.comment h5.subheader, ol.commentlist section.comment h6.subheader {
+  line-height: 1.4;
+}
+ol.commentlist a.comment-reply-link {
+  float: right;
+  position: relative;
+  bottom: 1em;
+}
+
+ul {
+  margin-left: 1.125em;
+}
+
+.container img {
+  margin-bottom: 1.25em;
+}
+
+input.prefix.button {
+  line-height: 1;
+}
+
+#sidebar input.prefix.button {
+  line-height: 0.7;
+}
