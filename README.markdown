@@ -7,6 +7,10 @@ It is extremely easy to create your blog, CMS, brochure and any other kind of si
 ###Important###
 Please note Reverie 4 was built from groud up (almost), as well as Foundation, thus there is no easy way to upgrade from prior version. Read more about the release on [ThemeFortress](http://themefortress.com/reverie-framework-4/).
 
+###Child Theme###
+Reverie 4 supports child theme but need a simple step to activate. Check out the [instruction](http://themefortress.com/child-theme-reverie-4/) on the blog.
+
+
 ###Links of Reverie###
 * Homepage:      http://themefortress.com/reverie
 * Introduction:  http://themefortress.com/reverie-versatile-html5-wordpress-framework/
@@ -27,9 +31,9 @@ Reverie utilizes Foundation's grid to implement layouts. It is quite easy to sta
 * Sass compatible.
 * Mobile first.
 * HTML5 Boilerplate standard and is hNews microformat ready.
-* Optimized for SEO.
+* SEO friendly.
 * Basic CSS included, you can also use it as a finished theme.
-* Foundation files are separate, you can update Foundation without any problems. Of course, is is always a good idea to have some backups.
+* Foundation files are separate (for vanilla CSS version), you can update Foundation without any problems. Of course, is is always a good idea to have some backups.
 
 ###WordPress Features###
 * Clean image HTML output for TinyMCE, only class and alt are returned. Post title will be automatically used for alt.
@@ -41,10 +45,8 @@ Reverie utilizes Foundation's grid to implement layouts. It is quite easy to sta
 * Custom filter for images, will automatically wrap images with figure tag.
 * Two Widget: sidebar and footer.
 * Two menus: top navigation menu and footer information menu.
-* Template structure inspired by [Roots](http://www.rootstheme.com/). Separated loops from templates, for better WordPress practice.
 * bbPress.php included, compatible with bbPress 2.
-* Several custom page templates are included in the package. A folder named custom is used for storing all your custom page templates. You can share your custom templates in the forum.
-* Looks good but what if you don't need these features? Sure, you can turn them off.
+* Several custom page templates are included in the package.
 
 ###PressTrends###
 Thanks to the generosity of [George](https://twitter.com/prstrends) from [PressTrends](http://www.presstrends.io/), Reverie Framework is using the service to track the usage of the framework and help us to improve it. Of course, you can always disable it by removing it from functions.php.
