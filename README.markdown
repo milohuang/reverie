@@ -13,10 +13,10 @@ By default, Foundation 4 was packed with jQuery 1.9.1, that's why Reverie loads 
 Find and remove the following line in `lib/clean.php`
 
 ```php
-    // deregister WordPress built in jQuery
-    wp_deregister_script('jquery');
-    // register Google jQuery
-    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", false, null, true);
+// deregister WordPress built in jQuery
+wp_deregister_script('jquery');
+// register Google jQuery
+wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", false, null, true);
 ```
 
 WordPress now will load the bundled version, which is 1.8.3, and you can expect some of the Foundation features will not work, including the top bar. It is a trade-off at this point. However, the problem will be fixed in the upcoming 3.6 version of WordPress, which bundled with 1.9.0. Will update Reverie at that time and check back for future updates.
