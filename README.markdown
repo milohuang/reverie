@@ -7,6 +7,21 @@ It is extremely easy to create your blog, CMS, brochure and any other kind of si
 ###Important###
 Please note Reverie 4 was built from groud up (almost), as well as Foundation, thus there is no easy way to upgrade from prior version. Read more about the release on [ThemeFortress](http://themefortress.com/reverie-framework-4/).
 
+##jQuery##
+By default, Foundation 4 was packed with jQuery 1.9.1, that's why Reverie loads Google's jQuery library by deregistering WordPress's bundled version. This is a really "bad" practice and it is my duty to point out. If you encounter any jQuery problems with some of your plugins, like Lightbox, the reason may be the jQuery. Note that Google's library is not nonConflit mode, and in this case, you can do a quick fix as below.
+
+Find and remove the following line in `lib/clean.php`
+
+```php
+    // deregister WordPress built in jQuery
+    wp_deregister_script('jquery');
+    // register Google jQuery
+    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", false, null, true);
+```
+
+WordPress now will load the bundled version, which is 1.8.3, and you can expect some of the Foundation features will not work, including the top bar. It is a trade-off at this point. However, the problem will be fixed in the upcoming 3.6 version of WordPress, which bundled with 1.9.0. Will update Reverie at that time and check back for future updates.
+
+
 ###Child Theme###
 Reverie 4 supports child theme but need a simple step to activate. Check out the [instruction](http://themefortress.com/child-theme-reverie-4/) on the blog.
 
