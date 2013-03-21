@@ -139,10 +139,10 @@ ol.commentlist a.comment-reply-link {
 }
 
 ul {
-  margin-left: 1.125em;
+  margin-left: 1.25em;
 }
 
-.container img {
+figure {
   margin-bottom: 1.25em;
 }
 
@@ -152,4 +152,39 @@ input.prefix.button {
 
 #sidebar input.prefix.button {
   line-height: 0.7;
+}
+
+img.alignright {
+  float: right;
+  margin: 0 0 18px 18px;
+}
+
+img.alignleft {
+  float: left;
+  margin: 0 18px 18px 0;
+}
+
+img.aligncenter {
+  display: block;
+  margin: 18px auto;
+}
+
+figure.figure {
+  margin: 0 auto;
+  display: inline-block;
+}
+figure.figure figcaption {
+  padding: 8px 10px;
+  color: gray;
+  margin-bottom: 1.25em;
+}
+
+figure.alignright.figure {
+  float: right;
+  margin: 0 0 18px 18px;
+}
+
+figure.alignleft.figure {
+  float: left;
+  margin: 0 18px 18px 0;
 }
