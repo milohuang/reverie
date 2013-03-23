@@ -79,8 +79,8 @@ ul {
 	margin-#{$default-float}: $list-side-margin;
 }
 
-// add some margin for images in post
-.container img {
+// add some margin for embeds in post
+figure {
 	margin-bottom: $paragraph-margin-bottom;
 }
 
@@ -92,4 +92,41 @@ input.prefix.button {
 // adjust search button on sideba
 #sidebar input.prefix.button {
 	line-height: 0.7;
+}
+
+// Add Class for Images
+img.alignright {
+	float: right;
+	margin: 0 0 18px 18px;
+}
+	
+img.alignleft {
+	float: left;
+	margin: 0 18px 18px 0;
+}
+
+img.aligncenter {
+	display: block;
+	margin: 18px auto;
+	}
+
+// Add HTML5 Caption Class for Images
+figure.figure {
+	margin: 0 auto;
+	display: inline-block;
+	figcaption {
+		padding: 8px 10px;
+		color: gray;
+		margin-bottom: $paragraph-margin-bottom;
+	}
+}
+
+figure.alignright.figure {
+	float: right;
+	margin: 0 0 18px 18px;
+}
+
+figure.alignleft.figure {
+	float: left;
+	margin: 0 18px 18px 0;
 }

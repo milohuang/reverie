@@ -39,7 +39,7 @@
 
 <body <?php body_class(); ?>>
 
-<div class="contain-to-grid sticky">
+<div class="contain-to-grid">
 	<!-- Starting the Top-Bar -->
 	<nav class="top-bar">
 	    <ul class="title-area">
