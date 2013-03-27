@@ -25,7 +25,7 @@ function presstrends_theme() {
 				$theme_name    = urlencode( $theme_data->Name );
 				$theme_version = $theme_data->Version;
 			} else {
-				$theme_data = get_theme_data( get_stylesheet_directory() . '/style.css' );
+				$theme_data = wp_get_theme( get_stylesheet_directory() . '/style.css' );
 				$theme_name = $theme_data['Name'];
 				$theme_versino = $theme_data['Version'];
 			}
