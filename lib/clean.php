@@ -122,7 +122,7 @@ function reverie_scripts_and_styles() {
     wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", false, null, true);
 
 	// register jQuery noConflict mode script
-	wp_register_script( 'jquery-noconflict', get_stylesheet_directory_uri() . '/js/jQuery-noConflict.js', array('jquery'), '1.0', true );
+	wp_register_script( 'jquery-noconflict', get_template_directory_uri() . '/js/jQuery-noConflict.js', array('jquery'), '1.0', true );
 	
 	// register jQuery Migrate plugin (from code.jquery.com – "The minified production file is compressed and does not generate console warnings.")
 	wp_register_script( 'jquery-migrate', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/jquery-migrate-1.1.1.min.js", array('jquery'), '1.1.1', true );
