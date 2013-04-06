@@ -86,7 +86,11 @@
           if (topbar.parent().hasClass('fixed')) {
             topbar.parent().removeClass('fixed');
             $('body').css('padding-top','0');
+<<<<<<< HEAD
+            window.scrollTo(0,0);
+=======
             window.scrollTo(0);
+>>>>>>> 0987acd9a169e626f34b58b7fbae3060432c0dbf
           } else if (topbar.hasClass('fixed expanded')) {
             topbar.parent().addClass('fixed');
             $('body').css('padding-top',offst);

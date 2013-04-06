@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Welcome and glad you are using Reverie.
  * This is the main stylesheet loaded by default.
  * Edit the file and have fun.
@@ -994,6 +995,7 @@ select {
 .hide-for-medium-down,
 .hide-for-large-down {
   display: none !important;
+<<<<<<< HEAD
 }
 
 /* Specific visilbity for tables */
@@ -1025,6 +1027,39 @@ th.hide-for-xlarge {
   display: table-cell !important;
 }
 
+=======
+}
+
+/* Specific visilbity for tables */
+table.show-for-small, table.show-for-medium-down, table.show-for-large-down, table.hide-for-medium, table.hide-for-medium-up, table.hide-for-large, table.hide-for-large-up, table.hide-for-xlarge {
+  display: table;
+}
+
+thead.show-for-small, thead.show-for-medium-down, thead.show-for-large-down, thead.hide-for-medium, thead.hide-for-medium-up, thead.hide-for-large, thead.hide-for-large-up, thead.hide-for-xlarge {
+  display: table-header-group !important;
+}
+
+tbody.show-for-small, tbody.show-for-medium-down, tbody.show-for-large-down, tbody.hide-for-medium, tbody.hide-for-medium-up, tbody.hide-for-large, tbody.hide-for-large-up, tbody.hide-for-xlarge {
+  display: table-row-group !important;
+}
+
+tr.show-for-small, tr.show-for-medium-down, tr.show-for-large-down, tr.hide-for-medium, tr.hide-for-medium-up, tr.hide-for-large, tr.hide-for-large-up, tr.hide-for-xlarge {
+  display: table-row !important;
+}
+
+td.show-for-small, td.show-for-medium-down, td.show-for-large-down, td.hide-for-medium, td.hide-for-medium-up, td.hide-for-large, td.hide-for-large-up, td.hide-for-xlarge,
+th.show-for-small,
+th.show-for-medium-down,
+th.show-for-large-down,
+th.hide-for-medium,
+th.hide-for-medium-up,
+th.hide-for-large,
+th.hide-for-large-up,
+th.hide-for-xlarge {
+  display: table-cell !important;
+}
+
+>>>>>>> 0987acd9a169e626f34b58b7fbae3060432c0dbf
 /* Medium Displays: 768px - 1279px */
 @media only screen and (min-width: 48em) {
   .show-for-medium,
