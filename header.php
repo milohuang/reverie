@@ -81,4 +81,5 @@
 </header>
 
 <!-- Start the main container -->
-<section class="container row" role="document">
+<section class="container" role="document">
+	<div class="row">

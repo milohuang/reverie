@@ -1,3 +1,4 @@
+	</div><!-- Row End -->
 </section><!-- Container End -->
 
 <div class="row full-width">
