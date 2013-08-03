@@ -32,6 +32,7 @@ Reverie 4 supports child theme but need a simple step to activate. Check out the
 * Homepage:      http://themefortress.com/reverie
 * Introduction:  http://themefortress.com/reverie-versatile-html5-wordpress-framework/
 * ThemeFortress: http://themefortress.com
+* Support Forum: http://themefortress.com/forum
 
 ###Learn more about Foundation###
 * Homepage:      http://foundation.zurb.com  
