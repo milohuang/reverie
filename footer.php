@@ -7,7 +7,7 @@
 
 <footer class="row full-width" role="contentinfo">
 	<div class="small-12 large-4 columns">
-		<p>&copy; <?php echo date('Y'); ?>. Crafted on <a href="http://themefortress.com/reverie/" rel="nofollow" title="Reverie Framework">Reverie</a>.</p>
+		<p>&copy; <?php echo date('Y'); ?>. <?php _e('Crafted on','reverie'); ?> <a href="http://themefortress.com/reverie/" rel="nofollow" title="Reverie Framework">Reverie</a>.</p>
 	</div>
 	
 	<div class="small-12 large-8 columns">
