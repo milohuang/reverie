@@ -1,0 +1,143 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: reverie_translation\n"
+"POT-Creation-Date: 2013-08-04 12:45+0100\n"
+"PO-Revision-Date: 2013-08-04 12:46+0100\n"
+"Last-Translator: Stefan Lorenz <stefan.lorenz@it-consulting-lorenz.de>\n"
+"Language-Team: Stefan Lorenz <stefan.lorenz@it-consulting-lorenz.de>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: /home/stefan/git/reverie\n"
+
+#: /home/stefan/git/reverie/search.php:23
+#: /home/stefan/git/reverie/index.php:21
+#: /home/stefan/git/reverie/archive.php:21
+msgid "&larr; Older posts"
+msgstr "&larr; Ältere Einträge"
+
+#: /home/stefan/git/reverie/search.php:24
+#: /home/stefan/git/reverie/index.php:22
+#: /home/stefan/git/reverie/archive.php:22
+msgid "Newer posts &rarr;"
+msgstr "Neuere Einträge &rarr;"
+
+#: /home/stefan/git/reverie/functions.php:56
+msgid "Primary Navigation"
+msgstr "Hauptmenü"
+
+#: /home/stefan/git/reverie/functions.php:57
+msgid "Utility Navigation"
+msgstr "Zusätzliches Mneü"
+
+#: /home/stefan/git/reverie/functions.php:95
+#, php-format
+msgid "Posted on %s at %s."
+msgstr "Veröffentlicht am %s um %s."
+
+#: /home/stefan/git/reverie/functions.php:96
+msgid "Written by"
+msgstr "Geschrieben von"
+
+#: /home/stefan/git/reverie/comments.php:8
+#, php-format
+msgid "<cite class=\"fn\">%s</cite>"
+msgstr "<cite class=\"fn\">%s</cite>"
+
+#: /home/stefan/git/reverie/comments.php:9
+#, php-format
+msgid "%1$s"
+msgstr "%1$s"
+
+#: /home/stefan/git/reverie/comments.php:10
+msgid "(Edit)"
+msgstr "(Bearbeiten)"
+
+#: /home/stefan/git/reverie/comments.php:31
+msgid "Please do not load this page directly. Thanks!"
+msgstr "Bitte diese Seite nicht direkt aufrufen. Danke. "
+
+#: /home/stefan/git/reverie/comments.php:46
+msgid "No Responses to"
+msgstr "Keine Kommentare zu"
+
+#: /home/stefan/git/reverie/comments.php:46
+msgid "One Response to"
+msgstr "Ein Kommentar zu "
+
+#: /home/stefan/git/reverie/comments.php:46
+msgid "% Responses to"
+msgstr "% Kommentare zu"
+
+#: /home/stefan/git/reverie/comments.php:53
+msgid "&larr; Older comments"
+msgstr "&larr; Vorherige Kommentare"
+
+#: /home/stefan/git/reverie/comments.php:54
+msgid "Newer comments &rarr;"
+msgstr "Weitere Kommentare &rarr;"
+
+#: /home/stefan/git/reverie/comments.php:70
+msgid "Leave a Reply"
+msgstr "Hinterlassen sie einen Kommentar"
+
+#: /home/stefan/git/reverie/comments.php:70
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Leave a Reply to %s"
+
+#: /home/stefan/git/reverie/comments.php:73
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+"Sie müssen  <a href=\"%s\">eingeloggt sein</a> um kommentieren zu können."
+
+#: /home/stefan/git/reverie/comments.php:77
+#, php-format
+msgid "Logged in as <a href=\"%s/wp-admin/profile.php\">%s</a>."
+msgstr ""
+
+#: /home/stefan/git/reverie/comments.php:77
+msgid "Log out of this account"
+msgstr "Abmelden"
+
+#: /home/stefan/git/reverie/page-full.php:21
+#: /home/stefan/git/reverie/single.php:17 /home/stefan/git/reverie/page.php:17
+msgid "Pages:"
+msgstr "Seiten"
+
+#: /home/stefan/git/reverie/404.php:17
+#, php-format
+msgid "Return to the <a href=\"%s\">home page</a>"
+msgstr "Zurück zur <a href=\"%s\">Startseite</a>"
+
+#: /home/stefan/git/reverie/lib/foundation.php:16
+msgid "&laquo;"
+msgstr "&laquo;"
+
+#: /home/stefan/git/reverie/lib/foundation.php:17
+msgid "&raquo;"
+msgstr "&raquo;"
+
+#: /home/stefan/git/reverie/lib/foundation.php:36
+#, php-format
+msgid ""
+"Please assign a menu to the primary menu location under %1$s or %2$s the "
+"design."
+msgstr ""
+
+#: /home/stefan/git/reverie/lib/foundation.php:37
+#, php-format
+msgid "<a href=\"%s\">Menus</a>"
+msgstr "<a href=\"%s\">Menüs</a>"
+
+#: /home/stefan/git/reverie/lib/foundation.php:40
+#, php-format
+msgid "<a href=\"%s\">Customize</a>"
+msgstr "<a href=\"%s\">Anpassen</a>"
