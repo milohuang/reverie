@@ -1,0 +1,245 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: reverie-german-translation\n"
+"POT-Creation-Date: 2013-08-04 17:52+0100\n"
+"PO-Revision-Date: 2013-08-04 18:16+0100\n"
+"Last-Translator: Stefan Lorenz <stefan.lorenz@it-consulting-lorenz.de>\n"
+"Language-Team: Stefan Lorenz <stefan.lorenz@it-consulting-lorenz.de>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: /home/stefan/git/reverie\n"
+
+#: /home/stefan/git/reverie/search.php:6
+msgid "Search Results for"
+msgstr "Suchergebnisse für"
+
+#: /home/stefan/git/reverie/search.php:23
+#: /home/stefan/git/reverie/index.php:21
+#: /home/stefan/git/reverie/archive.php:21
+msgid "&larr; Older posts"
+msgstr "&larr; Vorherige Einträge"
+
+#: /home/stefan/git/reverie/search.php:24
+#: /home/stefan/git/reverie/index.php:22
+#: /home/stefan/git/reverie/archive.php:22
+msgid "Newer posts &rarr;"
+msgstr "Neuere Einträge &rarr;"
+
+#: /home/stefan/git/reverie/content.php:16
+msgid "Continue reading..."
+msgstr "Weiterlesen"
+
+#: /home/stefan/git/reverie/functions.php:56
+msgid "Primary Navigation"
+msgstr "Hauptmenü"
+
+#: /home/stefan/git/reverie/functions.php:57
+msgid "Utility Navigation"
+msgstr "Zusätzliches Menü"
+
+#: /home/stefan/git/reverie/functions.php:95
+#, php-format
+msgid "Posted on %s at %s."
+msgstr "Veröffentlicht am %s um %s."
+
+#: /home/stefan/git/reverie/functions.php:96
+msgid "Written by"
+msgstr "Geschrieben von"
+
+#: /home/stefan/git/reverie/comments.php:8
+#, php-format
+msgid "<cite class=\"fn\">%s</cite>"
+msgstr "<cite class=\"fn\">%s</cite>"
+
+#: /home/stefan/git/reverie/comments.php:9
+#, php-format
+msgid "%1$s"
+msgstr "%1$s"
+
+#: /home/stefan/git/reverie/comments.php:10
+msgid "(Edit)"
+msgstr "(Bearbeiten)"
+
+#: /home/stefan/git/reverie/comments.php:16
+msgid "Your comment is awaiting moderation."
+msgstr "Ihr Kommentar wartet auf Freischaltung"
+
+#: /home/stefan/git/reverie/comments.php:31
+msgid "Please do not load this page directly. Thanks!"
+msgstr "Bitte rufen sie diese Seite nicht direkt auf. Danke."
+
+#: /home/stefan/git/reverie/comments.php:36
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+"Dieser Artikel ist passwortgeschützt. Bitte geben sie das Passwort ein."
+
+#: /home/stefan/git/reverie/comments.php:46
+msgid "No Responses to"
+msgstr "Keine Kommentare zu"
+
+#: /home/stefan/git/reverie/comments.php:46
+msgid "One Response to"
+msgstr "Ein Kommentar zu"
+
+#: /home/stefan/git/reverie/comments.php:46
+msgid "% Responses to"
+msgstr "%s Kommentare zu"
+
+#: /home/stefan/git/reverie/comments.php:53
+msgid "&larr; Older comments"
+msgstr "&larr; Vorherige Kommentare"
+
+#: /home/stefan/git/reverie/comments.php:54
+msgid "Newer comments &rarr;"
+msgstr "Neuere Kommentare &rarr;"
+
+#: /home/stefan/git/reverie/comments.php:63
+msgid "Comments are closed."
+msgstr "Kommentare sind geschlossen."
+
+#: /home/stefan/git/reverie/comments.php:70
+msgid "Leave a Reply"
+msgstr "Hinterlassen sie einen Kommentar"
+
+#: /home/stefan/git/reverie/comments.php:70
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Hinterlassen sie einen Kommentar zu %s"
+
+#: /home/stefan/git/reverie/comments.php:73
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+"Sie müssen <a href=\"%s\">angemeldet</a> sein um kommentieren zu dürfen. "
+
+#: /home/stefan/git/reverie/comments.php:77
+#, php-format
+msgid "Logged in as <a href=\"%s/wp-admin/profile.php\">%s</a>."
+msgstr "Angemeldet als  <a href=\"%s/wp-admin/profile.php\">%s</a>."
+
+#: /home/stefan/git/reverie/comments.php:77
+msgid "Log out of this account"
+msgstr "Von diesem Konto abmelden"
+
+#: /home/stefan/git/reverie/comments.php:77
+msgid "Log out &raquo;"
+msgstr "Abmelden &raquo;"
+
+#: /home/stefan/git/reverie/comments.php:80
+msgid "Name"
+msgstr "Name"
+
+#: /home/stefan/git/reverie/comments.php:80
+#: /home/stefan/git/reverie/comments.php:84
+msgid " (required)"
+msgstr "(benötigt)"
+
+#: /home/stefan/git/reverie/comments.php:84
+msgid "Email (will not be published)"
+msgstr "E-Mail(wird nicht veröffentlicht)"
+
+#: /home/stefan/git/reverie/comments.php:88
+msgid "Website"
+msgstr "Webseite"
+
+#: /home/stefan/git/reverie/comments.php:93
+msgid "Comment"
+msgstr "Kommentar"
+
+#: /home/stefan/git/reverie/comments.php:96
+msgid "You can use these tags:"
+msgstr "Folgende HTML-Tags können verwendet werden:"
+
+#: /home/stefan/git/reverie/comments.php:97
+msgid "Submit Comment"
+msgstr "Kommentar abschicken"
+
+#: /home/stefan/git/reverie/page-full.php:21
+#: /home/stefan/git/reverie/single.php:17 /home/stefan/git/reverie/page.php:17
+msgid "Pages:"
+msgstr "Seiten:"
+
+#: /home/stefan/git/reverie/content-none.php:12
+msgid "Nothing Found"
+msgstr "Nichts gefunden"
+
+#: /home/stefan/git/reverie/content-none.php:15
+msgid ""
+"Apologies, but no results were found. Perhaps searching will help find a "
+"related post."
+msgstr ""
+"Entschuldigung, wir konnten nichts finden. Vielleicht hilft ihnen eine Suche "
+"weiter."
+
+#: /home/stefan/git/reverie/footer.php:10
+msgid "Crafted on"
+msgstr "Basierend auf"
+
+#: /home/stefan/git/reverie/searchform.php:4
+#: /home/stefan/git/reverie/searchform.php:7
+msgid "Search"
+msgstr "Suchen"
+
+#: /home/stefan/git/reverie/404.php:8
+msgid "File Not Found"
+msgstr "Datei nicht gefunden"
+
+#: /home/stefan/git/reverie/404.php:12
+msgid ""
+"The page you are looking for might have been removed, had its name changed, "
+"or is temporarily unavailable."
+msgstr ""
+"Die Seite nach der sie suchen ist entweder entfernt worden, ihr Name ist "
+"geändert worden oder sie ist im Moment nicht verfügbar."
+
+#: /home/stefan/git/reverie/404.php:14
+msgid "Please try the following:"
+msgstr "Bitte versuchen sie folgendes:"
+
+#: /home/stefan/git/reverie/404.php:16
+msgid "Check your spelling"
+msgstr "Bitte überprüfen sie ihre Eingabe"
+
+#: /home/stefan/git/reverie/404.php:17
+#, php-format
+msgid "Return to the <a href=\"%s\">home page</a>"
+msgstr "Zurück zur<a href=\"%s\">Startseite</a>"
+
+#: /home/stefan/git/reverie/404.php:18
+msgid "Click the <a href=\"javascript:history.back()\">Back</a> button"
+msgstr ""
+"Drücken sie den <a href=\"javascript:history.back()\">Zurück</a> Button"
+
+#: /home/stefan/git/reverie/lib/foundation.php:16
+msgid "&laquo;"
+msgstr "&laquo;"
+
+#: /home/stefan/git/reverie/lib/foundation.php:17
+msgid "&raquo;"
+msgstr "&raquo;"
+
+#: /home/stefan/git/reverie/lib/foundation.php:36
+#, php-format
+msgid ""
+"Please assign a menu to the primary menu location under %1$s or %2$s the "
+"design."
+msgstr ""
+"Bitte weisen sie dem Platz für das Hauptmenü ein Menü zu. Entweder unter "
+"%1$s oder Design %2$s."
+
+#: /home/stefan/git/reverie/lib/foundation.php:37
+#, php-format
+msgid "<a href=\"%s\">Menus</a>"
+msgstr "<a href=\"%s\">Menüs</a>"
+
+#: /home/stefan/git/reverie/lib/foundation.php:40
+#, php-format
+msgid "<a href=\"%s\">Customize</a>"
+msgstr "<a href=\"%s\">Anpassen</a>"
