@@ -2,7 +2,7 @@
 Theme Name:         Reverie
 Theme URI:          http://themefortress.com/reverie/
 Description:        Reverie is a versatile HTML5 responsive WordPress framework based on ZURB's Foundation.
-Version:            4.0.0
+Version:            4.3.1
 Author:             Zhen Huang
 Author URI:         http://themefortress.com/
 
@@ -44,8 +44,6 @@ h4.subheader, ol.commentlist cite.subheader.fn {
   margin-left: -0.3125em;
 }
 .page-numbers li {
-  display: block;
-  float: left;
   height: 1.5em;
   color: #222222;
   font-size: 0.875em;
@@ -75,6 +73,10 @@ h4.subheader, ol.commentlist cite.subheader.fn {
 }
 .page-numbers li.current a:hover, .page-numbers li.current a:focus {
   background: #2ba6cb;
+}
+.page-numbers li {
+  float: left;
+  display: block;
 }
 
 .page-numbers li span:hover a,
@@ -116,14 +118,14 @@ ol.commentlist section.comment {
   padding: 20px;
   background: white;
 }
-ol.commentlist section.comment h1, ol.commentlist section.comment h2, ol.commentlist section.comment h3, ol.commentlist section.comment h4, ol.commentlist section.comment cite.fn, ol.commentlist section.comment h5, ol.commentlist section.comment h6, ol.commentlist section.comment p {
-  color: #333333;
-}
 ol.commentlist section.comment > :first-child {
   margin-top: 0;
 }
 ol.commentlist section.comment > :last-child {
   margin-bottom: 0;
+}
+ol.commentlist section.comment h1, ol.commentlist section.comment h2, ol.commentlist section.comment h3, ol.commentlist section.comment h4, ol.commentlist section.comment cite.fn, ol.commentlist section.comment h5, ol.commentlist section.comment h6, ol.commentlist section.comment p {
+  color: #333333;
 }
 ol.commentlist section.comment h1, ol.commentlist section.comment h2, ol.commentlist section.comment h3, ol.commentlist section.comment h4, ol.commentlist section.comment cite.fn, ol.commentlist section.comment h5, ol.commentlist section.comment h6 {
   line-height: 1;
@@ -139,7 +141,7 @@ ol.commentlist a.comment-reply-link {
 }
 
 ul {
-  margin-left: 1.25em;
+  margin-left: 0;
 }
 
 figure {

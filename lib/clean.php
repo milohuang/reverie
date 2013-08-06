@@ -116,17 +116,6 @@ function reverie_scripts_and_styles() {
     // comment reply script for threaded comments
     if( get_option( 'thread_comments' ) )  { wp_enqueue_script( 'comment-reply' ); }
     
-    // deregister WordPress built in jQuery
-    wp_deregister_script('jquery');
-    // register Google jQuery
-    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", false, null, true);
-
-	// register jQuery noConflict mode script
-	wp_register_script( 'jquery-noconflict', get_template_directory_uri() . '/js/jQuery-noConflict.js', array('jquery'), '1.0', true );
-	
-	// register jQuery Migrate plugin (from code.jquery.com – "The minified production file is compressed and does not generate console warnings.")
-	wp_register_script( 'jquery-migrate', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/jquery-migrate-1.1.1.min.js", array('jquery'), '1.1.1', true );
-    
     // adding Foundation scripts file in the footer
     wp_register_script( 'reverie-js', get_template_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '', true );
     
@@ -144,10 +133,6 @@ function reverie_scripts_and_styles() {
     and your site will load faster.
     */
     wp_enqueue_script( 'jquery' );
-	
-	// enqueue jQuery noConflict mode script and Migrate plugin
-	wp_enqueue_script ('jquery-noconflict');
-	wp_enqueue_script ('jquery-migrate');
 	
     wp_enqueue_script( 'reverie-js' );
     wp_enqueue_script( 'html5shiv' );
