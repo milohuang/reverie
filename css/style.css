@@ -6284,12 +6284,14 @@ img.aligncenter {
 
 figure.figure {
   margin: 0 auto;
-  display: inline-block;
+  display: table;
 }
 figure.figure figcaption {
   padding: 8px 10px;
   color: gray;
   margin-bottom: 1.25em;
+  display: table-caption;
+  caption-side: bottom;
 }
 
 figure.alignright.figure {
