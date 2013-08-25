@@ -1,0 +1,232 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Reverie\n"
+"POT-Creation-Date: 2013-08-26 00:11+0100\n"
+"PO-Revision-Date: 2013-08-26 00:11+0100\n"
+"Last-Translator: Francesco Michelini <kekko.rider@libero.it>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ../.\n"
+
+#: .././404.php:8
+msgid "File Not Found"
+msgstr "File Non Trovato"
+
+#: .././404.php:12
+msgid ""
+"The page you are looking for might have been removed, had its name changed, "
+"or is temporarily unavailable."
+msgstr ""
+"La pagina che stavi cercando potrebbe essere stata rimossa, aver cambiato "
+"nome o temporaneamente non disponibile."
+
+#: .././404.php:14
+msgid "Please try the following:"
+msgstr "Puoi sempre provare le seguenti opzioni"
+
+#: .././404.php:16
+msgid "Check your spelling"
+msgstr "Controlla lo spelling"
+
+#: .././404.php:17
+#, php-format
+msgid "Return to the <a href=\"%s\">home page</a>"
+msgstr "Ritorna alla <a href=\"%s\">home page</a>"
+
+#: .././404.php:18
+msgid "Click the <a href=\"javascript:history.back()\">Back</a> button"
+msgstr "Clicca sul pulsante <a href=\"javascript:history.back()\">Indietro</a>"
+
+#: .././archive.php:21 .././index.php:21 .././search.php:23
+msgid "&larr; Older posts"
+msgstr "&larr; Post più vecchi"
+
+#: .././archive.php:22 .././index.php:22 .././search.php:24
+msgid "Newer posts &rarr;"
+msgstr "Post più nuovi &rarr;"
+
+#: .././comments.php:8
+#, php-format
+msgid "<cite class=\"fn\">%s</cite>"
+msgstr "<cite class=\"fn\">%s</cite>"
+
+#: .././comments.php:9
+#, php-format
+msgid "%1$s"
+msgstr "%1$s"
+
+#: .././comments.php:10
+msgid "(Edit)"
+msgstr "(Modifica)"
+
+#: .././comments.php:16
+msgid "Your comment is awaiting moderation."
+msgstr "Il tuo commento è in attesa di moderazione"
+
+#: .././comments.php:31
+msgid "Please do not load this page directly. Thanks!"
+msgstr "Per piacere non caricare questa pagina direttamente. Grazie!"
+
+#: .././comments.php:36
+msgid "This post is password protected. Enter the password to view comments."
+msgstr "Questa pagina è protetta da password"
+
+#: .././comments.php:46
+msgid "No Responses to"
+msgstr "Nessun Commento su"
+
+#: .././comments.php:46
+msgid "One Response to"
+msgstr "Un Commento su"
+
+#: .././comments.php:46
+msgid "% Responses to"
+msgstr "% Commenti su"
+
+#: .././comments.php:53
+msgid "&larr; Older comments"
+msgstr "&larr; Commenti più vecchi"
+
+#: .././comments.php:54
+msgid "Newer comments &rarr;"
+msgstr "Commenti più recenti &rarr;"
+
+#: .././comments.php:63
+msgid "Comments are closed."
+msgstr "Commenti disabilitati."
+
+#: .././comments.php:70
+msgid "Leave a Reply"
+msgstr "Lascia un Commento"
+
+#: .././comments.php:70
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Lascia un commento su %s"
+
+#: .././comments.php:73
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Devi essere <a href=\"%s\">loggato</a> per poter commentare."
+
+#: .././comments.php:77
+#, php-format
+msgid "Logged in as <a href=\"%s/wp-admin/profile.php\">%s</a>."
+msgstr "Loggato come <a href=\"%s/wp-admin/profile.php\">%s</a>."
+
+#: .././comments.php:77
+msgid "Log out of this account"
+msgstr "Esegui il logout"
+
+#: .././comments.php:77
+msgid "Log out &raquo;"
+msgstr "Disconnettiti &raquo;"
+
+#: .././comments.php:80
+msgid "Name"
+msgstr "Nome"
+
+#: .././comments.php:80 .././comments.php:84
+msgid " (required)"
+msgstr "(richiesto)"
+
+#: .././comments.php:84
+msgid "Email (will not be published)"
+msgstr "Email (non sarà resa pubblica)"
+
+#: .././comments.php:88
+msgid "Website"
+msgstr "Sito internet"
+
+#: .././comments.php:93
+msgid "Comment"
+msgstr "Commento"
+
+#: .././comments.php:96
+msgid "You can use these tags:"
+msgstr "Puoi usare questi tag:"
+
+#: .././comments.php:97
+msgid "Submit Comment"
+msgstr "Invia Commento"
+
+#: .././content-none.php:12
+msgid "Nothing Found"
+msgstr "Nessun risultato"
+
+#: .././content-none.php:15
+msgid ""
+"Apologies, but no results were found. Perhaps searching will help find a "
+"related post."
+msgstr ""
+"Spiacenti, ma non è stato trovato alcun risultato. Forse eseguendo una "
+"ricerca riuscirai a trovare un articolo correlato a quello che stai cercando."
+
+#: .././content.php:16
+msgid "Continue reading..."
+msgstr "Continua a leggere..."
+
+#: .././footer.php:10
+msgid "Crafted on"
+msgstr "Basato su"
+
+#: .././functions.php:56
+msgid "Primary Navigation"
+msgstr "Navigazione Primaria"
+
+#: .././functions.php:57
+msgid "Utility Navigation"
+msgstr "Navigazione Secondaria"
+
+#: .././functions.php:95
+#, php-format
+msgid "Posted on %s at %s."
+msgstr "Pubblicato %s alle %s."
+
+#: .././functions.php:96
+msgid "Written by"
+msgstr "Scritto da"
+
+#: .././page-full.php:21 .././page.php:17 .././single.php:17
+msgid "Pages:"
+msgstr "Pagine:"
+
+#: .././search.php:6
+msgid "Search Results for"
+msgstr "Risultati Ricerca per:"
+
+#: .././searchform.php:4 .././searchform.php:7
+msgid "Search"
+msgstr "Cerca"
+
+#: .././lib/foundation.php:16
+msgid "&laquo;"
+msgstr "&laquo;"
+
+#: .././lib/foundation.php:17
+msgid "&raquo;"
+msgstr "&raquo;"
+
+#: .././lib/foundation.php:36
+#, php-format
+msgid ""
+"Please assign a menu to the primary menu location under %1$s or %2$s the "
+"design."
+msgstr ""
+"Per favore assegna un menu alla navigazione primaria dalla sezione %1$s o "
+"%2$s l'aspetto grafico."
+
+#: .././lib/foundation.php:37
+#, php-format
+msgid "<a href=\"%s\">Menus</a>"
+msgstr "<a href=\"%s\">Menu</a>"
+
+#: .././lib/foundation.php:40
+#, php-format
+msgid "<a href=\"%s\">Customize</a>"
+msgstr "<a href=\"%s\">Personalizza</a>"
