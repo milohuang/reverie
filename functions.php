@@ -37,7 +37,7 @@ require_once('lib/presstrends.php'); // load PressTrends to track the usage of R
 Add theme supports
 **********************/
 function reverie_theme_support() {
-	// Add language supports. Please note that Reverie does not include language files, not yet
+	// Add language supports.
 	load_theme_textdomain('reverie', get_template_directory() . '/lang');
 	
 	// Add post thumbnail supports. http://codex.wordpress.org/Post_Thumbnails
