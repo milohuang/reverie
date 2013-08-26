@@ -10,7 +10,7 @@ anything else you may wan to use plugins to keep things tidy.
 
 /*
 1. lib/clean.php
-    - head cleanup
+  - head cleanup
 	- post and images related cleaning
 */
 require_once('lib/clean.php'); // do all the cleaning and enqueue here
@@ -24,11 +24,15 @@ require_once('lib/enqueue-sass.php'); // do all the cleaning and enqueue if you 
 /*
 3. lib/foundation.php
 	- add pagination
-	- custom walker for top-bar and related
 */
 require_once('lib/foundation.php'); // load Foundation specific functions like top-bar
 /*
-4. lib/presstrends.php
+4. lib/nav.php
+	- custom walker for top-bar and related
+*/
+require_once('lib/nav.php'); // filter default wordpress menu classes and clean wp_nav_menu markup
+/*
+5. lib/presstrends.php
     - add PressTrends, tracks how many people are using Reverie
 */
 require_once('lib/presstrends.php'); // load PressTrends to track the usage of Reverie across the web, comment this line if you don't want to be tracked
