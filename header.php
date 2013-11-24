@@ -10,8 +10,8 @@
 
 	<title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
 
-	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
-	<meta name="viewport" content="width=device-width" />
+	<!-- Mobile viewport optimized: j.mp/mobileviewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Favicon and Feed -->
 	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
