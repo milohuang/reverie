@@ -59,7 +59,8 @@
 	            'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
 	            'walker' => new reverie_walker( array(
 	                'in_top_bar' => true,
-	                'item_type' => 'li'
+	                'item_type' => 'li',
+	                'menu_type' => 'main-menu'
 	            ) ),
 	        ) );
 	    ?>
