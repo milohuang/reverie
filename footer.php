@@ -1,17 +1,22 @@
 	</div><!-- Row End -->
-</section><!-- Container End -->
+</div><!-- Container End -->
 
-<div class="row full-width">
-	<?php dynamic_sidebar("Footer"); ?>
+<div class="full-width footer-widget">
+	<div class="row">
+		<?php dynamic_sidebar("Footer"); ?>
+	</div>
 </div>
 
-<footer class="row full-width" role="contentinfo">
-	<div class="small-12 large-4 columns">
-		<p>&copy; <?php echo date('Y'); ?>. <?php _e('Crafted on','reverie'); ?> <a href="http://themefortress.com/reverie/" rel="nofollow" title="Reverie Framework">Reverie</a>.</p>
+<footer class="full-width" role="contentinfo">
+	<div class="row">
+		<div class="large-12 columns">
+			<?php wp_nav_menu(array('theme_location' => 'utility', 'container' => false, 'menu_class' => 'inline-list')); ?>
+		</div>
 	</div>
-	
-	<div class="small-12 large-8 columns">
-		<?php wp_nav_menu(array('theme_location' => 'utility', 'container' => false, 'menu_class' => 'inline-list right')); ?>
+	<div class="row love-reverie">
+		<div class="large-12 columns">
+			<p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. <?php _e('Made with Love in','reverie'); ?> <a href="http://themefortress.com/reverie/" rel="nofollow" title="Reverie Framework">Reverie</a>.</p>
+		</div>
 	</div>
 </footer>
 

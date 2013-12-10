@@ -37,11 +37,11 @@
 
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('antialiased'); ?>>
 
-<div class="contain-to-grid">
+<header class="contain-to-grid">
 	<!-- Starting the Top-Bar -->
-	<nav class="top-bar">
+	<nav class="top-bar" data-topbar>
 	    <ul class="title-area">
 	        <li class="name">
 	        	<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -64,23 +64,25 @@
 	            ) ),
 	        ) );
 	    ?>
-	    <ul class="right">
-	    	<li class="divider hide-for-small"></li>
-	    	<li class="has-form"><?php get_search_form(); ?></li>
-	    </ul>
+	    <?php
+	        wp_nav_menu( array(
+	            'theme_location' => 'additional',
+	            'container' => false,
+	            'depth' => 0,
+	            'items_wrap' => '<ul class="right">%3$s</ul>',
+	            'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
+	            'walker' => new reverie_walker( array(
+	                'in_top_bar' => true,
+	                'item_type' => 'li',
+	                'menu_type' => 'main-menu'
+	            ) ),
+	        ) );
+	    ?>
 	    </section>
 	</nav>
 	<!-- End of Top-Bar -->
-</div>
-
-<header class="row" role="banner">
-	<div class="small-12 columns">
-		<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
-		<h4 class="subheader"><?php bloginfo('description'); ?></h4>
-		<hr/>
-	</div>
 </header>
 
 <!-- Start the main container -->
-<section class="container" role="document">
+<div class="container" role="document">
 	<div class="row">

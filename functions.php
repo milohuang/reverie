@@ -15,19 +15,11 @@ anything else you may wan to use plugins to keep things tidy.
 */
 require_once('lib/clean.php'); // do all the cleaning and enqueue here
 
-if(!function_exists('init_css_sass')) :
-    function init_css_sass(){
-        /*
-        2. lib/enqueue-sass.php or enqueue-css.php
-            - enqueueing scripts & styles for Sass OR CSS
-            - please use either Sass OR CSS, having two enabled will ruin your weekend
-        */
-        require_once('lib/enqueue-sass.php'); // do all the cleaning and enqueue if you Sass to customize Reverie
-        //require_once('lib/enqueue-css.php'); // to use CSS for customization, uncomment this line and comment the above Sass line
-    }
-endif;
-
-init_css_sass();
+/*
+2. lib/enqueue-style.php
+    - enqueue Foundation and Reverie CSS
+*/
+require_once('lib/enqueue-style.php');
 
 /*
 3. lib/foundation.php
@@ -55,6 +47,9 @@ function reverie_theme_support() {
     // Add post thumbnail supports. http://codex.wordpress.org/Post_Thumbnails
     add_theme_support('post-thumbnails');
     // set_post_thumbnail_size(150, 150, false);
+    add_image_size( 'fd-lrg', 1024, 99999);
+    add_image_size( 'fd-med', 768, 99999);
+    add_image_size( 'fd-sm', 320, 9999);
 
     // rss thingy
     add_theme_support('automatic-feed-links');
@@ -66,8 +61,57 @@ function reverie_theme_support() {
     add_theme_support('menus');
     register_nav_menus(array(
         'primary' => __('Primary Navigation', 'reverie'),
+        'additional' => __('Additional Navigation', 'reverie'),
         'utility' => __('Utility Navigation', 'reverie')
     ));
+
+    $menuname = 'Reverie Menu';
+    $menulocation = 'additional';
+    // Does the menu exist already?
+    $menu_exists = wp_get_nav_menu_object( $menuname );
+
+    // If it doesn't exist, let's create it.
+    if( !$menu_exists){
+        $menu_id = wp_create_nav_menu($menuname);
+
+        // Set up default Reverie links and add them to the menu.
+        $reverie_menu = wp_update_nav_menu_item($menu_id, 0, array(
+            'menu-item-title' =>  __('Made with Love in Reverie'),
+            'menu-item-url' => home_url( '/' ), 
+            'menu-item-status' => 'publish'));
+
+        wp_update_nav_menu_item($menu_id, 0, array(
+            'menu-item-title' =>  __('Reverie Official Website'),
+            'menu-item-url' => 'http://themefortress.com/reverie/',
+            'menu-item-parent-id' => $reverie_menu,
+            'menu-item-status' => 'publish'));
+
+        wp_update_nav_menu_item($menu_id, 0, array(
+            'menu-item-title' =>  __('Reverie Support Forum'),
+            'menu-item-url' => 'http://themefortress.com/forum/',
+            'menu-item-parent-id' => $reverie_menu,
+            'menu-item-status' => 'publish'));
+
+        wp_update_nav_menu_item($menu_id, 0, array(
+            'menu-item-title' =>  __('Reverie Github Repo'),
+            'menu-item-url' => 'https://github.com/milohuang/reverie/',
+            'menu-item-parent-id' => $reverie_menu,
+            'menu-item-status' => 'publish'));
+
+        wp_update_nav_menu_item($menu_id, 0, array(
+            'menu-item-title' =>  __('ZURB Foundation'),
+            'menu-item-url' => 'http://foundation.zurb.com/',
+            'menu-item-parent-id' => $reverie_menu,
+            'menu-item-status' => 'publish'));
+
+        // Grab the theme locations and assign our newly-created menu
+        // to the Reverie menu location.
+        if( !has_nav_menu( $menulocation ) ){
+            $locations = get_theme_mod('nav_menu_locations');
+            $locations[$menulocation] = $menu_id;
+            set_theme_mod( 'nav_menu_locations', $locations );
+        }
+    }
 
     // Add custom background support
     add_theme_support( 'custom-background',
@@ -86,27 +130,27 @@ add_action('after_setup_theme', 'reverie_theme_support'); /* end Reverie theme s
 $sidebars = array('Sidebar');
 foreach ($sidebars as $sidebar) {
     register_sidebar(array('name'=> $sidebar,
-        'before_widget' => '<article id="%1$s" class="row widget %2$s"><div class="small-12 columns">',
-        'after_widget' => '</div></article>',
-        'before_title' => '<h6><strong>',
-        'after_title' => '</strong></h6>'
+        'before_widget' => '<article id="%1$s" class="panel widget %2$s">',
+        'after_widget' => '</article>',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>'
     ));
 }
 $sidebars = array('Footer');
 foreach ($sidebars as $sidebar) {
     register_sidebar(array('name'=> $sidebar,
-        'before_widget' => '<article id="%1$s" class="large-4 columns widget %2$s">',
-        'after_widget' => '</article>',
-        'before_title' => '<h6><strong>',
-        'after_title' => '</strong></h6>'
+        'before_widget' => '<div class="large-3 columns"><article id="%1$s" class="panel widget %2$s">',
+        'after_widget' => '</article></div>',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>'
     ));
 }
 
 // return entry meta information for posts, used by multiple loops.
 if(!function_exists('reverie_entry_meta')) :
     function reverie_entry_meta() {
-        echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. sprintf(__('Posted on %s at %s.', 'reverie'), get_the_time('l, F jS, Y'), get_the_time()) .'</time>';
-        echo '<p class="byline author">'. __('Written by', 'reverie') .' <a href="'. get_author_posts_url(get_the_author_meta('ID')) .'" rel="author" class="fn">'. get_the_author() .'</a></p>';
+        echo '<span class="byline author">'. __('Written by', 'reverie') .' <a href="'. get_author_posts_url(get_the_author_meta('ID')) .'" rel="author" class="fn">'. get_the_author() .', </a></span>';
+        echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. get_the_time('F jS, Y') .'</time>';
     }
 endif;
 ?>

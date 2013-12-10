@@ -108,7 +108,10 @@ function reverie_scripts_and_styles() {
   if (!is_admin()) {
 
     // modernizr (without media query polyfill)
-    wp_register_script( 'reverie-modernizr', get_template_directory_uri() . '/js/vendor/custom.modernizr.js', array(), '2.6.2', false );
+    wp_register_script( 'reverie-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.6.2', false );
+
+    // register Google font
+    wp_register_style('google-font', 'http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Lora:400,700|Droid+Sans+Mono');
 
     // ie-only style sheet
     wp_register_style( 'reverie-ie-only', get_template_directory_uri() . '/css/ie.css', array(), '' );
@@ -126,6 +129,7 @@ function reverie_scripts_and_styles() {
 
     // enqueue styles and scripts
     wp_enqueue_script( 'reverie-modernizr' );
+    wp_enqueue_style( 'google-font' );
     wp_enqueue_style('reverie-ie-only');
     /*
     I recommend using a plugin to call jQuery

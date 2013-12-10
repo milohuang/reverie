@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!-- Row for main content area -->
-	<div class="small-12 large-8 columns" role="main">
+	<div class="small-12 large-8 columns" id="content" role="main">
 	
 	<?php /* Start loop */ ?>
 	<?php while (have_posts()) : the_post(); ?>
@@ -15,10 +15,22 @@
 			</div>
 			<footer>
 				<?php wp_link_pages(array('before' => '<nav id="page-nav"><p>' . __('Pages:', 'reverie'), 'after' => '</p></nav>' )); ?>
-				<p><?php the_tags(); ?></p>
+				<p class="entry-tags"><?php the_tags(); ?></p>
+				<?php edit_post_link('Edit this Post'); ?>
 			</footer>
-			<?php comments_template(); ?>
 		</article>
+		<div class="entry-author panel">
+			<div class="row">
+				<div class="large-3 columns">
+					<?php echo get_avatar( get_the_author_meta('user_email'), 95 ); ?>
+				</div>
+				<div class="large-9 columns">
+					<h4><?php the_author_posts_link(); ?></h4>
+					<p class="cover-description"><?php the_author_meta('description'); ?></p>
+				</div>
+			</div>
+		</div>
+		<?php comments_template(); ?>
 	<?php endwhile; // End the loop ?>
 
 	</div>
