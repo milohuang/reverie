@@ -65,54 +65,6 @@ function reverie_theme_support() {
         'utility' => __('Utility Navigation', 'reverie')
     ));
 
-    $menuname = 'Reverie Menu';
-    $menulocation = 'additional';
-    // Does the menu exist already?
-    $menu_exists = wp_get_nav_menu_object( $menuname );
-
-    // If it doesn't exist, let's create it.
-    if( !$menu_exists){
-        $menu_id = wp_create_nav_menu($menuname);
-
-        // Set up default Reverie links and add them to the menu.
-        $reverie_menu = wp_update_nav_menu_item($menu_id, 0, array(
-            'menu-item-title' =>  __('Made with Love in Reverie'),
-            'menu-item-url' => home_url( '/' ), 
-            'menu-item-status' => 'publish'));
-
-        wp_update_nav_menu_item($menu_id, 0, array(
-            'menu-item-title' =>  __('Reverie Official Website'),
-            'menu-item-url' => 'http://themefortress.com/reverie/',
-            'menu-item-parent-id' => $reverie_menu,
-            'menu-item-status' => 'publish'));
-
-        wp_update_nav_menu_item($menu_id, 0, array(
-            'menu-item-title' =>  __('Reverie Support Forum'),
-            'menu-item-url' => 'http://themefortress.com/forum/',
-            'menu-item-parent-id' => $reverie_menu,
-            'menu-item-status' => 'publish'));
-
-        wp_update_nav_menu_item($menu_id, 0, array(
-            'menu-item-title' =>  __('Reverie Github Repo'),
-            'menu-item-url' => 'https://github.com/milohuang/reverie/',
-            'menu-item-parent-id' => $reverie_menu,
-            'menu-item-status' => 'publish'));
-
-        wp_update_nav_menu_item($menu_id, 0, array(
-            'menu-item-title' =>  __('ZURB Foundation'),
-            'menu-item-url' => 'http://foundation.zurb.com/',
-            'menu-item-parent-id' => $reverie_menu,
-            'menu-item-status' => 'publish'));
-
-        // Grab the theme locations and assign our newly-created menu
-        // to the Reverie menu location.
-        if( !has_nav_menu( $menulocation ) ){
-            $locations = get_theme_mod('nav_menu_locations');
-            $locations[$menulocation] = $menu_id;
-            set_theme_mod( 'nav_menu_locations', $locations );
-        }
-    }
-
     // Add custom background support
     add_theme_support( 'custom-background',
         array(
