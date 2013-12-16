@@ -5,7 +5,6 @@ if you use Sass.
 *********************/
 function reverie_enqueue_style()
 {
-
 	// foundation stylesheet
 	wp_register_style( 'reverie-foundation-stylesheet', get_template_directory_uri() . '/css/app.css', array(), '' );
 
@@ -22,7 +21,6 @@ function reverie_enqueue_style()
 		
 		wp_enqueue_style( 'reverie-child-stylesheet' );
 	}
-	
 }
 add_action( 'wp_enqueue_scripts', 'reverie_enqueue_style' );
 ?>
