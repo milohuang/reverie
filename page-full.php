@@ -5,7 +5,7 @@ Template Name: Full Width
 get_header(); ?>
 
 <!-- Row for main content area -->
-	<div class="small-12 large-12 columns" role="main">
+	<div class="small-12 large-12 columns" id="content" role="main">
 	
 	<?php /* Start loop */ ?>
 	<?php while (have_posts()) : the_post(); ?>
