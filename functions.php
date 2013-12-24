@@ -82,6 +82,7 @@ add_action('after_setup_theme', 'reverie_theme_support'); /* end Reverie theme s
 $sidebars = array('Sidebar');
 foreach ($sidebars as $sidebar) {
     register_sidebar(array('name'=> $sidebar,
+    	'id' => 'Sidebar',
         'before_widget' => '<article id="%1$s" class="panel widget %2$s">',
         'after_widget' => '</article>',
         'before_title' => '<h4>',
@@ -91,6 +92,7 @@ foreach ($sidebars as $sidebar) {
 $sidebars = array('Footer');
 foreach ($sidebars as $sidebar) {
     register_sidebar(array('name'=> $sidebar,
+    	'id' => 'Footer'
         'before_widget' => '<div class="large-3 columns"><article id="%1$s" class="panel widget %2$s">',
         'after_widget' => '</article></div>',
         'before_title' => '<h4>',
