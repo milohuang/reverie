@@ -54,10 +54,10 @@ function reverie_theme_support() {
     // rss thingy
     add_theme_support('automatic-feed-links');
 
-    // Add post formarts supports. http://codex.wordpress.org/Post_Formats
+    // Add post formats support. http://codex.wordpress.org/Post_Formats
     add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
 
-    // Add menu supports. http://codex.wordpress.org/Function_Reference/register_nav_menus
+    // Add menu support. http://codex.wordpress.org/Function_Reference/register_nav_menus
     add_theme_support('menus');
     register_nav_menus(array(
         'primary' => __('Primary Navigation', 'reverie'),
