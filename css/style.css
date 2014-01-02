@@ -513,6 +513,15 @@ footer.full-width .love-reverie {
   padding-top: 1.5rem;
 }
 
+.admin-bar > .fixed {
+  margin-top: 2rem;
+}
+
+
+.f-topbar-fixed > .container {
+  margin-top: 2rem;
+}
+
 @media only screen {
   .entry-author .avatar {
     margin-bottom: 1.25rem;
