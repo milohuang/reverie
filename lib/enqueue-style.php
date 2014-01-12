@@ -17,7 +17,7 @@ function reverie_enqueue_style()
 	// Register child theme style if using child theme
 	if ( is_child_theme() ) {
 	
-		wp_register_style( 'reverie-child-stylesheet', get_stylesheet_directory_uri() . '/style.css', array(), '', 'all' );
+		wp_register_style( 'reverie-child-stylesheet', get_stylesheet_directory_uri() . '/css/style.css', array(), '', 'all' );
 		
 		wp_enqueue_style( 'reverie-child-stylesheet' );
 	}
