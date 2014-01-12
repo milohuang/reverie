@@ -1,14 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Reverie\n"
-"POT-Creation-Date: 2013-08-26 00:11+0100\n"
-"PO-Revision-Date: 2013-08-26 00:11+0100\n"
+"POT-Creation-Date: 2013-12-27 22:31+0100\n"
+"PO-Revision-Date: 2013-12-27 22:32+0100\n"
 "Last-Translator: Francesco Michelini <kekko.rider@libero.it>\n"
 "Language-Team: \n"
+"Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.6.3\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ../.\n"
@@ -151,10 +152,6 @@ msgstr "Commento"
 msgid "You can use these tags:"
 msgstr "Puoi usare questi tag:"
 
-#: .././comments.php:97
-msgid "Submit Comment"
-msgstr "Invia Commento"
-
 #: .././content-none.php:12
 msgid "Nothing Found"
 msgstr "Nessun risultato"
@@ -167,28 +164,23 @@ msgstr ""
 "Spiacenti, ma non è stato trovato alcun risultato. Forse eseguendo una "
 "ricerca riuscirai a trovare un articolo correlato a quello che stai cercando."
 
-#: .././content.php:16
-msgid "Continue reading..."
-msgstr "Continua a leggere..."
+#: .././footer.php:18
+msgid "Made with Love in"
+msgstr "Costruito con amore con"
 
-#: .././footer.php:10
-msgid "Crafted on"
-msgstr "Basato su"
-
-#: .././functions.php:56
+#: .././functions.php:63
 msgid "Primary Navigation"
 msgstr "Navigazione Primaria"
 
-#: .././functions.php:57
+#: .././functions.php:64
+msgid "Additional Navigation"
+msgstr "Navigazione Secondaria"
+
+#: .././functions.php:65
 msgid "Utility Navigation"
 msgstr "Navigazione Secondaria"
 
-#: .././functions.php:95
-#, php-format
-msgid "Posted on %s at %s."
-msgstr "Pubblicato %s alle %s."
-
-#: .././functions.php:96
+#: .././functions.php:106
 msgid "Written by"
 msgstr "Scritto da"
 
@@ -199,10 +191,6 @@ msgstr "Pagine:"
 #: .././search.php:6
 msgid "Search Results for"
 msgstr "Risultati Ricerca per:"
-
-#: .././searchform.php:4 .././searchform.php:7
-msgid "Search"
-msgstr "Cerca"
 
 #: .././lib/foundation.php:16
 msgid "&laquo;"
@@ -230,3 +218,18 @@ msgstr "<a href=\"%s\">Menu</a>"
 #, php-format
 msgid "<a href=\"%s\">Customize</a>"
 msgstr "<a href=\"%s\">Personalizza</a>"
+
+#~ msgid "Submit Comment"
+#~ msgstr "Invia Commento"
+
+#~ msgid "Continue reading..."
+#~ msgstr "Continua a leggere..."
+
+#~ msgid "Crafted on"
+#~ msgstr "Basato su"
+
+#~ msgid "Posted on %s at %s."
+#~ msgstr "Pubblicato %s alle %s."
+
+#~ msgid "Search"
+#~ msgstr "Cerca"
