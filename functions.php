@@ -4,7 +4,7 @@ Author: Zhen Huang
 URL: http://themefortress.com/
 
 This place is much cleaner. Put your theme specific codes here,
-anything else you may wan to use plugins to keep things tidy.
+anything else you may want to use plugins to keep things tidy.
 
 */
 
