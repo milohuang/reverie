@@ -4,7 +4,7 @@ Author: Zhen Huang
 URL: http://themefortress.com/
 
 This place is much cleaner. Put your theme specific codes here,
-anything else you may wan to use plugins to keep things tidy.
+anything else you may want to use plugins to keep things tidy.
 
 */
 
@@ -47,9 +47,9 @@ function reverie_theme_support() {
     // Add post thumbnail supports. http://codex.wordpress.org/Post_Thumbnails
     add_theme_support('post-thumbnails');
     // set_post_thumbnail_size(150, 150, false);
-    add_image_size( 'fd-lrg', 1024, 99999);
-    add_image_size( 'fd-med', 768, 99999);
-    add_image_size( 'fd-sm', 320, 9999);
+    add_image_size('fd-lrg', 1024, 99999);
+    add_image_size('fd-med', 768, 99999);
+    add_image_size('fd-sm', 320, 9999);
 
     // rss thingy
     add_theme_support('automatic-feed-links');
@@ -100,8 +100,8 @@ foreach ($sidebars as $sidebar) {
     ));
 }
 
-// return entry meta information for posts, used by multiple loops.
-if(!function_exists('reverie_entry_meta')) :
+// return entry meta information for posts, used by multiple loops, you can override this function by defining them first in your child theme's functions.php file
+if (!function_exists('reverie_entry_meta')) :
     function reverie_entry_meta() {
         echo '<span class="byline author">'. __('Written by', 'reverie') .' <a href="'. get_author_posts_url(get_the_author_meta('ID')) .'" rel="author" class="fn">'. get_the_author() .', </a></span>';
         echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. get_the_time('F jS, Y') .'</time>';

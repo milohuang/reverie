@@ -1,4 +1,3 @@
-@import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 /* Welcome and glad you are using Reverie.
  * This is the main stylesheet loaded by default.
  * Edit the file and have fun.
@@ -9,7 +8,7 @@ meta.foundation-mq-small {
 }
 
 meta.foundation-mq-medium {
-  font-family: "/only screen and (min-width:40.063em) and (max-width:64em)/";
+  font-family: "/only screen and (min-width:40.063em)/";
   width: 40.063em;
 }
 
@@ -122,8 +121,25 @@ img {
   display: none;
 }
 
+.start {
+  float: left !important;
+}
+
+.end {
+  float: right !important;
+}
+
+.text-start {
+  text-align: left !important;
+}
+
+.text-end {
+  text-align: right !important;
+}
+
 .antialiased {
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 img {
@@ -511,6 +527,14 @@ footer.full-width a:hover, footer.full-width a:focus {
 footer.full-width .love-reverie {
   border-top: 1px solid #ccc;
   padding-top: 1.5rem;
+}
+
+.admin-bar > .fixed {
+  margin-top: 2rem;
+}
+
+.f-topbar-fixed > .container {
+  margin-top: 2rem;
 }
 
 @media only screen {

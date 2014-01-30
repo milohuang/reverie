@@ -314,6 +314,15 @@ footer.full-width {
 	}
 }
 
+// Fix admin bar issue, by bybe on Github
+.admin-bar > .fixed {
+	margin-top: rem-calc(32);
+}
+
+.f-topbar-fixed > .container {
+	margin-top: rem-calc(32);
+}
+
 @media #{$small-up} {
 	.entry-author {
 		.avatar {
