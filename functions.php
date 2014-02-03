@@ -40,41 +40,43 @@ require_once('lib/presstrends.php'); // load PressTrends to track the usage of R
 /**********************
 Add theme supports
  **********************/
-function reverie_theme_support() {
-    // Add language supports.
-    load_theme_textdomain('reverie', get_template_directory() . '/lang');
+if( ! function_exists( 'reverie_theme_support' ) ) {
+    function reverie_theme_support() {
+        // Add language supports.
+        load_theme_textdomain('reverie', get_template_directory() . '/lang');
 
-    // Add post thumbnail supports. http://codex.wordpress.org/Post_Thumbnails
-    add_theme_support('post-thumbnails');
-    // set_post_thumbnail_size(150, 150, false);
-    add_image_size('fd-lrg', 1024, 99999);
-    add_image_size('fd-med', 768, 99999);
-    add_image_size('fd-sm', 320, 9999);
+        // Add post thumbnail supports. http://codex.wordpress.org/Post_Thumbnails
+        add_theme_support('post-thumbnails');
+        // set_post_thumbnail_size(150, 150, false);
+        add_image_size('fd-lrg', 1024, 99999);
+        add_image_size('fd-med', 768, 99999);
+        add_image_size('fd-sm', 320, 9999);
 
-    // rss thingy
-    add_theme_support('automatic-feed-links');
+        // rss thingy
+        add_theme_support('automatic-feed-links');
 
-    // Add post formats support. http://codex.wordpress.org/Post_Formats
-    add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
+        // Add post formats support. http://codex.wordpress.org/Post_Formats
+        add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
 
-    // Add menu support. http://codex.wordpress.org/Function_Reference/register_nav_menus
-    add_theme_support('menus');
-    register_nav_menus(array(
-        'primary' => __('Primary Navigation', 'reverie'),
-        'additional' => __('Additional Navigation', 'reverie'),
-        'utility' => __('Utility Navigation', 'reverie')
-    ));
+        // Add menu support. http://codex.wordpress.org/Function_Reference/register_nav_menus
+        add_theme_support('menus');
+        register_nav_menus(array(
+            'primary' => __('Primary Navigation', 'reverie'),
+            'additional' => __('Additional Navigation', 'reverie'),
+            'utility' => __('Utility Navigation', 'reverie')
+        ));
 
-    // Add custom background support
-    add_theme_support( 'custom-background',
-        array(
-            'default-image' => '',  // background image default
-            'default-color' => '', // background color default (dont add the #)
-            'wp-head-callback' => '_custom_background_cb',
-            'admin-head-callback' => '',
-            'admin-preview-callback' => ''
-        )
-    );
+        // Add custom background support
+        add_theme_support( 'custom-background',
+            array(
+                'default-image' => '',  // background image default
+                'default-color' => '', // background color default (dont add the #)
+                'wp-head-callback' => '_custom_background_cb',
+                'admin-head-callback' => '',
+                'admin-preview-callback' => ''
+            )
+        );
+    }
 }
 add_action('after_setup_theme', 'reverie_theme_support'); /* end Reverie theme support */
 
@@ -101,10 +103,10 @@ foreach ($sidebars as $sidebar) {
 }
 
 // return entry meta information for posts, used by multiple loops, you can override this function by defining them first in your child theme's functions.php file
-if (!function_exists('reverie_entry_meta')) :
+if ( ! function_exists( 'reverie_entry_meta' ) ) {
     function reverie_entry_meta() {
         echo '<span class="byline author">'. __('Written by', 'reverie') .' <a href="'. get_author_posts_url(get_the_author_meta('ID')) .'" rel="author" class="fn">'. get_the_author() .', </a></span>';
         echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. get_the_time('F jS, Y') .'</time>';
     }
-endif;
+};
 ?>
