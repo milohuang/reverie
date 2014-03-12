@@ -4806,7 +4806,7 @@ meta.foundation-mq-topbar {
 .top-bar.expanded .toggle-topbar a {
   color: #888888;
 }
-.top-bar.expanded .toggle-topbar a span {
+.top-bar.expanded .toggle-topbar.menu-icon a:after {
   -webkit-box-shadow: 0 10px 0 1px #888888, 0 16px 0 1px #888888, 0 22px 0 1px #888888;
   box-shadow: 0 10px 0 1px #888888, 0 16px 0 1px #888888, 0 22px 0 1px #888888;
 }
