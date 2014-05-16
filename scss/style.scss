@@ -1,0 +1,353 @@
+/* Welcome and glad you are using Reverie.
+ * This is the main stylesheet loaded by default.
+ * Edit the file and have fun.
+ * http://themefortress.com/reverie */
+
+// import normalize, stay at top
+// @import "normalize";
+
+// Global Foundation Settings
+@import "settings";
+
+// Tweak the mixin for WordPress, this might create some extra CSS in additional to app.css
+@import "foundation/components/pagination";
+
+// Reverie comes with a standalone Foundation stylesheet already
+// @import "foundation";
+
+// Load some Compass magic, note you will need to install Compass first
+@import "compass/css3/shared";
+@import "compass/css3/border-radius";
+@import "compass/css3/transition";
+
+/* Start to customize Reverie */
+
+// add transition effect
+a, a:visited, a:hover, a:visited:hover {
+	@include transition(all 100ms linear);
+}
+
+// add some margin for embeds in post
+figure {
+	margin: 0 auto $panel-margin-bottom;
+}
+
+// Add class for images
+figure img {
+	@include border-radius(5px);
+}
+
+img.alignright {
+	float: right;
+	margin: 0 0 18px 18px;
+}
+	
+img.alignleft {
+	float: left;
+	margin: 0 18px 18px 0;
+}
+
+img.aligncenter {
+	display: block;
+	margin: 18px auto;
+	}
+
+// Fix gallery images display
+.gallery {
+	dt, dl {
+		display: inline-block;
+	}
+	dl {
+		margin-left: rem-calc(9);
+		margin-right: rem-calc(9);
+	}
+}
+
+// Add HTML5 Caption Class for Images
+figure.figure {
+	margin: 0 auto;
+	display: table;
+	figcaption {
+		font-size: rem-calc(14);
+		line-height: 1.4;
+		font-style: italic;
+		padding: 8px 10px;
+		color: #999;
+		margin-bottom: $panel-margin-bottom;
+		display: table-caption;
+		caption-side: bottom;
+	}
+}
+
+figure.alignright.figure {
+	float: right;
+	margin: 0 0 18px 18px;
+}
+
+figure.alignleft.figure {
+	float: left;
+	margin: 0 18px 18px 0;
+}
+
+.footer-widget {
+	background-color: #eee;
+}
+
+body > header.contain-to-grid {
+	margin-bottom: rem-calc(32);
+	max-width: 100%;
+	padding-bottom: 0;
+}
+
+#content {
+	background-color: #fff;
+	border: 1px solid #ddd;
+}
+
+.index-card {
+	border-bottom: 1px solid #ddd;
+	padding-bottom: rem-calc(32);
+	margin-bottom: rem-calc(32);
+}
+
+span.author,
+time {
+	font-size: rem-calc(15);
+	color: #999;
+	a {
+		color: #999;
+		font-weight: bold;
+		&:hover, &:focus {
+			color: $body-font-color;
+		}
+	}
+}
+
+// define content padding for later use
+$content-padding: rem-calc(50);
+
+.entry-author {
+	background-color: #fbfbfb;
+	border: none;
+	padding: rem-calc(50) rem-calc(80);
+	margin: rem-calc(50) (-($column-gutter/2));
+	.avatar {
+		margin-right: rem-calc(40);
+		margin-bottom: rem-calc(24);
+	}
+	h4 {
+		a {
+			color: #999;
+			&:hover, &:focus {
+				color: $body-font-color;
+			}
+		}
+	}
+	p {
+		color: #bbb;
+	}
+}
+
+.post header,
+.page header {
+	margin-bottom: rem-calc(20);
+}
+
+.entry-tags {
+	color: #999;
+	font-size: rem-calc(15);
+	a {
+		color: #999;
+		&:hover, &:focus {
+			color: $body-font-color;
+		}
+	}
+}
+
+
+// add new pagination class for WordPress, Sass is amazingly fast
+.page-numbers {
+	color: #999;
+	@include pagination;
+}
+
+.pagination-centered ul.page-numbers li {
+  float: none;
+  display: inline-block;
+}
+
+.page-numbers li span.current {
+  @include border-radius(3px);
+}
+
+.page-numbers li {
+  margin-left: rem-calc(8);
+}
+
+// customizing pagination for WordPress using Foundation mixins, this is not beautiful I know
+.page-numbers li {
+	span:hover a,
+	span a:focus {
+		background: $pagination-link-active-bg;
+	}
+	span.current {
+		background: $pagination-link-current-background;
+		padding: $pagination-link-pad;
+		color: $pagination-link-current-font-color;
+		font-weight: $pagination-link-current-font-weight;
+		cursor: $pagination-link-current-cursor;
+	}
+}
+
+.avatar {
+	@include border-radius(50%);
+	float: left;
+}
+
+// add some basic comment styles
+ol.commentlist {
+	margin-left: 0;
+	margin-top: 2em;
+	p {
+		font-size: rem-calc(15);
+		line-height: 1.5;
+	}
+	ul.children {
+		margin-left: rem-calc(64);
+	}
+	li {
+		list-style: none;
+		margin-bottom: 2em;
+	
+		.comment-author img {
+			float: left;
+			margin: 0 1em 0 0;
+		}
+		.author-meta {
+			display: inline-block;
+			cite.fn {
+				font-style: normal;
+				font-weight: 600;
+				margin-right: rem-calc(8);
+			}
+			time a {
+				color: #ccc;
+				font-size: rem-calc(14);
+				margin-right: rem-calc(8);
+			}
+			.comment-edit-link {
+				color: #bbb;
+				font-size: rem-calc(14);
+			}
+		}
+		section.comment {
+			margin-left: rem-calc(64);
+			margin-bottom: rem-calc(32);
+			a.comment-reply-link {
+				font-size: rem-calc(14);
+				font-weight: 600;
+				color: #bbb;
+				&:hover, &:focus {
+					color: $body-font-color;
+				}
+			}
+		}
+	}
+}
+
+
+
+// Start the sidebar
+#sidebar {
+	margin-top: rem-calc(20);
+}
+
+#sidebar, .footer-widget {
+	.panel {
+		border: none;
+		background-color: #eee;
+		padding: rem-calc(24) rem-calc(30);
+		a {
+			color: #999;
+			font-size: rem-calc(15);
+			&:hover, &:focus {
+				color: $body-font-color;
+			}
+		}
+	}
+	ul {
+		list-style-type: none;
+		margin-left: 0;
+	}
+	.widget {
+		h4 {
+			text-transform: uppercase;
+			font-size: rem-calc(16);
+			padding-bottom: rem-calc(16);
+			border-bottom: 1px solid #ddd;
+			color: #888;
+			font-weight: 600;
+		}
+	}
+}
+
+
+
+// Start the footer
+footer.full-width {
+	background-color: #fff;
+	border-top: 1px solid #ccc;
+	padding-top: rem-calc(48);
+	p {
+		font-size: rem-calc(14);
+	}
+	a {
+		color: #666;
+		font-size: rem-calc(15);
+		&:hover, &:focus {
+			color: $body-font-color;
+		}
+	}
+	.love-reverie {
+		border-top: 1px solid #ccc;
+		padding-top: rem-calc(24);
+	}
+}
+
+// Fix admin bar issue, by bybe on Github
+.admin-bar > .fixed {
+	margin-top: rem-calc(32);
+}
+
+.f-topbar-fixed > .container {
+	margin-top: rem-calc(32);
+}
+
+@media #{$small-up} {
+	.entry-author {
+		.avatar {
+			margin-bottom: rem-calc(20);
+		}
+	}
+}
+
+@media #{$medium-up} {
+	#content {
+		padding: $content-padding;
+	}
+	.entry-author {
+		margin: rem-calc(50) (-$content-padding);
+	}
+}
+
+@media #{$large-up} {
+	#sidebar {
+		padding-left: $column-gutter;
+		padding-right: 0;
+		margin-top: rem-calc(0);
+	}
+	.footer-widget {
+		margin-top: rem-calc(48);
+		padding-top: rem-calc(32);
+	}
+}
