@@ -1,0 +1,30 @@
+{
+  "name": "Basement",
+  "version": "1.0.0",
+  "description": "A Brief Introduction\r ====================\r Basement is a WordPress starting theme based on ZURB's [Foundation](http://foundation.zurb.com). Basement derives from [Reverie](https://github.com/milohuang/reverie), [Roots](https://github.com/roots/roots) and [Grunterie](https://github.com/gpspake/grunterie.git)",
+  "main": "Gruntfile.js",
+  "devDependencies": {
+    "node-sass": "~0.7.0",
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-sass": "~0.8.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-jshint": "~0.6.3",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-svgmin": "~0.2.0",
+    "grunt-smushit": "~1.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Charles-Louis Allizard",
+  "license": "BSD",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kartonnade/basement"
+  },
+  "bugs": {
+    "url": "https://github.com/kartonnade/basement/issues"
+  }
+}

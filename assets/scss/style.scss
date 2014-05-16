@@ -6,6 +6,8 @@
 // import normalize, stay at top
 // @import "normalize";
 
+@import "foundation_basis";
+
 // Global Foundation Settings
 @import "settings";
 
@@ -15,10 +17,8 @@
 // Reverie comes with a standalone Foundation stylesheet already
 // @import "foundation";
 
-// Load some Compass magic, note you will need to install Compass first
-@import "compass/css3/shared";
-@import "compass/css3/border-radius";
-@import "compass/css3/transition";
+// Load some Bourbon magic
+@import "bourbon";
 
 /* Start to customize Reverie */
 
@@ -34,7 +34,8 @@ figure {
 
 // Add class for images
 figure img {
-	@include border-radius(5px);
+	@include border-top-radius(5px);
+	@include border-bottom-radius(5px);
 }
 
 img.alignright {
@@ -177,7 +178,8 @@ $content-padding: rem-calc(50);
 }
 
 .page-numbers li span.current {
-  @include border-radius(3px);
+  @include border-top-radius(3px);
+  @include border-bottom-radius(3px);
 }
 
 .page-numbers li {
@@ -200,7 +202,8 @@ $content-padding: rem-calc(50);
 }
 
 .avatar {
-	@include border-radius(50%);
+	@include border-top-radius(50%);
+	@include border-bottom-radius(50%);
 	float: left;
 }
 
