@@ -12,10 +12,7 @@
 @import "settings";
 
 // Tweak the mixin for WordPress, this might create some extra CSS in additional to app.css
-@import "foundation/components/pagination";
-
-// Reverie comes with a standalone Foundation stylesheet already
-// @import "foundation";
+// @import "foundation/components/pagination";
 
 // Load some Bourbon magic
 @import "bourbon";
