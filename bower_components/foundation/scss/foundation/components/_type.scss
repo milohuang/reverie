@@ -1,10 +1,14 @@
+// Foundation by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
+
 @import "global";
 
 $include-html-type-classes: $include-html-classes !default;
 
 // We use these to control header font styles
 $header-font-family: $body-font-family !default;
-$header-font-weight: 300 !default;
+$header-font-weight: normal !default;
 $header-font-style: normal !default;
 $header-font-color: #222 !default;
 $header-line-height: 1.4 !default;
@@ -23,7 +27,7 @@ $h6-font-size: 1rem !default;
 // These control how subheaders are styled.
 $subheader-line-height: 1.4 !default;
 $subheader-font-color: scale-color($header-font-color, $lightness: 35%) !default;
-$subheader-font-weight: 300 !default;
+$subheader-font-weight: normal !default;
 $subheader-top-margin: .2rem !default;
 $subheader-bottom-margin: .5rem !default;
 
@@ -50,7 +54,7 @@ $code-font-weight: bold !default;
 // We use these to style anchors
 $anchor-text-decoration: none !default;
 $anchor-font-color: $primary-color !default;
-$anchor-font-color-hover: scale-color($primary-color, $lightness: -14%) !default;
+$anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%) !default;
 
 // We use these to style the <hr> element
 $hr-border-width: 1px !default;
@@ -102,6 +106,48 @@ $microformat-abbr-padding: rem-calc(0 1) !default;
 $microformat-abbr-font-weight: bold !default;
 $microformat-abbr-font-decoration: none !default;
 
+// Text alignment class names
+$align-class-names:
+  small-only,
+  small,
+  medium-only,
+  medium,
+  large-only,
+  large,
+  xlarge-only,
+  xlarge,
+  xxlarge-only,
+  xxlarge;
+
+// Text alignment breakpoints
+$align-class-breakpoints:
+  $small-only,
+  $small-up,
+  $medium-only,
+  $medium-up,
+  $large-only,
+  $large-up,
+  $xlarge-only,
+  $xlarge-up,
+  $xxlarge-only,
+  $xxlarge-up;
+
+// Generates text align and justify classes
+@mixin align-classes{
+  .text-left    { text-align: left !important; }
+  .text-right   { text-align: right !important; }
+  .text-center  { text-align: center !important; }
+  .text-justify { text-align: justify !important; }
+
+  @for $i from 1 through length($align-class-names) {
+    @media #{(nth($align-class-breakpoints, $i))} {
+      .#{(nth($align-class-names, $i))}-text-left { text-align: left !important; }
+      .#{(nth($align-class-names, $i))}-text-right   { text-align: right !important; }
+      .#{(nth($align-class-names, $i))}-text-center  { text-align: center !important; }
+      .#{(nth($align-class-names, $i))}-text-justify { text-align: justify !important; }
+    }
+  }
+}
 
 //
 // Typography Placeholders
@@ -122,6 +168,8 @@ $microformat-abbr-font-decoration: none !default;
 }
 @include exports("type") {
   @if $include-html-type-classes {
+    // Responsive Text alignment
+    @include align-classes;
 
     /* Typography resets */
     div,
@@ -208,7 +256,7 @@ $microformat-abbr-font-decoration: none !default;
       border: $hr-border-style $hr-border-color;
       border-width: $hr-border-width 0 0;
       clear: both;
-      margin: $hr-margin 0 ($hr-margin - rem-calc(1));
+      margin: $hr-margin 0 ($hr-margin - rem-calc($hr-border-width));
       height: 0;
     }
 
@@ -269,7 +317,6 @@ $microformat-abbr-font-decoration: none !default;
         ol {
           margin-#{$default-float}: $list-nested-margin;
           margin-bottom: 0;
-          font-size: 1rem; /* Override nested font-size change */
         }
       }
       &.square,

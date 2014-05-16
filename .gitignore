@@ -1,3 +1,6 @@
-
 .DS_Store
 /.project
+/bower_components/*
+/node_modules/*
+.sass-cache/*
+/assets/css
