@@ -4,23 +4,8 @@ Reverie Framework is an extremely versatile HTML5 WordPress framework based on Z
 
 It is extremely easy to create your blog, CMS, brochure and any other kind of sites with Reverie. You can see some [samples](http://foundation.zurb.com/templates.php) on ZURB and how they make these prototypes. Did I just mention Reverie works well with [bbPress 2.0](http://bbpress.org/) and [BuddyPress 1.5](http://buddypress.org/)?
 
-###Important###
-Please note Reverie 4 was built from groud up (almost), as well as Foundation, thus there is no easy way to upgrade from prior version. Read more about the release on [ThemeFortress](http://themefortress.com/reverie-framework-4/). And start with this version, Reverie will only support the latest and second latest WordPress. Why, [Yoast](http://yoast.com/why-we-dont-support-old-wordpress-versions/) explains it well.
-
-Still, if you want to get Reverie 3 (based on Foundation 3.2), you can find it at our [last Reverie 3 commit](https://github.com/milohuang/reverie/tree/2ef429776d4d3e27906e44d7d0a43cf912078e36).
-
-###jQuery###
-WordPress 3.6 has a built in jQuery of 1.10 which is good for Reverie.
-
-###Child Theme###
-Reverie 4 supports child theme but need a simple step to activate. Check out the [instruction](http://themefortress.com/child-theme-reverie-4/) on the blog.
-
-
 ###Links of Reverie###
-* Homepage:      http://themefortress.com/reverie
-* Introduction:  http://themefortress.com/reverie-versatile-html5-wordpress-framework/
-* ThemeFortress: http://themefortress.com
-* Support Forum: http://themefortress.com/forum
+* Homepage:      http://theakiba.com/reverie
 
 ###Learn more about Foundation###
 * Homepage:      http://foundation.zurb.com  
@@ -30,8 +15,6 @@ Reverie 4 supports child theme but need a simple step to activate. Check out the
 ###Derivatives of Reverie###
 There are contributors, developers who loves Reverie and created other versions. If you are one of them, send me a link.
 * [Leonard Bogdonoff](https://github.com/lkbgift/reverie/): ZURB introduced a [standalone](http://foundation.zurb.com/docs/sass.html) solution of Foundation 4 Sass (under Using Sass Standalone heading). Leonard has a beautiful solution.
-
-
 
 What are the Features?
 ======================
@@ -60,16 +43,13 @@ Reverie utilizes Foundation's grid to implement layouts. It is quite easy to sta
 * bbPress.php included, compatible with bbPress 2.
 * Several custom page templates are included in the package.
 
-###PressTrends###
-Thanks to the generosity of [George](https://twitter.com/prstrends) from [PressTrends](http://www.presstrends.io/), Reverie Framework is using the service to track the usage of the framework and help us to improve it. Of course, you can always disable it by removing it from functions.php.
-
 What about Mobile Devices?
 ==========================
 Positive. With the power of Foundation, Reverie uses media query to adjust for all kinds of devices, including phones, tablets and computers. Reverie is also optimized for iPhone and iPad. Icons and loading images will be display when you save your website as a Home Screen app (example in the above image). Add this page to Home Screen on any iOS devices to see what I mean.
 
-ThemeFortress
+TheAkiba (Previously on ThemeFortress)
 =============
-Reverie is a WordPress framework created by [ThemeFortress](http://themefortress.com), a WordPress blog that focus on theme design and plugins.
+Reverie is a WordPress framework created by [TheAkiba](http://theakiba.com), a WordPress blog that focus on theme design and plugins. The old ThemeFortress website was no longer maintained and Reverie was now on TheAkiba, my other personal site.
 
 Please note Reverie Framework is under MIT License, the same as Foundation.
 
