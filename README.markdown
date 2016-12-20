@@ -49,7 +49,7 @@ Positive. With the power of Foundation, Reverie uses media query to adjust for a
 
 TheAkiba (Previously on ThemeFortress)
 =============
-Reverie is a WordPress framework created by [TheAkiba](http://theakiba.com), a WordPress blog that focus on theme design and plugins. The old ThemeFortress website was no longer maintained and Reverie was now on TheAkiba, my other personal site.
+Reverie is a WordPress framework created by [TheAkiba](http://theakiba.com), my personal blog focus Japanese Anime and Games, instead of WordPress theme design. The old ThemeFortress website was no longer maintained and Reverie was now on TheAkiba, my other personal site.
 
 Please note Reverie Framework is under MIT License, the same as Foundation.
 
