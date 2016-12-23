@@ -1,0 +1,9 @@
+{
+    "name": "milohuang/reverie",
+    "description": "Reverie is a versatile HTML5 responsive WordPress framework based on ZURB's Foundation.",
+    "type": "wordpress-theme",
+    "require": {
+        "composer/installers": "~1.0"
+    },
+    "license": "MIT"
+}
